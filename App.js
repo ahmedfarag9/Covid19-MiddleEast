@@ -2,6 +2,11 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
+import DailyUpdateScreen from './screens/DailyUpdateScreen'
+import NewsScreen from './screens/NewsScreen'
+import SettingsScreen from './screens/SettingsScreen'
+
+
 const Tab1 = createBottomTabNavigator();
 
 function MainTabs() {
