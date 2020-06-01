@@ -89,6 +89,23 @@ function MainTabs() {
   );
 }
 
+
+const Tab3 = createBottomTabNavigator();
+
+function MyTabs3() {
+  return (
+    <Tab3.Navigator
+      initialRouteName="GraphScreen1"
+      tabBarOptions={{
+        style: {
+          marginBottom: 10,
+          paddingBottom: 8,
+        }
+      }}
+    >
+
+    </Tab3.Navigator>
+  );
 }
 
 export default function App() {
