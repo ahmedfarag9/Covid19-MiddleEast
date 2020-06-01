@@ -43,6 +43,14 @@ function MainTabs() {
         }}
       />
       <Tab1.Screen
+        name="DashboardMiddleEastScreen"
+        component={MyTabs2}
+        options={{
+          tabBarLabel: 'Dashboard',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
       />
       <Tab1.Screen
         name="NewsScreen"
