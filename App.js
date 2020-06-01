@@ -103,6 +103,27 @@ function MyTabs3() {
         }
       }}
     >
+      <Tab3.Screen
+        name="GraphScreen1"
+        component={GraphScreen1}
+        options={{
+          tabBarLabel: 'Total Cases',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab3.Screen
+        name="GraphScreen2"
+        component={GraphScreen2}
+        options={{
+          tabBarLabel: 'New Cases',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
+
 
     </Tab3.Navigator>
   );
