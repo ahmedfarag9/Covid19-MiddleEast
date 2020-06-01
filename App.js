@@ -32,6 +32,29 @@ function MainTabs() {
           ),
         }}
       />
+      <Tab1.Screen
+      <Tab1.Screen
+      />
+      <Tab1.Screen
+        name="NewsScreen"
+        component={NewsScreen}
+        options={{
+          tabBarLabel: 'News',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab1.Screen
+        name="SettingsScreen"
+        component={SettingsScreen}
+        options={{
+          tabBarLabel: 'Settings',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
 
     </Tab1.Navigator>
   );
