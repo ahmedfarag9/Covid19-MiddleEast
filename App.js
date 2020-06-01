@@ -5,6 +5,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import DailyUpdateScreen from './screens/DailyUpdateScreen'
+import GraphScreen1 from './screens/GraphScreen1'
+import GraphScreen2 from './screens/GraphScreen2'
+import GraphScreen3 from './screens/GraphScreen3'
+import GraphScreen4 from './screens/GraphScreen4'
 import NewsScreen from './screens/NewsScreen'
 import SettingsScreen from './screens/SettingsScreen'
 
