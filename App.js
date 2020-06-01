@@ -124,6 +124,27 @@ function MyTabs3() {
         }}
       />
 
+      <Tab3.Screen
+        name="GraphScreen3"
+        component={GraphScreen3}
+        options={{
+          tabBarLabel: 'Total Deaths',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab3.Screen
+        name="GraphScreen4"
+        component={GraphScreen4}
+        options={{
+          tabBarLabel: 'New Deaths',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
+
 
     </Tab3.Navigator>
   );
