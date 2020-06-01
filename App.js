@@ -22,7 +22,7 @@ function MainTabs() {
         }
       }}
     >
-      <Tab.Screen
+      <Tab1.Screen
         name="DailyUpdateScreen"
         component={DailyUpdateScreen}
         options={{
@@ -33,6 +33,9 @@ function MainTabs() {
         }}
       />
 
+    </Tab1.Navigator>
+  );
+}
 
 
     </Tab1.Navigator>
