@@ -22,6 +22,16 @@ function MainTabs() {
         }
       }}
     >
+      <Tab.Screen
+        name="DailyUpdateScreen"
+        component={DailyUpdateScreen}
+        options={{
+          tabBarLabel: 'Daily Update',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
 
 
 
