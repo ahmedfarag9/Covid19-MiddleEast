@@ -85,7 +85,22 @@ function MainTabs() {
 }
 
 
-    </Tab1.Navigator>
+
+const Tab2 = createBottomTabNavigator();
+
+function MyTabs2() {
+  return (
+    <Tab2.Navigator
+      initialRouteName="DashboardMiddleEastScreen"
+      tabBarOptions={{
+        style: {
+          marginBottom: 10,
+          paddingBottom: 8,
+        }
+      }}
+    >
+
+    </Tab2.Navigator>
   );
 }
 
