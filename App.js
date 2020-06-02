@@ -100,6 +100,16 @@ function MyTabs2() {
       }}
     >
 
+      <Tab2.Screen
+        name="DashboardWorldScreen"
+        component={DashboardWorldScreen}
+        options={{
+          tabBarLabel: 'World',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
     </Tab2.Navigator>
   );
 }
