@@ -110,6 +110,17 @@ function MyTabs2() {
           ),
         }}
       />
+
+      <Tab2.Screen
+        name="DashboardMiddleEastScreenn"
+        component={DashboardMiddleEastScreen}
+        options={{
+          tabBarLabel: 'Middle East',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
     </Tab2.Navigator>
   );
 }
