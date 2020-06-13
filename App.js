@@ -121,6 +121,17 @@ function MyTabs2() {
           ),
         }}
       />
+      <Tab2.Screen
+        name="DashboardCountryScreen"
+        component={DashboardCountryScreen}
+        options={{
+          tabBarLabel: 'Country',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
+
     </Tab2.Navigator>
   );
 }
