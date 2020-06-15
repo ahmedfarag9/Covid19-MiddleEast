@@ -7,6 +7,20 @@ function Countries() {
   const [Country, setCountry] = useState("") 
 
   return (
+
+    <View style={styles.container}>
+
+      <Button
+        title="Refresh"
+        onPress={() => {
+          GetCountries()
+        }}
+      />
+
+
+    </View>
+
+
   )
 
 }
