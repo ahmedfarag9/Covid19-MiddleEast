@@ -6,6 +6,16 @@ function Countries() {
 
   const [Country, setCountry] = useState("") 
 
+  const GetCountries = async () => {
+    const results = await fetchCountriesDailyData()
+    //this.setState({movies: results})
+    //this.setState({showMovies: true})
+        //this.handleSubmit()
+    console.log("finished")
+    setCountry(results)
+  }
+
+
   return (
 
     <View style={styles.container}>
