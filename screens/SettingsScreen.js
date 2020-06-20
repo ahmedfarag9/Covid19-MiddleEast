@@ -13,3 +13,13 @@ const styles = StyleSheet.create({
     },
   })
   
+
+export default function SettingsScreen() {
+
+    return (
+      <View style={styles.container}>
+        <Text style={styles.text}>Settings coming soon.</Text>
+      </View>
+    )
+  }
+
