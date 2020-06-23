@@ -91,6 +91,38 @@ const styles = StyleSheet.create({
       alignItems: "stretch",
       width: 360
     },
+    text: {
+      textAlign: 'center',
+      paddingTop: 0,
+      fontSize: 40,
+      fontWeight: "bold",
+      color: "white"
+    },
+    text3: {
+      textAlign: 'center',
+      paddingTop: 20,
+      fontSize: 15,
+      //fontWeight: "bold",
+      color: "white"
+    },
+    text2: {
+      justifyContent: "center",
+      textAlign: 'center',
+      //paddingTop: 30,
+      fontSize: 40 ,
+      fontWeight: "bold",
+      color: "white"
+    },
+    circle: {
+      backgroundColor: "black",
+      //alignSelf: "center",
+      height: 100,
+      width: 140,
+      //borderRadius: 95/2,
+      //flex: 2
+      //paddingTop: 10,
+      //paddingBottom: 10,
+    }
   })
 
 function Countries() {
