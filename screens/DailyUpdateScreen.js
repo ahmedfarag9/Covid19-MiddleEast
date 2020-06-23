@@ -174,6 +174,24 @@ function Countries() {
         </View>
       </View>
 
+      <View style={styles.container5}>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}> {Country.active} </Text>
+          <Text style={styles.text3}> Active Cases </Text>
+        </View>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}> {Country.critical} </Text>
+          <Text style={styles.text3}> Critical Cases </Text>
+        </View>
+      </View>
+
+      <View style={styles.container6}>
+        <View style={[styles.circle,{alignSelf: "center"}]}> 
+          <Text style={styles.text}> {Country.recovered} </Text>
+          <Text style={styles.text3}> Total Recovered</Text>
+        </View>
+      </View>
+
       <Button
         title="Refresh"
         onPress={() => {
@@ -189,9 +207,11 @@ function Countries() {
 
 }
 
+
 export default function DailyUpdateScreen() {
 
-  //Countries()
+  //GetCountries()
+  
 
   return (
     <Countries/>
