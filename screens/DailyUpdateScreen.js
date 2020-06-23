@@ -81,6 +81,21 @@ function Countries() {
 
     <View style={styles.container}>
 
+      <View style={[styles.container2,{}]}>
+        <Text style={styles.text2}>{Country.country}    1/1/2020{Country.Date}</Text>
+      </View>
+
+      <View style={styles.container3}>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}>{Country.todayCases} </Text>
+          <Text style={styles.text3}>New Cases </Text>
+        </View>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}>{Country.cases} </Text>
+          <Text style={styles.text3}>Total Cases </Text>
+        </View>
+      </View>
+
       <Button
         title="Refresh"
         onPress={() => {
