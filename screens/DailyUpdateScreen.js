@@ -163,6 +163,17 @@ function Countries() {
         </View>
       </View>
 
+      <View style={styles.container4}>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}> {Country.todayDeaths} </Text>
+          <Text style={styles.text3}> New Deaths </Text>
+        </View>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}> {Country.deaths} </Text>
+          <Text style={styles.text3}> Total Deaths </Text>
+        </View>
+      </View>
+
       <Button
         title="Refresh"
         onPress={() => {
