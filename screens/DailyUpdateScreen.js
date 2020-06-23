@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       //paddingTop: 10,
       //paddingBottom: 10,
-      paddingLeft: 50,
-      paddingRight: 50,
+      paddingLeft: 30,
+      paddingRight: 30,
       alignContent : "stretch",
       alignItems: "stretch",
       width: 360
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       //paddingTop: 10,
       //paddingBottom: 10,
-      paddingLeft: 20,
-      paddingRight: 20,
+      paddingLeft: 30,
+      paddingRight: 30,
       alignContent : "stretch",
       alignItems: "stretch",
       width: 360
@@ -69,11 +69,12 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       //paddingTop: 10,
       //paddingBottom: 10,
-      paddingLeft: 50,
-      paddingRight: 50,
+      paddingLeft: 30,
+      paddingRight: 30,
       alignContent : "stretch",
       alignItems: "stretch",
-      width: 360
+      width: 360,
+      //alignSelf: "center"
     
     },
     container6:{
