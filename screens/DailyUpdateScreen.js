@@ -15,6 +15,52 @@ const styles = StyleSheet.create({
       paddingRight: 20,
       alignContent : "stretch"
     },
+    container2:{
+      justifyContent: "center",
+      flex: 0.8,
+      flexDirection: "row",
+      backgroundColor: "black",
+      alignItems: 'center',
+      paddingTop: 5,
+      //paddingBottom: 10,
+      paddingLeft: 20,
+      paddingRight: 20,
+      alignContent : "stretch",
+      alignItems: "stretch",
+      width: 360
+    
+    },
+    container3:{
+      justifyContent: "space-between",
+      flex: 1.05,
+      flexDirection: "row",
+      backgroundColor: "black",
+      alignItems: 'center',
+      //paddingTop: 10,
+      //paddingBottom: 10,
+      paddingLeft: 50,
+      paddingRight: 50,
+      alignContent : "stretch",
+      alignItems: "stretch",
+      width: 360
+    
+    },
+    container4:{
+      justifyContent: "space-between",
+      flex: 1.05,
+      flexDirection: "row",
+      backgroundColor: "black",
+      alignItems: 'center',
+      //paddingTop: 10,
+      //paddingBottom: 10,
+      paddingLeft: 20,
+      paddingRight: 20,
+      alignContent : "stretch",
+      alignItems: "stretch",
+      width: 360
+    
+    },
+
   })
 
 function Countries() {
