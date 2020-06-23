@@ -105,6 +105,11 @@ function Countries() {
     setCountry(results)
   }
 
+  if (Country === "") {
+    GetCountries()
+  }    
+
+  //GetCountries()
 
   return (
 
