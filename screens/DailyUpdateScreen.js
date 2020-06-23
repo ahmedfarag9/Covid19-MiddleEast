@@ -134,8 +134,11 @@ function Countries() {
     //this.setState({movies: results})
     //this.setState({showMovies: true})
         //this.handleSubmit()
+
+    const myCountry = results[25]
+    //console.log(results[25])
     console.log("finished")
-    setCountry(results)
+    setCountry(myCountry)
   }
 
   if (Country === "") {
