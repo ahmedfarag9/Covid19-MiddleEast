@@ -19,5 +19,14 @@ const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egy
 
 function Countries() {
 
+    const GetCountries = async () => {
+      const resultsTmp0 = await fetchCountriesDailyData()
+      const resultsTmp = [];
+    }
+    }
+
+    }
+
+    }
   }
 
