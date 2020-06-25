@@ -57,6 +57,8 @@ function Countries() {
       console.log(resultsTmp)
       setResults(resultsTmp)
       
+      const tableData1 = [];
+      setTableData(tableData1)
     }
 
     if (results === "") {
