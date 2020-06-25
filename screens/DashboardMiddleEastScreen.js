@@ -62,5 +62,9 @@ function Countries() {
     if (results === "") {
       GetCountries()
     }
-  }
+export default function DashboardMiddleEastScreenEnglish() {
+  return (
+    <Countries/>
+  )
+}
 
