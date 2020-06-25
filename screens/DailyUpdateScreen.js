@@ -171,7 +171,7 @@ function Countries(props) {
     <View style={styles.container}>
 
       <View style={[styles.container2,{}]}>
-        <Text style={styles.text2}>{Country.country}    1/1/2020{Country.Date}</Text>
+        <Text style={styles.text2}>{Country.country}   {todayDate} {'\n'}{language}</Text>
       </View>
 
       <View style={styles.container3}>
