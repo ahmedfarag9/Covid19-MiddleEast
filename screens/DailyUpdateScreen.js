@@ -230,13 +230,18 @@ function Countries(props) {
 }
 
 
-export default function DailyUpdateScreen() {
+export default function DailyUpdateScreen({route, navigation}) {
 
-  //GetCountries()
+  const { language }  = route.params
+  console.log(language)
+  //const movie = this.props.route.params.language
+  //navigation.params = language
+
   
-
   return (
-    <Countries/>
+    <Countries
+      language = {language}
+    />
   )
 }
 
