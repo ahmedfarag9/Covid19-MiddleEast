@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useState } from 'react'
 import {Button, View, StyleSheet, Text, ScrollView} from 'react-native'
 import { Table, TableWrapper, Row } from 'react-native-table-component';
+import {fetchCountriesDailyData} from '../Api'
 const tableDataTmp = [];
 /*for (let i = 0; i < 30; i += 1) {
   const rowData = [];
