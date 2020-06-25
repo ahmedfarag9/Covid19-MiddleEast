@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
       flexDirection: "column",
       backgroundColor: "black",
       alignItems: 'center',
-      paddingTop: 40,
+      paddingTop: 10,
       //paddingBottom: 10,
       paddingLeft: 20,
       paddingRight: 20,
