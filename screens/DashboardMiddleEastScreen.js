@@ -82,6 +82,20 @@ function Countries() {
     if (results === "") {
       GetCountries()
     }
+ 
+    return (
+      <View style={styles.container}>
+
+        <Button
+            title="Refresh"
+            onPress={() => {
+              GetCountries()
+            }}
+          />
+      </View>
+    )
+  }
+
 export default function DashboardMiddleEastScreenEnglish() {
   return (
     <Countries/>
