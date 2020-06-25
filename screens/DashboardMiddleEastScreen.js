@@ -59,6 +59,8 @@ function Countries() {
       
     }
 
+    if (results === "") {
+      GetCountries()
     }
   }
 
