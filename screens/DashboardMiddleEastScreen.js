@@ -54,7 +54,9 @@ function Countries() {
           resultsTmp.push(element)
         }
       }
-
+      console.log(resultsTmp)
+      setResults(resultsTmp)
+      
     }
 
     }
