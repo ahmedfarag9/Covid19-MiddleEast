@@ -40,6 +40,11 @@ const styles = StyleSheet.create({
 
 function Countries() {
 
+    const [tableHead, setTableHead] = useState(tableHeadConst)
+    const [widthArr, setWidthArr] = useState(widthArrConst)
+    const [results, setResults] = useState("")
+    const [tableData, setTableData] = useState(tableDataTmp)
+
     const GetCountries = async () => {
       const resultsTmp0 = await fetchCountriesDailyData()
       const resultsTmp = [];
