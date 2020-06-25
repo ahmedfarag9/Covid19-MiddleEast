@@ -125,10 +125,29 @@ const styles = StyleSheet.create({
     }
   })
 
-function Countries() {
+function Countries(props) {
 
-  const [Country, setCountry] = useState("") 
+  const [Country, setCountry] = useState("")
+  const [language, setLanguage] = useState(props.language)
+  const [todayDate, setDate] = useState("1/1/2020") 
 
+  // Get today's date
+  /*const today = new Date();
+  const dd = today.getDate();  
+  const mm = today.getMonth()+1; 
+  const yyyy = today.getFullYear();
+  if(dd<10) 
+  {
+      const dd='0'+dd;
+  } 
+  if(mm<10) 
+  {
+      mm='0'+mm;
+  }
+  const today1 = dd+'/'+mm+'/'+yyyy;
+  setDate(today1)*/
+
+  // Get Data from Api
   const GetCountries = async () => {
     const results = await fetchCountriesDailyData()
     //this.setState({movies: results})
@@ -137,7 +156,7 @@ function Countries() {
 
     const myCountry = results[25]
     //console.log(results[25])
-    console.log("finished")
+    //console.log("finished")
     setCountry(myCountry)
   }
 
