@@ -159,16 +159,20 @@ function Countries(props) {
 
   // Get Data from Api
   const GetCountries = async () => {
-    const results = await fetchCountriesDailyData()
+    const resultsTmp0 = await fetchCountriesDailyData()
     //this.setState({movies: results})
     //this.setState({showMovies: true})
         //this.handleSubmit()
+    console.log(resultsTmp0)
 
-    const myCountry = results[25]
-    //console.log(results[25])
-    //console.log("finished")
-    setCountry(myCountry)
-  }
+    const resultsTmp = [];
+    for (const element of resultsTmp0) {
+      // if (element.country in middleEastCountries) {
+        if (middleEastCountries.includes(element.country)) {
+        resultsTmp.push(element)
+      }
+    }
+    console.log(resultsTmp)
 
   if (Country === "") {
     GetCountries()
