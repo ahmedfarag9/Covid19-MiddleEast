@@ -132,9 +132,10 @@ const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egy
 
 function Countries(props) {
 
+  const [ChosenCountryTmp, setChosenCountry] = useState(ChosenCountry)
   const [Country, setCountry] = useState("")
-  const [language, setLanguage] = useState(props.language)
-  const [todayDate, setDate] = useState("1/1/2020") 
+  const [todayDate, setDate] = useState("1/1/2020")
+  const [results, setResults] = useState("") 
 
   // Get today's date
   /*const today = new Date();
