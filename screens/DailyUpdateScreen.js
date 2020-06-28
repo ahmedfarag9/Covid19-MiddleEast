@@ -125,6 +125,11 @@ const styles = StyleSheet.create({
     }
   })
 
+const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egypt', 'Iraq', 'Jordan', 'Kuwait',
+'Lebanon', 'Libya', 'Mauritania', 'Morocco', 'Oman', 'Palestine', 'Qatar',
+'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
+
+
 function Countries(props) {
 
   const [Country, setCountry] = useState("")
