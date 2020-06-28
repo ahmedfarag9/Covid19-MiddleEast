@@ -96,9 +96,14 @@ function Countries() {
     )
   }
 
-export default function DashboardMiddleEastScreenEnglish() {
+export default function DashboardMiddleEastScreen({route}) {
+
+  const  { country }   = route.params
+
   return (
-    <Countries/>
+    <Countries
+      ChosenCountry = {country}          
+    />
   )
 }
 
