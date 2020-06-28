@@ -211,30 +211,30 @@ function Countries(props) {
 
       <View style={styles.container4}>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}> {Country.todayDeaths} </Text>
-          <Text style={styles.text3}> New Deaths </Text>
+          <Text style={styles.text}>{Country.todayDeaths}</Text>
+          <Text style={styles.text3}>New Deaths</Text>
         </View>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}> {Country.deaths} </Text>
-          <Text style={styles.text3}> Total Deaths </Text>
+          <Text style={styles.text}>{Country.deaths}</Text>
+          <Text style={styles.text3}>Total Deaths</Text>
         </View>
       </View>
 
       <View style={styles.container5}>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}> {Country.active} </Text>
-          <Text style={styles.text3}> Active Cases </Text>
+          <Text style={styles.text}>{Country.active}</Text>
+          <Text style={styles.text3}>Active Cases</Text>
         </View>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}> {Country.critical} </Text>
-          <Text style={styles.text3}> Critical Cases </Text>
+          <Text style={styles.text}>{Country.critical}</Text>
+          <Text style={styles.text3}>Critical Cases</Text>
         </View>
       </View>
 
       <View style={styles.container6}>
         <View style={[styles.circle,{alignSelf: "center"}]}> 
-          <Text style={styles.text}> {Country.recovered} </Text>
-          <Text style={styles.text3}> Total Recovered</Text>
+          <Text style={styles.text}>{Country.recovered}</Text>
+          <Text style={styles.text3}>Total Recovered</Text>
         </View>
       </View>
 
