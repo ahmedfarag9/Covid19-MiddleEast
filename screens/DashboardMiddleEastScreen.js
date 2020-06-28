@@ -28,7 +28,7 @@ const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egy
 const styles = StyleSheet.create({
   container: {
     flex: 1, padding: 16,
-    paddingTop: 30,
+    paddingTop: 10,
     backgroundColor: 'black' 
     },
   header: { height: 50, backgroundColor: '#537791' },
