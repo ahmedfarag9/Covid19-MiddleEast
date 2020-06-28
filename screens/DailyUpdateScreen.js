@@ -132,6 +132,10 @@ const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egy
 
 function Countries(props) {
 
+  // 
+  const { ChosenCountry } = props
+  //console.log(ChosenCountry)
+
   const [ChosenCountryTmp, setChosenCountry] = useState(ChosenCountry)
   const [Country, setCountry] = useState("")
   const [todayDate, setDate] = useState("1/1/2020")
