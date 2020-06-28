@@ -91,6 +91,8 @@ function Countries(props) {
     return (
       <View style={styles.container}>
 
+        <Text style={styles.text}>Chosen country: {ChosenCountryTmp} {'\n'}</Text>
+
         <Button
             title="Refresh"
             onPress={() => {
