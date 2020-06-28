@@ -254,17 +254,17 @@ function Countries(props) {
 }
 
 
-export default function DailyUpdateScreen({route, navigation}) {
+export default function DailyUpdateScreen({route}) {
 
-  const { language }  = route.params
-  console.log(language)
-  //const movie = this.props.route.params.language
-  //navigation.params = language
+  const  { country }   = route.params
+  //console.log(country)
 
-  
+  //const  { language }  = route.params
+  //console.log(language)
+
   return (
     <Countries
-      language = {language}
+      ChosenCountry = {country}      
     />
   )
 }
