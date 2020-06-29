@@ -29,6 +29,13 @@ export default function CountryPageScreen({navigation}) {
     return (
       <View style={styles.container}>
 
+      <Button
+        title="Egypt"
+        onPress={() => navigation.navigate('MainTabsEnglish', {
+          params: { language: 'English', country: 'Egypt' }, 
+      })
+      }          
+      />
     </View>
     )
   }
