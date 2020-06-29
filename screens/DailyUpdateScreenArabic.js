@@ -96,3 +96,12 @@ const styles = StyleSheet.create({
   'Lebanon', 'Libya', 'Mauritania', 'Morocco', 'Oman', 'Palestine', 'Qatar',
   'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
   
+
+export default function DailyUpdateScreenArabic({route}) {
+
+  return (
+    <Countries
+    />
+  )
+}
+
