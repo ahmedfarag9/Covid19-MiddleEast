@@ -99,8 +99,11 @@ const styles = StyleSheet.create({
 
 export default function DailyUpdateScreenArabic({route}) {
 
+  const  { country }   = route.params
+
   return (
     <Countries
+    ChosenCountry = {country}      
     />
   )
 }
