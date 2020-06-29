@@ -29,6 +29,14 @@ export default function CountryPageScreenArabic({navigation}) {
     return (
       <View style={styles.container}>
 
+      <Button
+        title="مصر"
+        onPress={() => navigation.navigate('MainTabsArabic', {
+          screen: 'DailyUpdateScreenArabic',
+          params: { language: 'Arabic', country: 'Egypt' }, 
+        })
+      }          
+      />
     </View>
     )
   }
