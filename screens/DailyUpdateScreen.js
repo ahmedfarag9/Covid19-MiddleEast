@@ -2,15 +2,16 @@ import * as React from 'react'
 import { useState } from 'react'
 import {Button, View, StyleSheet, Text} from 'react-native'
 import {fetchCountriesDailyData} from '../Api'
+
 const styles = StyleSheet.create({
     container: {
       justifyContent: "space-between",
       flex: 1,
       flexDirection: "column",
-      backgroundColor: "black",
+      backgroundColor: "white",
       alignItems: 'center',
       paddingTop: 10,
-      //paddingBottom: 10,
+      paddingBottom: 7,
       paddingLeft: 20,
       paddingRight: 20,
       alignContent : "stretch"
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       flex: 0.8,
       flexDirection: "row",
-      backgroundColor: "black",
+      backgroundColor: "white",
       alignItems: 'center',
       paddingTop: 5,
       //paddingBottom: 10,
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       flex: 1.05,
       flexDirection: "row",
-      backgroundColor: "black",
+      backgroundColor: "white",
       alignItems: 'center',
       //paddingTop: 10,
       //paddingBottom: 10,
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       flex: 1.05,
       flexDirection: "row",
-      backgroundColor: "black",
+      backgroundColor: "white",
       alignItems: 'center',
       //paddingTop: 10,
       //paddingBottom: 10,
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       flex: 1.05,
       flexDirection: "row",
-      backgroundColor: "black",
+      backgroundColor: "white",
       alignItems: 'center',
       //paddingTop: 10,
       //paddingBottom: 10,
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       flex: 1.05,
       flexDirection: "row",
-      backgroundColor: "black",
+      backgroundColor: "white",
       alignItems: 'center',
       //paddingTop: 10,
       //paddingBottom: 10,
@@ -96,14 +97,14 @@ const styles = StyleSheet.create({
       paddingTop: 0,
       fontSize: 40,
       fontWeight: "bold",
-      color: "white"
+      color: "black"
     },
     text3: {
       textAlign: 'center',
       paddingTop: 20,
       fontSize: 15,
       //fontWeight: "bold",
-      color: "white"
+      color: "black"
     },
     text2: {
       justifyContent: "center",
@@ -111,10 +112,10 @@ const styles = StyleSheet.create({
       //paddingTop: 30,
       fontSize: 40 ,
       fontWeight: "bold",
-      color: "white"
+      color: "black"
     },
     circle: {
-      backgroundColor: "black",
+      backgroundColor: "white",
       //alignSelf: "center",
       height: 100,
       width: 140,
