@@ -23,3 +23,12 @@ const styles = StyleSheet.create({
   },
 })  
   
+
+export default function CountryPageScreen({navigation}) {
+
+    return (
+      <View style={styles.container}>
+
+    </View>
+    )
+  }
