@@ -29,6 +29,17 @@ export default function LanguagePageScreen({navigation}) {
     return (
       <View style={styles.container}>
 
+      <Button
+        title="English"
+        onPress={() => navigation.navigate('CountryPageScreen')
+      }          
+      />
+
+      <Button
+        title="عربى"
+        onPress={() => navigation.navigate('CountryPageScreenArabic')
+      }          
+      />
     </View>
     )
   }
