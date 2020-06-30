@@ -17,4 +17,10 @@ function Countries(props) {
 
   }
   }
+export default function DashboardMiddleEastScreenArabic(route) {
+  return (
+    <Countries
+    />
+  )
+}
 
