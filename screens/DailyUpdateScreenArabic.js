@@ -142,6 +142,16 @@ const styles = StyleSheet.create({
     const [todayDate, setDate] = useState("1/1/2020")
     const [results, setResults] = useState("") 
   
+    // Get Data from Api
+    const GetCountries = async () => {
+      const resultsTmp0 = await fetchCountriesDailyData()
+      //this.setState({movies: results})
+      //this.setState({showMovies: true})
+          //this.handleSubmit()
+      console.log(resultsTmp0)
+  
+      }
+  
   return (
 
 
