@@ -195,6 +195,19 @@ const styles = StyleSheet.create({
         </View>
       </View>
 
+      <View style={styles.container6}>
+        <View style={[styles.circle,{alignSelf: "center"}]}> 
+          <Text style={styles.text}>{Country.recovered}</Text>
+          <Text style={styles.text3}>المتعافون</Text>
+        </View>
+      </View>
+
+      <Button
+        title="تحديث"
+        onPress={() => {
+          GetCountries()
+        }}
+      />
 
     </View>
 
