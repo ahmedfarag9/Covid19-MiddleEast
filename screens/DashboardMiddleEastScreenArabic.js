@@ -50,6 +50,11 @@ function Countries(props) {
   const [widthArr, setWidthArr] = useState(widthArrConst)
   const [results, setResults] = useState("")
   const [tableData, setTableData] = useState(tableDataTmp)
+
+    const GetCountries = async () => {
+      const resultsTmp0 = await fetchCountriesDailyData()
+    }
+
     return (
       <View style={styles.container}>
   }
