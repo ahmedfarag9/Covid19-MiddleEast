@@ -101,6 +101,9 @@ function Countries(props) {
 
         <ScrollView horizontal={true}>      
           <View>
+            <Table borderStyle={{borderWidth: 1, borderColor: '#C1C0B9'}}>
+              <Row data={tableHead} widthArr={widthArr} style={styles.header} textStyle={styles.text}/>
+            </Table>
   }
           </View>
         </ScrollView>
