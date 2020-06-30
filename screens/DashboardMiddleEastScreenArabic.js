@@ -53,7 +53,15 @@ function Countries(props) {
 
     const GetCountries = async () => {
       const resultsTmp0 = await fetchCountriesDailyData()
-    }
+      const resultsTmp = [];
+      for (const element of resultsTmp0) {
+        // if (element.country in middleEastCountries) {
+          if (middleEastCountries.includes(element.country)) {
+          resultsTmp.push(element)
+        }
+      }
+      console.log(resultsTmp)
+      setResults(resultsTmp)
 
     if (results === "") {
       GetCountries()
