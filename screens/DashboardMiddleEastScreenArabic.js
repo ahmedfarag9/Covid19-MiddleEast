@@ -98,7 +98,13 @@ function Countries(props) {
               GetCountries()
             }}
           />
+
+        <ScrollView horizontal={true}>      
+          <View>
   }
+          </View>
+        </ScrollView>
+      </View>
     )
   }
 
