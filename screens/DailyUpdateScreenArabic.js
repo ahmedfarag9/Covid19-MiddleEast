@@ -92,6 +92,40 @@ const styles = StyleSheet.create({
       alignItems: "stretch",
       width: 360
     },
+    text: {
+      textAlign: 'center',
+      paddingTop: 0,
+      fontSize: 40,
+      fontWeight: "bold",
+      color: "black"
+    },
+    text3: {
+      textAlign: 'center',
+      paddingTop: 20,
+      fontSize: 15,
+      //fontWeight: "bold",
+      color: "black"
+    },
+    text2: {
+      justifyContent: "center",
+      textAlign: 'center',
+      //paddingTop: 30,
+      fontSize: 40 ,
+      fontWeight: "bold",
+      color: "black"
+    },
+    circle: {
+      backgroundColor: "white",
+      //alignSelf: "center",
+      height: 100,
+      width: 140,
+      //borderRadius: 95/2,
+      //flex: 2
+      //paddingTop: 10,
+      //paddingBottom: 10,
+    }
+  })
+
   const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egypt', 'Iraq', 'Jordan', 'Kuwait',
   'Lebanon', 'Libya', 'Mauritania', 'Morocco', 'Oman', 'Palestine', 'Qatar',
   'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
