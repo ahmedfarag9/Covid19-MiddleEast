@@ -27,8 +27,12 @@ const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egy
 
 function Countries(props) {
 
+    return (
+      <View style={styles.container}>
   }
+    )
   }
+
 export default function DashboardMiddleEastScreenArabic(route) {
   const  { country }   = route.route.params
 
