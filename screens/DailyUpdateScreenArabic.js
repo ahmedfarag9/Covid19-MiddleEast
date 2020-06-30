@@ -150,6 +150,15 @@ const styles = StyleSheet.create({
           //this.handleSubmit()
       console.log(resultsTmp0)
   
+      const resultsTmp = [];
+      for (const element of resultsTmp0) {
+        // if (element.country in middleEastCountries) {
+          if (middleEastCountries.includes(element.country)) {
+          resultsTmp.push(element)
+        }
+      }
+      console.log(resultsTmp)
+  
       }
   
   return (
