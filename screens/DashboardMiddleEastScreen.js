@@ -27,9 +27,11 @@ const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egy
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, padding: 16,
-    paddingTop: 10,
-    backgroundColor: 'black' 
+    flex: 1,
+    //padding: 0,
+    paddingTop: 0,
+    paddingLeft: 3,
+    backgroundColor: 'white' 
     },
   header: { height: 50, backgroundColor: '#537791' },
   text: { textAlign: 'center', fontWeight: '100' },
@@ -90,8 +92,6 @@ function Countries(props) {
  
     return (
       <View style={styles.container}>
-
-        <Text style={styles.text}>Chosen country: {ChosenCountryTmp} {'\n'}</Text>
 
         <Button
             title="Refresh"
