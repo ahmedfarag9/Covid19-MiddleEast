@@ -169,8 +169,13 @@ const styles = StyleSheet.create({
       setResults(resultsTmp)
       }
   
-      }
+    if (Country === "") {
+      GetCountries()
+      }    
+    
+    //GetCountries()
   
+
   return (
 
 
