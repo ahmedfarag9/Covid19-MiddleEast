@@ -195,6 +195,28 @@ const styles = StyleSheet.create({
         </View>
       </View>
 
+      <View style={styles.container4}>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}>{Country.todayDeaths}</Text>
+          <Text style={styles.text3}>الوفيات الجديدة</Text>
+        </View>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}>{Country.deaths}</Text>
+          <Text style={styles.text3}>اجمالى الوفيات</Text>
+        </View>
+      </View>
+
+      <View style={styles.container5}>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}>{Country.active}</Text>
+          <Text style={styles.text3}>الحالات النشطة</Text>
+        </View>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}>{Country.critical}</Text>
+          <Text style={styles.text3}>الحالات الحرجة</Text>
+        </View>
+      </View>
+
       <View style={styles.container6}>
         <View style={[styles.circle,{alignSelf: "center"}]}> 
           <Text style={styles.text}>{Country.recovered}</Text>
