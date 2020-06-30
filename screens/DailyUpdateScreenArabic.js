@@ -159,6 +159,16 @@ const styles = StyleSheet.create({
       }
       console.log(resultsTmp)
   
+      for (const element of resultsTmp) {
+        // if (element.country in middleEastCountries) {
+          if (element.country === ChosenCountry) {
+          setCountry(element)
+          console.log(element.country)
+          }
+        }
+      setResults(resultsTmp)
+      }
+  
       }
   
   return (
