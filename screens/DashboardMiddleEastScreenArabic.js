@@ -55,6 +55,10 @@ function Countries(props) {
       const resultsTmp0 = await fetchCountriesDailyData()
     }
 
+    if (results === "") {
+      GetCountries()
+    }
+ 
     return (
       <View style={styles.container}>
   }
