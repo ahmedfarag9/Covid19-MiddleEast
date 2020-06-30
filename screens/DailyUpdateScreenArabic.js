@@ -142,6 +142,22 @@ const styles = StyleSheet.create({
     const [todayDate, setDate] = useState("1/1/2020")
     const [results, setResults] = useState("") 
   
+    // Get today's date
+    /*const today = new Date();
+    const dd = today.getDate();  
+    const mm = today.getMonth()+1; 
+    const yyyy = today.getFullYear();
+    if(dd<10) 
+    {
+        const dd='0'+dd;
+    } 
+    if(mm<10) 
+    {
+        mm='0'+mm;
+    }
+    const today1 = dd+'/'+mm+'/'+yyyy;
+    setDate(today1)*/
+  
     // Get Data from Api
     const GetCountries = async () => {
       const resultsTmp0 = await fetchCountriesDailyData()
