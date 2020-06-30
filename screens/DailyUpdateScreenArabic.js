@@ -184,6 +184,16 @@ const styles = StyleSheet.create({
         <Text style={styles.text2}>{Country.country}</Text>
       </View>
 
+      <View style={styles.container3}>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}>{Country.todayCases}</Text>
+          <Text style={styles.text3}>الاصابات الجديدة</Text>
+        </View>
+        <View style={[styles.circle,{}]}> 
+          <Text style={styles.text}>{Country.cases}</Text>
+          <Text style={styles.text3}>اجمالى الاصابات</Text>
+        </View>
+      </View>
 
 
     </View>
