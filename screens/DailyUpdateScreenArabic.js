@@ -178,10 +178,21 @@ const styles = StyleSheet.create({
 
   return (
 
+    <View style={styles.container}>
+
+      <View style={[styles.container2,{}]}>
+        <Text style={styles.text2}>{Country.country}</Text>
+      </View>
+
+
+
+    </View>
 
   )
 
 }
+
+
 export default function DailyUpdateScreenArabic({route}) {
 
   const  { country }   = route.params
