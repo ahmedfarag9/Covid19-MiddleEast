@@ -55,6 +55,31 @@ function Countries(props) {
           //this.handleSubmit()
       console.log(resultsTmp)
       setResults(resultsTmp)
+      
+      const tableData1 = [];
+      for (const element of resultsTmp) {
+        const rowData = [];
+        rowData.push(`${element.country}`);
+        rowData.push(`${element.cases}`);
+        rowData.push(`${element.todayCases}`);
+        rowData.push(`${element.deaths}`);
+        rowData.push(`${element.todayDeaths}`);
+        rowData.push(`${element.recovered}`);
+        rowData.push(`${element.active}`);
+        rowData.push(`${element.critical}`);
+        rowData.push(`${element.casesPerOneMillion}`);
+        rowData.push(`${element.deathsPerOneMillion}`);
+        rowData.push(`${element.totalTests}`);
+        rowData.push(`${element.testsPerOneMillion}`);
+        //rowData.push(`${parseInt(1)*parseInt(1)}`);
+
+        tableData1.push(rowData);
+        // for (let j = 0; j < 11; j += 1) {
+        //   rowData.push(`${element.country}`);
+        // }
+      }
+      setTableData(tableData1)
+
     }
 
 
