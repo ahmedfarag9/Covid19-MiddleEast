@@ -48,6 +48,12 @@ function Countries(props) {
 
 
     const GetCountries = async () => {
+      const resultsTmp = await fetchCountriesDailyData()
+      //this.setState({movies: results})
+      //this.setState({showMovies: true})
+          //this.handleSubmit()
+      console.log(resultsTmp)
+      setResults(resultsTmp)
     }
 
     if (results === "") {
