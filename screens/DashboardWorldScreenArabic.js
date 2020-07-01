@@ -36,6 +36,12 @@ const styles = StyleSheet.create({
 
 function Countries(props) {
 
+ 
+    return (
+      <View style={styles.container}>
+
+      </View>
+    )
   }
 
 
