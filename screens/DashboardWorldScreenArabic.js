@@ -46,7 +46,10 @@ function Countries(props) {
     const [results, setResults] = useState("")
     const [tableData, setTableData] = useState(tableDataTmp)
 
- 
+
+    const GetCountries = async () => {
+    }
+
     if (results === "") {
       GetCountries()
     }
