@@ -51,6 +51,11 @@ function Countries(props) {
     const GetCountries = async () => {
     }
 
+
+    if (results === "") {
+      GetCountries()
+    }
+ 
     return (
       <View style={styles.container}>
 
