@@ -49,6 +49,13 @@ function Countries(props) {
 
     return (
       <View style={styles.container}>
+
+        <Button
+            title="Refresh"
+            onPress={() => {
+              GetCountries()
+            }}
+          />
       </View>
     )
   }
