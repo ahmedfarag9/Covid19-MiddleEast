@@ -47,6 +47,10 @@ function Countries(props) {
     const [tableData, setTableData] = useState(tableDataTmp)
 
  
+    if (results === "") {
+      GetCountries()
+    }
+ 
     return (
       <View style={styles.container}>
 
