@@ -39,6 +39,13 @@ function Countries(props) {
   const { ChosenCountry } = props
   //console.log(ChosenCountry)
 
+    const [ChosenCountryTmp, setChosenCountry] = useState(ChosenCountry)
+
+    const [tableHead, setTableHead] = useState(tableHeadConst)
+    const [widthArr, setWidthArr] = useState(widthArrConst)
+    const [results, setResults] = useState("")
+    const [tableData, setTableData] = useState(tableDataTmp)
+
  
     return (
       <View style={styles.container}>
