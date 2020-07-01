@@ -33,3 +33,11 @@ const styles = StyleSheet.create({
   row: { height: 40, backgroundColor: '#E7E6E1' }
 });  
 
+
+
+export default function DashboardWorldScreenArabic() {
+
+  return (
+    <Countries/>
+  )
+}
