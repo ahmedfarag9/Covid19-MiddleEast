@@ -27,7 +27,13 @@ export default function SettingsScreen({route, navigation}) {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Settings coming soon.</Text>
+
+        <Text style={styles.text2}>Settings{'\n'}</Text>
+
+
+        <Text style={styles.text}>Current language: {language}  {'\n'}{'\n'}</Text>
+        <Text style={styles.text}>Change language:{'\n'}{'\n'}</Text>
+
       </View>
     )
   }
