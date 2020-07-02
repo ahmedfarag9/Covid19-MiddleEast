@@ -52,6 +52,21 @@ export default function SettingsScreen({route, navigation}) {
           onPress={() => navigation.navigate('CountryPageScreen')
         }          
         />
+        <Button
+        title="Change Country"
+        onPress={() => navigation.navigate('CountryPageScreen')}          
+        />
+
+        {/* <Button
+          onPress={() =>
+            navigation.setParams({
+              country:'USA'
+                //route.params.country === 'USA',
+            })
+          }
+          title="Change country"
+        /> */}
+
       </View>
     )
   }
