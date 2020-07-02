@@ -24,8 +24,6 @@ const styles = StyleSheet.create({
     color: 'black'
   },
 })  
-  })
-})  
   
 
 export default function SettingsScreen({route, navigation}) {
