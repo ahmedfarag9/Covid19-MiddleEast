@@ -17,7 +17,15 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: 'black'
   },
+  text2: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 30,
+    color: 'black'
+  },
+})  
   })
+})  
   
 
 export default function SettingsScreen({route, navigation}) {
