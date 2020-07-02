@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   })
   
 
-export default function SettingsScreen() {
+export default function SettingsScreen({route, navigation}) {
 
     return (
       <View style={styles.container}>
@@ -23,4 +23,3 @@ export default function SettingsScreen() {
       </View>
     )
   }
-
