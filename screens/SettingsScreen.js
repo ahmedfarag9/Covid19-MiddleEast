@@ -22,6 +22,9 @@ const styles = StyleSheet.create({
 
 export default function SettingsScreen({route, navigation}) {
 
+  const  { country }   = route.params
+  const  { language }  = route.params
+
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Settings coming soon.</Text>
