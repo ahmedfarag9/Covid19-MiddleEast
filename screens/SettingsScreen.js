@@ -34,6 +34,16 @@ export default function SettingsScreen({route, navigation}) {
         <Text style={styles.text}>Current language: {language}  {'\n'}{'\n'}</Text>
         <Text style={styles.text}>Change language:{'\n'}{'\n'}</Text>
 
+        <Button
+          title="عربى"
+          onPress={() => navigation.navigate('CountryPageScreenArabic')
+        }          
+        />
+        <Button
+          title="English"
+          onPress={() => navigation.navigate('CountryPageScreen')
+        }          
+        />
       </View>
     )
   }
