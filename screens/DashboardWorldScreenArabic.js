@@ -102,6 +102,21 @@ function Countries(props) {
             <Table borderStyle={{borderWidth: 1, borderColor: '#C1C0B9'}}>
               <Row data={tableHead} widthArr={widthArr} style={styles.header} textStyle={styles.text}/>
             </Table>
+            <ScrollView style={styles.dataWrapper}>
+              <Table borderStyle={{borderWidth: 1, borderColor: '#C1C0B9'}}>
+                {
+                  tableData.map((rowData, index) => (
+                    <Row
+                      key={index}
+                      data={rowData}
+                      widthArr={widthArr}
+                      style={[styles.row, index%2 && {backgroundColor: '#F7F6E7'}]}
+                      textStyle={styles.text}
+                    />
+                  ))
+                }
+              </Table>
+            </ScrollView>
           </View>
         </ScrollView>
       </View>
