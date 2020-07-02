@@ -89,6 +89,13 @@ function Countries(props) {
     return (
       <View style={styles.container}>
 
+        <Button
+            title="تحديث"
+            onPress={() => {
+              GetCountries()
+            }}
+          />
+
       </View>
     )
   }
