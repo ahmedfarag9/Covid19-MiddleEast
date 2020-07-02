@@ -52,6 +52,11 @@ export default function SettingsScreen({route, navigation}) {
           onPress={() => navigation.navigate('CountryPageScreen')
         }          
         />
+
+
+        <Text style={styles.text}>{'\n'}{'\n'}{'\n'}{'\n'}Current Country: {country}  {'\n'}{'\n'}</Text>
+        <Text style={styles.text}>Choose a country:{'\n'}{'\n'}</Text>
+
         <Button
         title="Change Country"
         onPress={() => navigation.navigate('CountryPageScreen')}          
