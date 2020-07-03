@@ -13,3 +13,11 @@ const styles = StyleSheet.create({
     },
   })
   
+
+export default function NewsScreen({route, navigation})  {
+
+
+    return (
+
+    )
+  }
