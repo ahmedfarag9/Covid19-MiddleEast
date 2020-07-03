@@ -21,6 +21,11 @@ export default function NewsScreen({route, navigation})  {
   //const  { language }  = route.params
 
     return (
+      <View style={styles.container}>
 
+        <Text style={styles.text}>Current country: {country}  {'\n'}{'\n'}</Text>
+        
+        <Text style={styles.text}> News coming soon.</Text>
+      </View>
     )
   }
