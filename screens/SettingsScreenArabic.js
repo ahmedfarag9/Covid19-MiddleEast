@@ -11,6 +11,12 @@ const styles = StyleSheet.create({
     //alignItems: 'center',
     //paddingTop: 10,
   },
+  text: {
+    textAlign: 'center',
+    //fontWeight: 'bold',
+    fontSize: 15,
+    color: 'black'
+  },
 })  
 
 export default function SettingsScreenArabic({route, navigation}) {
