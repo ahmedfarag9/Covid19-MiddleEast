@@ -25,6 +25,16 @@ export default function SettingsScreenArabic({route, navigation}) {
   const  { language }  = route.params
 
   return (
+    <View style={styles.container}>
+
+      <Text style={styles.text}>الاعدادات:{'\n'}</Text>
+
+      <Text style={styles.text}>اللغة المختارة حاليا: {language}  {'\n'}{'\n'}</Text>
+
+      <Text style={styles.text}>تغيير اللغة:{'\n'}{'\n'}</Text>
+
+
+    </View>
   )
 }
 
