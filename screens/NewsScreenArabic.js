@@ -13,3 +13,9 @@ const styles = StyleSheet.create({
     },
   })
   
+
+export default function NewsScreenArabic()  {
+
+    return (
+    )
+  }
