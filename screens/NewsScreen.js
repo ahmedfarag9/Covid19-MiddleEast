@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
 export default function NewsScreen({route, navigation})  {
 
 
+  const  { country }   = route.params
+  //const  { language }  = route.params
+
     return (
 
     )
