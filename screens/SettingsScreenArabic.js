@@ -45,6 +45,14 @@ export default function SettingsScreenArabic({route, navigation}) {
       />
 
 
+      <Text style={styles.text}>{'\n'}{'\n'}{'\n'}{'\n'}الدولة المختارة حاليا: {country}  {'\n'}{'\n'}</Text>
+      <Text style={styles.text}>تغيير البلد:{'\n'}{'\n'}</Text>
+
+      <Button
+        title="تغيير البلد"
+        onPress={() => navigation.navigate('CountryPageScreenArabic')}
+      />
+
     </View>
   )
 }
