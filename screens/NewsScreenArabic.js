@@ -17,5 +17,8 @@ const styles = StyleSheet.create({
 export default function NewsScreenArabic()  {
 
     return (
+      <View style={styles.container}>
+        <Text style={styles.text}>الأخبار سوف تضاف قريبا.</Text>
+      </View>
     )
   }
