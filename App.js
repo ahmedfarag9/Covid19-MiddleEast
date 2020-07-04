@@ -36,7 +36,8 @@ import NewsScreenArabic from './screens/NewsScreenArabic'
 import SettingsScreenArabic from './screens/SettingsScreenArabic'
 
 
-function MainTabs() {
+// Main stack Nav
+const MainStack = createStackNavigator();
   return (
     <Tab1.Navigator
       initialRouteName="DailyUpdateScreen"
