@@ -447,10 +447,12 @@ function Tabs3Arabic(props) {
   );
 }
 
+
+
 export default function App() {
   return (
     <NavigationContainer>
-      <MainTabs/>
+      <MyStack/>
     </NavigationContainer>
   )
 }
