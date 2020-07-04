@@ -68,6 +68,7 @@ function MainTabsEnglish(props) {
       <Tab1English.Screen
         name="DailyUpdateScreen"
         component={DailyUpdateScreen}
+        initialParams={props.route.params.params}
         options={{
           tabBarLabel: 'Daily Update',
           tabBarIcon: ({ color, size }) => (
@@ -78,6 +79,7 @@ function MainTabsEnglish(props) {
        {/* <Tab1English.Screen
         name="GraphsScreenEnglish"
         component={Tabs3English}
+        initialParams={props.route.params.params}
         options={{
           tabBarLabel: 'Graphs',
           tabBarIcon: ({ color, size }) => (
@@ -88,6 +90,7 @@ function MainTabsEnglish(props) {
       <Tab1English.Screen
         name="DashboardMiddleEastScreen"
         component={Tabs2English}
+        initialParams={props.route.params.params}        
         options={{
           tabBarLabel: 'Dashboard',
           tabBarIcon: ({ color, size }) => (
@@ -98,6 +101,7 @@ function MainTabsEnglish(props) {
       {/* <Tab1English.Screen
         name="NewsScreen"
         component={NewsScreen}
+        initialParams={props.route.params.params}
         options={{
           tabBarLabel: 'News',
           tabBarIcon: ({ color, size }) => (
@@ -108,6 +112,7 @@ function MainTabsEnglish(props) {
       <Tab1English.Screen
         name="SettingsScreen"
         component={SettingsScreen}
+        initialParams={props.route.params.params}
         options={{
           tabBarLabel: 'Settings',
           tabBarIcon: ({ color, size }) => (
