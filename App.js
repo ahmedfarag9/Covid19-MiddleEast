@@ -263,6 +263,17 @@ const Tab2Arabic = createMaterialTopTabNavigator();
 
 function Tabs2Arabic(props) {
   return (
+    <Tab2Arabic.Navigator
+      initialRouteName="DashboardMiddleEastScreenArabic"
+      initialParams={props.route.params}
+      swipeEnabled= {false}                
+      tabBarOptions={{
+        style: {
+          marginBottom: 0,
+          paddingBottom: 1,
+        }
+      }}
+    >
       />
 
 
