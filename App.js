@@ -29,8 +29,12 @@ import GraphScreen1Arabic from './screens/GraphScreen1Arabic'
 import GraphScreen2Arabic from './screens/GraphScreen2Arabic'
 import GraphScreen3Arabic from './screens/GraphScreen3Arabic'
 import GraphScreen4Arabic from './screens/GraphScreen4Arabic'
+import DashboardMiddleEastScreenArabic from './screens/DashboardMiddleEastScreenArabic'
+import DashboardCountryScreenArabic from './screens/DashboardCountryScreenArabic'
+import DashboardWorldScreenArabic from './screens/DashboardWorldScreenArabic'
+import NewsScreenArabic from './screens/NewsScreenArabic'
+import SettingsScreenArabic from './screens/SettingsScreenArabic'
 
-const Tab1 = createBottomTabNavigator();
 
 function MainTabs() {
   return (
