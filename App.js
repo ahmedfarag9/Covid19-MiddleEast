@@ -274,6 +274,17 @@ function Tabs2Arabic(props) {
         }
       }}
     >
+
+      <Tab2Arabic.Screen
+        name="DashboardWorldScreenArabic"
+        component={DashboardWorldScreenArabic}
+        initialParams={props.route.params}        
+        options={{
+          tabBarLabel: 'العالم',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
       />
 
 
