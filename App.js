@@ -44,6 +44,9 @@ function MyStack() {
 	<MainStack.Navigator initialRouteName="LanguagePageScreen" screenOptions={{ headerTintColor: '#a41034', headerStyle: { backgroundColor: '#fff'}, }}>
       <MainStack.Screen name="LanguagePageScreen" component={LanguagePageScreen} options={{title: 'Choose your language / اختر اللغة'}}/>
       <MainStack.Screen name="CountryPageScreen" component={CountryPageScreen} options={{title: 'Choose a country'}}/>
+      <MainStack.Screen name="CountryPageScreenArabic" component={CountryPageScreenArabic} options={{title: 'اختر البلد'}}/>
+      <MainStack.Screen name="MainTabsEnglish" component={MainTabsEnglish} options={{title: 'WELCOME TO COVID19 MIDDLE EAST'}}/>
+      <MainStack.Screen name="MainTabsArabic" component={MainTabsArabic} options={{title: 'أهلا بك فى كوفيد 19 الشرق الأوسط'}}/>
   </MainStack.Navigator>
   );
 }
