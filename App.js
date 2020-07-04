@@ -151,6 +151,17 @@ function MainTabsArabic(props) {
           ),
         }}
       />
+       {/* <Tab1Arabic.Screen
+        name="GraphsScreenArabic"
+        component={Tabs3Arabic}
+        initialParams={props.route.params.params}
+        options={{
+          tabBarLabel: 'جداول ومنحنيات',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      /> */}
 
     </Tab1Arabic.Navigator>
   );
