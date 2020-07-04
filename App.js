@@ -173,6 +173,17 @@ function MainTabsArabic(props) {
           ),
         }}
       />
+      {/* <Tab1Arabic.Screen
+        name="NewsScreenArabic"
+        component={NewsScreenArabic}
+        initialParams={props.route.params.params}
+        options={{
+          tabBarLabel: 'أخبار',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      /> */}
 
     </Tab1Arabic.Navigator>
   );
