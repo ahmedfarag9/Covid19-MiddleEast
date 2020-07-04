@@ -6,6 +6,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+// Start Screens
+import LanguagePageScreen from './screens/LanguagePageScreen'
+import CountryPageScreen from './screens/CountryPageScreen'
+import CountryPageScreenArabic from './screens/CountryPageScreenArabic'
+
+// English Screens
 import DailyUpdateScreen from './screens/DailyUpdateScreen'
 import GraphScreen1 from './screens/GraphScreen1'
 import GraphScreen2 from './screens/GraphScreen2'
