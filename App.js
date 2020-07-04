@@ -420,6 +420,17 @@ function Tabs3Arabic(props) {
           ),
         }}
       />
+      <Tab3Arabic.Screen
+        name="GraphScreen3Arabic"
+        component={GraphScreen3Arabic}
+        initialParams={props.route.params}        
+        options={{
+          tabBarLabel: 'اجمالى الوفيات',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
 
     </Tab3Arabic.Navigator>
   );
