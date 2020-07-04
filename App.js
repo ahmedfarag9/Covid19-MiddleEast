@@ -315,9 +315,10 @@ function Tabs2Arabic(props) {
 }
 
 
-const Tab3 = createBottomTabNavigator();
+// English Graphs Tab Nav
+const Tab3English = createMaterialTopTabNavigator();
 
-function MyTabs3() {
+function Tabs3English(props) {
   return (
     <Tab3.Navigator
       initialRouteName="GraphScreen1"
