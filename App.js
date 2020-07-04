@@ -131,6 +131,17 @@ const Tab1Arabic = createBottomTabNavigator();
 
 function MainTabsArabic(props) {
   return (
+    <Tab1Arabic.Navigator
+      initialRouteName="DailyUpdateScreenArabic"
+      tabBarOptions={{
+        style: {
+          marginBottom: 3,
+          paddingBottom: 8,
+        }
+      }}
+    >
+
+    </Tab1Arabic.Navigator>
   );
 }
 
