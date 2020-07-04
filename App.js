@@ -257,9 +257,16 @@ function Tabs2English(props) {
   );
 }
 
+
+// Arabic Dashboard tab Nav
+const Tab2Arabic = createMaterialTopTabNavigator();
+
+function Tabs2Arabic(props) {
+  return (
       />
 
-    </Tab2.Navigator>
+
+    </Tab2Arabic.Navigator>
   );
 }
 
