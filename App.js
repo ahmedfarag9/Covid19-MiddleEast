@@ -431,6 +431,17 @@ function Tabs3Arabic(props) {
           ),
         }}
       />
+      <Tab3Arabic.Screen
+        name="GraphScreen4Arabic"
+        component={GraphScreen4Arabic}
+        initialParams={props.route.params}        
+        options={{
+          tabBarLabel: 'الوفيات الجديدة',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
 
     </Tab3Arabic.Navigator>
   );
