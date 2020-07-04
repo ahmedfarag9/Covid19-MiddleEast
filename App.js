@@ -381,7 +381,12 @@ function Tabs3English(props) {
   );
 }
 
-    </Tab3.Navigator>
+
+// Arabic Graphs Tab Nav
+const Tab3Arabic = createMaterialTopTabNavigator();
+
+function Tabs3Arabic(props) {
+  return (
   );
 }
 
