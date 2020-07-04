@@ -126,8 +126,14 @@ function MainTabsEnglish(props) {
 }
 
 
+// Arabic Main tab Nav
+const Tab1Arabic = createBottomTabNavigator();
 
-const Tab2 = createBottomTabNavigator();
+function MainTabsArabic(props) {
+  return (
+  );
+}
+
 
 function MyTabs2() {
   return (
