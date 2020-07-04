@@ -298,6 +298,17 @@ function Tabs2Arabic(props) {
           ),
         }}
       />
+      {/* <Tab2Arabic.Screen
+        name="DashboardCountryScreenArabic"
+        component={DashboardCountryScreenArabic}
+        initialParams={props.route.params}        
+        options={{
+          tabBarLabel: 'الدولة',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      /> */}
 
     </Tab2Arabic.Navigator>
   );
