@@ -201,7 +201,10 @@ function MainTabsArabic(props) {
 }
 
 
-function MyTabs2() {
+// English Dashboard tab Nav
+const Tab2English = createMaterialTopTabNavigator();
+
+function Tabs2English(props) {
   return (
     <Tab2.Navigator
       initialRouteName="DashboardMiddleEastScreen"
