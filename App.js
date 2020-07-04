@@ -184,6 +184,17 @@ function MainTabsArabic(props) {
           ),
         }}
       /> */}
+      <Tab1Arabic.Screen
+        name="SettingsScreenArabic"
+        component={SettingsScreenArabic}
+        initialParams={props.route.params.params}
+        options={{
+          tabBarLabel: 'الاعدادات',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
 
     </Tab1Arabic.Navigator>
   );
