@@ -208,10 +208,12 @@ function Tabs2English(props) {
   return (
     <Tab2English.Navigator
       initialRouteName="DashboardMiddleEastScreen"
+      initialParams={props.route.params}
+      swipeEnabled= {false}        
       tabBarOptions={{
         style: {
-          marginBottom: 10,
-          paddingBottom: 8,
+          marginBottom: 0,
+          paddingBottom: 1,
         }
       }}
     >
