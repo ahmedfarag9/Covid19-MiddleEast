@@ -23,6 +23,12 @@ import DashboardWorldScreen from './screens/DashboardWorldScreen'
 import NewsScreen from './screens/NewsScreen'
 import SettingsScreen from './screens/SettingsScreen'
 
+// Arabic Screens
+import DailyUpdateScreenArabic from './screens/DailyUpdateScreenArabic'
+import GraphScreen1Arabic from './screens/GraphScreen1Arabic'
+import GraphScreen2Arabic from './screens/GraphScreen2Arabic'
+import GraphScreen3Arabic from './screens/GraphScreen3Arabic'
+import GraphScreen4Arabic from './screens/GraphScreen4Arabic'
 
 const Tab1 = createBottomTabNavigator();
 
