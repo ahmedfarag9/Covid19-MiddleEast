@@ -320,7 +320,7 @@ const Tab3English = createMaterialTopTabNavigator();
 
 function Tabs3English(props) {
   return (
-    <Tab3.Navigator
+    <Tab3English.Navigator
       initialRouteName="GraphScreen1"
       tabBarOptions={{
         style: {
@@ -329,7 +329,7 @@ function Tabs3English(props) {
         }
       }}
     >
-      <Tab3.Screen
+      <Tab3English.Screen
         name="GraphScreen1"
         component={GraphScreen1}
         options={{
@@ -339,7 +339,7 @@ function Tabs3English(props) {
           ),
         }}
       />
-      <Tab3.Screen
+      <Tab3English.Screen
         name="GraphScreen2"
         component={GraphScreen2}
         options={{
@@ -350,7 +350,7 @@ function Tabs3English(props) {
         }}
       />
 
-      <Tab3.Screen
+      <Tab3English.Screen
         name="GraphScreen3"
         component={GraphScreen3}
         options={{
@@ -360,7 +360,7 @@ function Tabs3English(props) {
           ),
         }}
       />
-      <Tab3.Screen
+      <Tab3English.Screen
         name="GraphScreen4"
         component={GraphScreen4}
         options={{
@@ -371,6 +371,9 @@ function Tabs3English(props) {
         }}
       />
 
+    </Tab3English.Navigator>
+  );
+}
 
     </Tab3.Navigator>
   );
