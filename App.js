@@ -387,6 +387,19 @@ const Tab3Arabic = createMaterialTopTabNavigator();
 
 function Tabs3Arabic(props) {
   return (
+    <Tab3Arabic.Navigator
+      initialRouteName="GraphScreen1Arabic"
+      initialParams={props.route.params} 
+      swipeEnabled= {false}               
+      tabBarOptions={{
+        style: {
+          marginBottom: 0,
+          paddingBottom: 1,
+        }
+      }}
+    >
+
+    </Tab3Arabic.Navigator>
   );
 }
 
