@@ -65,7 +65,7 @@ function MainTabsEnglish(props) {
         }
       }}
     >
-      <Tab1.Screen
+      <Tab1English.Screen
         name="DailyUpdateScreen"
         component={DailyUpdateScreen}
         options={{
@@ -75,19 +75,19 @@ function MainTabsEnglish(props) {
           ),
         }}
       />
-      <Tab1.Screen
-        name="GraphsScreen"
-        component={MyTabs3}
+       {/* <Tab1English.Screen
+        name="GraphsScreenEnglish"
+        component={Tabs3English}
         options={{
           tabBarLabel: 'Graphs',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
           ),
         }}
-      />
-      <Tab1.Screen
+      /> */}
+      <Tab1English.Screen
         name="DashboardMiddleEastScreen"
-        component={MyTabs2}
+        component={Tabs2English}
         options={{
           tabBarLabel: 'Dashboard',
           tabBarIcon: ({ color, size }) => (
@@ -95,7 +95,7 @@ function MainTabsEnglish(props) {
           ),
         }}
       />
-      <Tab1.Screen
+      {/* <Tab1English.Screen
         name="NewsScreen"
         component={NewsScreen}
         options={{
@@ -104,8 +104,8 @@ function MainTabsEnglish(props) {
             <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
           ),
         }}
-      />
-      <Tab1.Screen
+      /> */}
+      <Tab1English.Screen
         name="SettingsScreen"
         component={SettingsScreen}
         options={{
@@ -116,7 +116,7 @@ function MainTabsEnglish(props) {
         }}
       />
 
-    </Tab1.Navigator>
+    </Tab1English.Navigator>
   );
 }
 
