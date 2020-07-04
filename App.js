@@ -334,6 +334,7 @@ function Tabs3English(props) {
       <Tab3English.Screen
         name="GraphScreen1"
         component={GraphScreen1}
+        initialParams={props.route.params}        
         options={{
           tabBarLabel: 'Total Cases',
           tabBarIcon: ({ color, size }) => (
@@ -344,6 +345,7 @@ function Tabs3English(props) {
       <Tab3English.Screen
         name="GraphScreen2"
         component={GraphScreen2}
+        initialParams={props.route.params}        
         options={{
           tabBarLabel: 'New Cases',
           tabBarIcon: ({ color, size }) => (
@@ -355,6 +357,7 @@ function Tabs3English(props) {
       <Tab3English.Screen
         name="GraphScreen3"
         component={GraphScreen3}
+        initialParams={props.route.params}        
         options={{
           tabBarLabel: 'Total Deaths',
           tabBarIcon: ({ color, size }) => (
@@ -365,6 +368,7 @@ function Tabs3English(props) {
       <Tab3English.Screen
         name="GraphScreen4"
         component={GraphScreen4}
+        initialParams={props.route.params}        
         options={{
           tabBarLabel: 'New Deaths',
           tabBarIcon: ({ color, size }) => (
