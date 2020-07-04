@@ -51,10 +51,16 @@ function MyStack() {
   );
 }
 
+// English Main tab Nav
+const Tab1English = createBottomTabNavigator();
+
+function MainTabsEnglish(props) {
+  return (
+    <Tab1English.Navigator
       initialRouteName="DailyUpdateScreen"
       tabBarOptions={{
         style: {
-          marginBottom: 10,
+          marginBottom: 3,
           paddingBottom: 8,
         }
       }}
