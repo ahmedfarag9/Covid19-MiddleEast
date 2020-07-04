@@ -206,7 +206,7 @@ const Tab2English = createMaterialTopTabNavigator();
 
 function Tabs2English(props) {
   return (
-    <Tab2.Navigator
+    <Tab2English.Navigator
       initialRouteName="DashboardMiddleEastScreen"
       tabBarOptions={{
         style: {
@@ -216,7 +216,7 @@ function Tabs2English(props) {
       }}
     >
 
-      <Tab2.Screen
+      <Tab2English.Screen
         name="DashboardWorldScreen"
         component={DashboardWorldScreen}
         options={{
@@ -227,8 +227,8 @@ function Tabs2English(props) {
         }}
       />
 
-      <Tab2.Screen
-        name="DashboardMiddleEastScreenn"
+      <Tab2English.Screen
+        name="DashboardMiddleEastScreen"
         component={DashboardMiddleEastScreen}
         options={{
           tabBarLabel: 'Middle East',
@@ -237,7 +237,7 @@ function Tabs2English(props) {
           ),
         }}
       />
-      <Tab2.Screen
+      {/* <Tab2English.Screen
         name="DashboardCountryScreen"
         component={DashboardCountryScreen}
         options={{
@@ -246,6 +246,12 @@ function Tabs2English(props) {
             <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
           ),
         }}
+      /> */}
+
+    </Tab2English.Navigator>
+  );
+}
+
       />
 
     </Tab2.Navigator>
