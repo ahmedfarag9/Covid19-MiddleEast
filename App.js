@@ -140,6 +140,17 @@ function MainTabsArabic(props) {
         }
       }}
     >
+      <Tab1Arabic.Screen
+        name="DailyUpdateScreenArabic"
+        component={DailyUpdateScreenArabic}
+        initialParams={props.route.params.params}
+        options={{
+          tabBarLabel: 'التحديث اليومى',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
+          ),
+        }}
+      />
 
     </Tab1Arabic.Navigator>
   );
