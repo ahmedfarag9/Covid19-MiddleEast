@@ -38,8 +38,16 @@ import SettingsScreenArabic from './screens/SettingsScreenArabic'
 
 // Main stack Nav
 const MainStack = createStackNavigator();
+
+function MyStack() {
   return (
-    <Tab1.Navigator
+	<MainStack.Navigator initialRouteName="LanguagePageScreen" screenOptions={{ headerTintColor: '#a41034', headerStyle: { backgroundColor: '#fff'}, }}>
+      <MainStack.Screen name="LanguagePageScreen" component={LanguagePageScreen} options={{title: 'Choose your language / اختر اللغة'}}/>
+      <MainStack.Screen name="CountryPageScreen" component={CountryPageScreen} options={{title: 'Choose a country'}}/>
+  </MainStack.Navigator>
+  );
+}
+
       initialRouteName="DailyUpdateScreen"
       tabBarOptions={{
         style: {
