@@ -221,6 +221,7 @@ function Tabs2English(props) {
       <Tab2English.Screen
         name="DashboardWorldScreen"
         component={DashboardWorldScreen}
+        initialParams={props.route.params}        
         options={{
           tabBarLabel: 'World',
           tabBarIcon: ({ color, size }) => (
@@ -232,6 +233,7 @@ function Tabs2English(props) {
       <Tab2English.Screen
         name="DashboardMiddleEastScreen"
         component={DashboardMiddleEastScreen}
+        initialParams={props.route.params}        
         options={{
           tabBarLabel: 'Middle East',
           tabBarIcon: ({ color, size }) => (
@@ -242,6 +244,7 @@ function Tabs2English(props) {
       {/* <Tab2English.Screen
         name="DashboardCountryScreen"
         component={DashboardCountryScreen}
+        initialParams={props.route.params}        
         options={{
           tabBarLabel: 'Country',
           tabBarIcon: ({ color, size }) => (
