@@ -322,10 +322,12 @@ function Tabs3English(props) {
   return (
     <Tab3English.Navigator
       initialRouteName="GraphScreen1"
+      initialParams={props.route.params}
+      swipeEnabled= {false}                
       tabBarOptions={{
         style: {
-          marginBottom: 10,
-          paddingBottom: 8,
+          marginBottom: 0,
+          paddingBottom: 1,
         }
       }}
     >
