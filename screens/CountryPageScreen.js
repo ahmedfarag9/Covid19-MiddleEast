@@ -115,6 +115,9 @@ export default function CountryPageScreen({navigation}){
       }
 
       </Text>
+<Text style ={styles.text}> 
+            {'\n'} selected theme: {'\n'}          {CurrentTheme}        
+      </Text>
       <Text>{'\n'}{'\n'}{'\n'}{'\n'}{'\n'}</Text>
         <Button styles= {styles.Button} 
         title="Next"
