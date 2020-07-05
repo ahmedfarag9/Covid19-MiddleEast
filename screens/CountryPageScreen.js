@@ -94,6 +94,7 @@ export default function CountryPageScreen({navigation}){
         setCurrentTheme('White')
       }
   return (
+    <View style={styles.container}>
 
       <Button
         title="Egypt"
