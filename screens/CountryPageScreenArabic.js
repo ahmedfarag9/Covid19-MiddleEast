@@ -12,6 +12,10 @@ const ListOfCountriesNCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti'
                                'Lebanon', 'Libya', 'Mauritania', 'Morocco', 'Oman', 'Palestine', 'Qatar',
                                'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
 // 
+const renderItem = item => (
+
+  item.country
+  )
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
