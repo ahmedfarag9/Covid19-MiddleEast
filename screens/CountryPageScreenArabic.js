@@ -20,6 +20,7 @@ export default function CountryPageScreenArabic({navigation}) {
     const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
     const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages 
     const [ListOfCountriesN, setListOfCountriesN] = useState("")
+    const [BottonDis,setBotton]= useState(true)
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
