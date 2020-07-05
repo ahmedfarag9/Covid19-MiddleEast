@@ -30,18 +30,21 @@ export default function CountryPageScreen({navigation}){
     const [CurrentTheme,setCurrentTheme]= useState('White')
 
     const styles = StyleSheet.create({
-    justifyContent: "center",
-    flex: 1,
-    flexDirection: "column",
-    backgroundColor: "white",
-    //alignItems: 'center',
-    //paddingTop: 10,
-  },
+      container: {
+        flex: 1,
+        paddingTop: 70,
+        alignItems: "center",
+        backgroundColor: BackgroundColor
+      }
+    ,
+      text: { 
   text: {
-    textAlign: 'center',
-    //fontWeight: 'bold',
-    fontSize: 15
-  },
+      text: { 
+        fontSize : 24,
+        fontStyle : "italic",
+        fontWeight: "bold",
+        color: TextColor
+      },
     });  
 
 export default function CountryPageScreen({navigation}) {
