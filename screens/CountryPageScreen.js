@@ -121,7 +121,7 @@ export default function CountryPageScreen({navigation}){
       <Text style ={styles.text}> 
         Choose your theme {'\n'} 
         </Text>
-      </Text>
+        </Text>
       <Switch value ={DarkTheme}
       onValueChange={(value)=> setDarkTheme(value)}
       trackColor= {{true: "white"}}      
