@@ -119,6 +119,15 @@ export default function CountryPageScreen({navigation}){
           <Picker.Item label={ListOfCountriesN[5]} value={ListOfCountriesN[5]} />
           <Picker.Item label={ListOfCountriesN[6]} value={ListOfCountriesN[6]} />
           <Picker.Item label={ListOfCountriesN[7]} value={ListOfCountriesN[7]} />
+          <Picker.Item label={ListOfCountriesN[8]} value={ListOfCountriesN[8]} />
+          <Picker.Item label={ListOfCountriesN[9]} value={ListOfCountriesN[9]} />
+          <Picker.Item label={ListOfCountriesN[10]} value={ListOfCountriesN[10]} />
+          <Picker.Item label={ListOfCountriesN[11]} value={ListOfCountriesN[11]} />
+          <Picker.Item label={ListOfCountriesN[12]} value={ListOfCountriesN[12]} />
+          <Picker.Item label={ListOfCountriesN[13]} value={ListOfCountriesN[13]} />
+          <Picker.Item label={ListOfCountriesN[14]} value={ListOfCountriesN[14]} />
+          <Picker.Item label={ListOfCountriesN[15]} value={ListOfCountriesN[15]} />
+          <Picker.Item label={ListOfCountriesN[16]} value={ListOfCountriesN[16]} />
         </Picker>
       }
 
