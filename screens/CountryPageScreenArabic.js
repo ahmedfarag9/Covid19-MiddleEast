@@ -100,14 +100,19 @@ export default function CountryPageScreenArabic({navigation}) {
                          
       </View>
 
-      <Button
-        title="مصر"
-        onPress={() => navigation.navigate('MainTabsArabic', {
-          screen: 'DailyUpdateScreenArabic',
+          <Button
+         title="متابعة"
+         onPress={() => navigation.navigate('MainTabsArabic', {
+           screen: 'DailyUpdateScreenArabic',
+           params: { language: 'Arabic', country: 'Egypt' }, 
           params: { language: 'Arabic', country: 'Egypt' }, 
-        })
+           params: { language: 'Arabic', country: 'Egypt' }, 
+              })
+            } 
       }          
-      />
+            } 
+            disabled = {BottonDis}         
+          />
     </View>
   );
 }
