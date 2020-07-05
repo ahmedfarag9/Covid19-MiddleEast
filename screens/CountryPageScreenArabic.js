@@ -92,6 +92,13 @@ export default function CountryPageScreenArabic({navigation}) {
       }
   return (
     <View style={styles.container}>
+      <View>
+
+        <Text style ={styles.text}> 
+        اختر البلد 
+        </Text>
+                         
+      </View>
 
       <Button
         title="مصر"
