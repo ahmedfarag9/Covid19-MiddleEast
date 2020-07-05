@@ -75,6 +75,24 @@ export default function CountryPageScreen({navigation}){
         //setMiddleEastCountries(resultsTmp)
         setListOfCountriesN(resultsTmp)
       }
+      if (TotallCountries === "") {
+        GetCountriesNames()
+      }
+
+      //Check App theme
+      if (DarkTheme && WhiteTheme) {
+        setBackgroundColor('black')
+        setTextColor('white')
+        setWhiteTheme(false)
+        setCurrentTheme('Black')
+      }
+      else if (!DarkTheme && !WhiteTheme ) {
+        setBackgroundColor('white')
+        setTextColor('black')
+        setDarkTheme(false)
+        setWhiteTheme(true)
+        setCurrentTheme('White')
+      }
   return (
 
       <Button
