@@ -18,6 +18,8 @@ const renderItem = item => (
   )
 
 export default function CountryPageScreen({navigation}){
+    const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
+    
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
