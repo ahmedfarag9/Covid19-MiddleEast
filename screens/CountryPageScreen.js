@@ -29,8 +29,7 @@ export default function CountryPageScreen({navigation}){
     const [TextColor,setTextColor]= useState('black')
     const [CurrentTheme,setCurrentTheme]= useState('White')
 
-const styles = StyleSheet.create({
-  container: {
+    const styles = StyleSheet.create({
     justifyContent: "center",
     flex: 1,
     flexDirection: "column",
@@ -43,13 +42,7 @@ const styles = StyleSheet.create({
     //fontWeight: 'bold',
     fontSize: 15
   },
-  text2: {
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 30
-  },
-})  
-  
+    });  
 
 export default function CountryPageScreen({navigation}) {
 
