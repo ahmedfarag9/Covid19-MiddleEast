@@ -102,7 +102,19 @@ export default function CountryPageScreen({navigation}){
         </Text>
                          
       </View>
+      <Text>
+      { ListOfCountriesN && 
+        <Picker
+          selectedValue={SelectedValue}
+          style={{ height: 50, width: 160, color: TextColor}}
+          onValueChange={function(itemValue) {setSelectedValue(itemValue)
+          setBotton(false)}
+          }
+        >       
+        </Picker>
+      }
 
+      </Text>
         <Button styles= {styles.Button} 
         title="Next"
         disabled = {BottonDis}
