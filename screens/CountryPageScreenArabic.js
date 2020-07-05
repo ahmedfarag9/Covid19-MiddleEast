@@ -91,6 +91,7 @@ export default function CountryPageScreenArabic({navigation}) {
         setCurrentTheme('White')
       }
   return (
+    <View style={styles.container}>
 
       <Button
         title="مصر"
