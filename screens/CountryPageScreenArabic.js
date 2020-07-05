@@ -21,6 +21,11 @@ export default function CountryPageScreenArabic({navigation}) {
     const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages 
     const [ListOfCountriesN, setListOfCountriesN] = useState("")
     const [BottonDis,setBotton]= useState(true)
+    const [DarkTheme,setDarkTheme]= useState(false)
+    const [WhiteTheme,setWhiteTheme]= useState(true)
+    const [BackgroundColor,setBackgroundColor]= useState('white')
+    const [TextColor,setTextColor]= useState('black')
+    const [CurrentTheme,setCurrentTheme]= useState('White')
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
