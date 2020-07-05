@@ -114,6 +114,13 @@ export default function CountryPageScreen({navigation}){
         </Picker>
       }
 
+      <Text style ={styles.text}> 
+            {'\n'} selected country: {'\n'}     {SelectedValue}    {'\n'}{'\n'}{'\n'}           
+      </Text>
+
+      <Text style ={styles.text}> 
+        Choose your theme {'\n'} 
+        </Text>
       </Text>
 <Text style ={styles.text}> 
             {'\n'} selected theme: {'\n'}          {CurrentTheme}        
