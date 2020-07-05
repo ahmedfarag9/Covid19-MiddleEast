@@ -95,6 +95,13 @@ export default function CountryPageScreen({navigation}){
       }
   return (
     <View style={styles.container}>
+      <View>
+
+        <Text style ={styles.text}> 
+        Choose a Country
+        </Text>
+                         
+      </View>
 
       <Button
         title="Egypt"
