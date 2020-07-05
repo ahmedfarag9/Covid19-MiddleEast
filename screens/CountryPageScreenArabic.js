@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {Button, View, StyleSheet, Text} from 'react-native'
+import React, { useState } from "react";
+import { View, Picker, StyleSheet, Text, Switch, Button } from "react-native";
 
 
 const styles = StyleSheet.create({
