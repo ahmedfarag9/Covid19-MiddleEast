@@ -53,8 +53,28 @@ export default function CountryPageScreen({navigation}){
       }
     });  
 
-export default function CountryPageScreen({navigation}) {
+    const GetCountriesNames = async () => {
+        const results = await fetchCountriesDailyData()
+     
+        const Final = results.map(renderItem)
+        console.log(Final)
+              
+        //console.log(TotallCountries)
+        console.log("-------------------------------------")
+  
 
+        const resultsTmp = [];
+        for (const element of Final) {
+          // if (element.country in ListOfCountriesNCountries) {
+            if (ListOfCountriesNCountries.includes(element)) {
+            resultsTmp.push(element)
+          }
+        }   
+        //console.log(resultsTmp)
+        setTotallCountries(Final)
+        //setMiddleEastCountries(resultsTmp)
+        setListOfCountriesN(resultsTmp)
+      }
   return (
 
       <Button
