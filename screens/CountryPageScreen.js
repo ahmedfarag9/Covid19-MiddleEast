@@ -115,6 +115,7 @@ export default function CountryPageScreen({navigation}){
       }
 
       </Text>
+      <Text>{'\n'}{'\n'}{'\n'}{'\n'}{'\n'}</Text>
         <Button styles= {styles.Button} 
         title="Next"
         disabled = {BottonDis}
