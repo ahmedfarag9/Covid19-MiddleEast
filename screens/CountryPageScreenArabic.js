@@ -7,6 +7,11 @@ import { set } from "react-native-reanimated";
 import { DarkTheme } from "@react-navigation/native";
 //
 
+// testing 
+const ListOfCountriesNCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egypt', 'Iraq', 'Jordan', 'Kuwait',
+                               'Lebanon', 'Libya', 'Mauritania', 'Morocco', 'Oman', 'Palestine', 'Qatar',
+                               'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
+// 
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
