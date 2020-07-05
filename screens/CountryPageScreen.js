@@ -17,6 +17,7 @@ const renderItem = item => (
   item.country
   )
 
+export default function CountryPageScreen({navigation}){
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
@@ -41,8 +42,7 @@ const styles = StyleSheet.create({
 
 export default function CountryPageScreen({navigation}) {
 
-    return (
-      <View style={styles.container}>
+  return (
 
       <Button
         title="Egypt"
@@ -52,5 +52,5 @@ export default function CountryPageScreen({navigation}) {
       }          
       />
     </View>
-    )
-  }
+  );
+}
