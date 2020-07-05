@@ -58,6 +58,21 @@ export default function CountryPageScreenArabic({navigation}) {
               
         //console.log(TotallCountries)
         console.log("-------------------------------------")
+  
+
+        const resultsTmp = [];
+        for (const element of Final) {
+          // if (element.country in ListOfCountriesNCountries) {
+            if (ListOfCountriesNCountries.includes(element)) {
+            resultsTmp.push(element)
+          }
+        }   
+        //console.log(resultsTmp)
+        setTotallCountries(Final)
+        //setMiddleEastCountries(resultsTmp)
+        setListOfCountriesN(resultsTmp)
+      }
+      }
       }
   return (
 
