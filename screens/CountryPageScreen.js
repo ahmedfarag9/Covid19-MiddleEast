@@ -22,6 +22,7 @@ export default function CountryPageScreen({navigation}){
     
     const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages 
     const [ListOfCountriesN, setListOfCountriesN] = useState("")
+    const [BottonDis,setBotton]= useState(true)
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
