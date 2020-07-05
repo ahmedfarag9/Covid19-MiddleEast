@@ -45,6 +45,12 @@ export default function CountryPageScreen({navigation}){
         fontWeight: "bold",
         color: TextColor
       },
+      Button: { 
+        fontSize : 24,
+        fontStyle : "italic",
+        fontWeight: "bold",
+        color: 'red',
+      }
     });  
 
 export default function CountryPageScreen({navigation}) {

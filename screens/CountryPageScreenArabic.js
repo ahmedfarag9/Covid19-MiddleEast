@@ -50,8 +50,15 @@ export default function CountryPageScreenArabic({navigation}) {
       }
     });  
 
-export default function CountryPageScreenArabic({navigation}) {
-
+    const GetCountriesNames = async () => {
+        const results = await fetchCountriesDailyData()
+     
+        const Final = results.map(renderItem)
+        console.log(Final)
+              
+        //console.log(TotallCountries)
+        console.log("-------------------------------------")
+      }
   return (
 
       <Button
