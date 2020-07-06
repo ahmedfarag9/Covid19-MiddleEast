@@ -7,5 +7,8 @@ import {fetchCountriesDailyData} from '../Api'
 export default function DashboardCountryScreen() {
 
   return (
+    <View>
+      <Text>Default View</Text>
+    </View>
   )
 }

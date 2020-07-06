@@ -5,5 +5,8 @@ export default function GraphsScreen3Arabic()  {
 
 
     return (
+      <View>
+      <Text>Default View</Text>
+    </View>      
     )
   }
