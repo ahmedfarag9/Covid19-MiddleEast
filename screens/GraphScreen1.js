@@ -6,6 +6,9 @@ import {Button, View, StyleSheet, Text, ScrollView} from 'react-native'
     //Country()
   
     return (
+      <View>
+        <Text>Default View</Text>
+      </View>      
     )
   }
   
