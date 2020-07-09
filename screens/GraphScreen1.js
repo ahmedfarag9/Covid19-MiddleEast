@@ -19,10 +19,10 @@ const styles = StyleSheet.create({
   const processTotalCases = item => (
     parseInt(item.Confirmed)
   )
-    return (
+  export default function GraphsScreen1(){
+      return (
       <View>
         <Text>Default View</Text>
       </View>      
-    )
-  }
-  
+      )
+    }
