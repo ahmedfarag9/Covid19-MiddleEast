@@ -13,8 +13,12 @@ const styles = StyleSheet.create({
       textAlign: 'center',
     },
   })
-    //Country()
-  
+  const processDates = item => (
+    item.Date
+  )
+  const processTotalCases = item => (
+    parseInt(item.Confirmed)
+  )
     return (
       <View>
         <Text>Default View</Text>
