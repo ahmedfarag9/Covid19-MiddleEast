@@ -5,8 +5,14 @@ import {fetchCountryData, fetchCountryID} from '../Api'
 import { Dimensions } from "react-native";
 import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, StackedBarChart} from "react-native-chart-kit"
 
-  export default function GraphsScreen1() {
-  
+const styles = StyleSheet.create({
+    container: {
+      flex: 1, padding: 16, paddingTop: 30, backgroundColor: 'black' 
+    },
+    text: {
+      textAlign: 'center',
+    },
+  })
     //Country()
   
     return (
