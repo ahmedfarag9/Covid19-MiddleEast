@@ -56,8 +56,7 @@ const styles = StyleSheet.create({
 
 
       return (
-      <View>
-        <Text>Default View</Text>
-      </View>      
+        <ScrollView horizontal={true}>
+        </ScrollView>
       )
     }
