@@ -57,6 +57,8 @@ const styles = StyleSheet.create({
 
       return (
         <ScrollView horizontal={true}>
+        <View  style={styles.container}>
+        </View>
         </ScrollView>
       )
     }
