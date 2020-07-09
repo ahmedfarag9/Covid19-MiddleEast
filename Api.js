@@ -34,6 +34,28 @@ export const fetchCountriesDailyData = async () => {
 
 
 
+// Fetch data to feed graphscreens
+export const fetchCountryID = async (input) => {
+  //console.log(CountryID)
+
+
+
+  //const url = 'https://api.covid19api.com/live/country/Egypt/status/confirmed/date/2020-03-21T13:13:30Z' 
+  //const url = 'https://api.covid19api.com/live/country/' +input+'/status/confirmed/date/2020-03-21T13:13:30Z' 
+  //const url = 'https://api.covid19api.com/live/country/egypt/status/confirmed/date/2020-03-21T13:13:30Z' 
+  const url = 'https://corona.lmao.ninja/v2/historical/'+input+''
+  
+
+	const response = await fetch(url)
+    const result = await response.json()
+  console.log(result)
+
+	//const response = await fetch('http://www.omdbapi.com/?apikey=4e59c02d&r=json&s=Avengers')
+  //console.log(result)
+
+	return result
+	
+}
 
 
 
