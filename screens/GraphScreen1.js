@@ -20,6 +20,9 @@ const styles = StyleSheet.create({
     parseInt(item.Confirmed)
   )
   export default function GraphsScreen1(){
+
+    const [Dates, setDates] = useState(null)
+    const [TotalCases, setTotalCases] = useState(null) 
       return (
       <View>
         <Text>Default View</Text>
