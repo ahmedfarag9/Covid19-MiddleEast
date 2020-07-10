@@ -49,6 +49,15 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
 
         <View style={{ flex: 1, alignItems: "center", backgroundColor: "white"}}>
       </View> 
+
+
+
+        {/* <Button
+          title="Refresh"
+          onPress={() => {
+            GetCountry()
+          }}
+        /> */}
       </View>
       </ScrollView>
     )
