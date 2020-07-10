@@ -29,6 +29,11 @@ const renderItem = item => (
   )
 
 
+  const processTotalDeaths = item => (
+    parseInt(item.deaths)
+  )  
+
+
 export default function CountryPageScreen({navigation}){
     const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
     
