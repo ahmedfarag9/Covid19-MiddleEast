@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
       backgroundColor: "white",
       alignItems: 'center',
       paddingTop: 10,
-      paddingBottom: 7,
-      paddingLeft: 20,
-      paddingRight: 20,
+      paddingBottom: 0,
+      paddingLeft: 0,
+      paddingRight: 0,
       alignContent : "stretch"
     },
     container2:{
