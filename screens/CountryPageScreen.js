@@ -212,14 +212,30 @@ export default function CountryPageScreen({navigation}){
         <Button styles= {styles.Button} 
         title="Next"
         disabled = {BottonDis}
-         onPress={() => navigation.navigate('MainTabsEnglish', {
-           params: { language: 'English', country: 'Egypt' }, 
-          params: { language: 'English', country: 'Egypt' }, 
-           params: { language: 'English', country: 'Egypt' }, 
-          })
-          }          
+         onPress={() => navigation.navigate('MainTabsEnglish', { 
+          params: { 
+            language: 'English',
+            country: 'Egypt' , 
+            TotalDeaths: TotalDeaths, 
+            Dates: Dates,
+            TotalCountriesNames : TotallCountries,
+            MiddleEastCountries: ListOfCountriesN,
+            ChossenCountry: SelectedValue,
+            DarkTheme: DarkTheme,
+            WhiteTheme:WhiteTheme,
+            CurrentTheme: CurrentTheme,
+            BackgroundColor:BackgroundColor,
+            TextColor:TextColor,
+
+          }   
+        }
       }          
+        }
+        )
+      }   
           }          
+      }   
+          // onPress = {()=> GetCountry("Egypt")}         
         />
     </View>
   );
