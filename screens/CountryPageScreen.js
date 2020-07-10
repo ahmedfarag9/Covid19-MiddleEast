@@ -122,6 +122,11 @@ export default function CountryPageScreen({navigation}){
         <Text style ={styles.text}> 
         Choose a Country
         </Text>
+        {/* {Dates && 
+        <Text>
+            {Dates[0]}
+        </Text>
+        } */}
                          
       </View>
       <Text>
