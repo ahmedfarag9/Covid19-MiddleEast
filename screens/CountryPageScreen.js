@@ -97,6 +97,12 @@ export default function CountryPageScreen({navigation}){
         //setMiddleEastCountries(resultsTmp)
         setListOfCountriesN(resultsTmp)
       }
+
+
+      const test = function(itemValue) {setSelectedValue(itemValue)
+        setBotton(false)
+        GetCountry(SelectedValue)
+      }
       if (TotallCountries === "") {
         GetCountriesNames()
       }
