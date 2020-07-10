@@ -165,8 +165,7 @@ export default function CountryPageScreen({navigation}){
         <Picker
           selectedValue={SelectedValue}
           style={{ height: 50, width: 160, color: TextColor}}
-          onValueChange={function(itemValue) {setSelectedValue(itemValue)
-          setBotton(false)}
+          onValueChange={(itemValue) => test(itemValue)
           }
         >       
           <Picker.Item label={ListOfCountriesN[0]} value={ListOfCountriesN[0]} />
