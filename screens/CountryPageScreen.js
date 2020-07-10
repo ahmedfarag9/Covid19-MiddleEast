@@ -46,6 +46,12 @@ export default function CountryPageScreen({navigation}){
     const [TextColor,setTextColor]= useState('black')
     const [CurrentTheme,setCurrentTheme]= useState('White')
 
+
+    // states for graphscreen
+    const [Dates, setDates] = useState(null)
+    const [TotalDeaths, setTotalDeaths] = useState(null) 
+
+
     const styles = StyleSheet.create({
       container: {
         flex: 1,
