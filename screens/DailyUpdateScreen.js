@@ -205,6 +205,7 @@ function Countries(props) {
 
       <View style={[styles.container2,{}]}>
         <Text style={styles.text2}>{Country.country}</Text>
+        <Text style={styles.text2}>   1/1/2020</Text>
       </View>
 
       <View style={styles.container3}>
