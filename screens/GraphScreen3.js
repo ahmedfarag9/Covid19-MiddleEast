@@ -7,12 +7,15 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
 
 
   export default function GraphScreen3({route}){
-    },
-    text: {
-      textAlign: 'center',
-    },
-  })
-
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1, padding: 16, paddingTop: 30, backgroundColor: 'black' 
+      },
+      text: {
+        textAlign: 'center',
+      },
+    })
+  
     return (
       <View>
       <Text>Default View</Text>
