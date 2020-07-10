@@ -61,8 +61,7 @@ export default function CountryPageScreen({navigation}){
       }
     ,
       text: { 
-  text: {
-      text: { 
+      
         fontSize : 24,
         fontStyle : "italic",
         fontWeight: "bold",
