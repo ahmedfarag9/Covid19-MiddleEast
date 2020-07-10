@@ -230,10 +230,6 @@ export default function CountryPageScreen({navigation}){
           }   
       }
          )          
-        )
-         )          
-          }   
-      }   
           }   
           />
     </View>
