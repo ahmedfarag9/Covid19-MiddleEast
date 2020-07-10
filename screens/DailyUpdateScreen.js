@@ -252,11 +252,19 @@ function Countries(props) {
         </View>
       </View>
 
-      <Button
+
+
+      {/* <Button
         title="Refresh"
         onPress={() => {
           GetCountries()
         }}
+      /> */}
+
+      {/* <Text>{"\n"}</Text> */}
+
+      {/* // Display a banner */}
+      <AdMobBanner
       />
 
 
