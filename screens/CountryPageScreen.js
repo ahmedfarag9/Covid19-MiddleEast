@@ -22,6 +22,13 @@ const renderItem = item => (
   item.country
   )
 
+
+
+  const processDates = item => (
+    item.Date
+  )
+
+
 export default function CountryPageScreen({navigation}){
     const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
     
