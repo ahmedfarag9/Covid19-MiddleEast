@@ -228,13 +228,10 @@ export default function CountryPageScreen({navigation}){
             TextColor:TextColor,
 
           }   
-      }          
+      }
+         )          
           }   
-        }
-        )
-      }   
-          // onPress = {()=> GetCountry("Egypt")}         
-        />
+          />
     </View>
   );
 }

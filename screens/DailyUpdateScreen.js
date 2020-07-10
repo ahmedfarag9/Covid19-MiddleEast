@@ -2,6 +2,14 @@ import * as React from 'react'
 import { useState } from 'react'
 import {Button, View, StyleSheet, Text} from 'react-native'
 import {fetchCountriesDailyData} from '../Api'
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
+
 
 const styles = StyleSheet.create({
     container: {
@@ -11,9 +19,9 @@ const styles = StyleSheet.create({
       backgroundColor: "white",
       alignItems: 'center',
       paddingTop: 10,
-      paddingBottom: 7,
-      paddingLeft: 20,
-      paddingRight: 20,
+      paddingBottom: 0,
+      paddingLeft: 0,
+      paddingRight: 0,
       alignContent : "stretch"
     },
     container2:{
@@ -191,12 +199,17 @@ function Countries(props) {
   
   //GetCountries()
 
+  // Set global test device ID
+  setTestDeviceIDAsync('ANDROID');
+
+
   return (
 
     <View style={styles.container}>
 
       <View style={[styles.container2,{}]}>
         <Text style={styles.text2}>{Country.country}</Text>
+        <Text style={styles.text2}>   1/1/2020</Text>
       </View>
 
       <View style={styles.container3}>
@@ -239,11 +252,23 @@ function Countries(props) {
         </View>
       </View>
 
-      <Button
+
+
+      {/* <Button
         title="Refresh"
         onPress={() => {
           GetCountries()
         }}
+      /> */}
+
+      {/* <Text>{"\n"}</Text> */}
+
+      {/* // Display a banner */}
+      <AdMobBanner
+        bannerSize="banner"
+        adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+        servePersonalizedAds // true or false
+        //onDidFailToReceiveAdWithError={this.bannerError} 
       />
 
 
