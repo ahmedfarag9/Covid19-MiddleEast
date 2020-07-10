@@ -45,6 +45,10 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
 
       <View  style={styles.container}>
         <Text>Total Deaths in Egypt</Text>
+
+
+        <View style={{ flex: 1, alignItems: "center", backgroundColor: "white"}}>
+      </View> 
       </View>
       </ScrollView>
     )
