@@ -40,8 +40,7 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
       };     
 
     return (
-      <View>
-      <Text>Default View</Text>
-    </View>      
+      <ScrollView horizontal={true}>
+      </ScrollView>
     )
   }
