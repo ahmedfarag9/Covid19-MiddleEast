@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Picker, StyleSheet, Text, Switch, Button } from "react-native";
 
 //testing 
-import {fetchCountriesDailyData} from '../Api'
+import {fetchCountriesDailyData,fetchCountryID} from '../Api'
 import { set } from "react-native-reanimated";
 import { DarkTheme } from "@react-navigation/native";
 //
@@ -11,11 +11,28 @@ import { DarkTheme } from "@react-navigation/native";
 const ListOfCountriesNCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egypt', 'Iraq', 'Jordan', 'Kuwait',
                                'Lebanon', 'Libya', 'Mauritania', 'Morocco', 'Oman', 'Palestine', 'Qatar',
                                'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
+
+
+const ListOfCoubrtiesNamesAPI2 = ['Algeria',"Bahrain","Comoros","Djibouti", "Egypt","Iraq","Jordan",
+                                  "Lebanon","Libya","Mauritania","Morocco","Oman","Palestine","Qatar",
+                                  "Saudi Arabia","Somalia","Sudan","Syria","Tunisia","United Arab Emirates","Yemen"]
 // 
 const renderItem = item => (
 
   item.country
   )
+
+
+
+  const processDates = item => (
+    item.Date
+  )
+
+
+  const processTotalDeaths = item => (
+    parseInt(item.deaths)
+  )  
+
 
 export default function CountryPageScreen({navigation}){
     const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
@@ -29,6 +46,12 @@ export default function CountryPageScreen({navigation}){
     const [TextColor,setTextColor]= useState('black')
     const [CurrentTheme,setCurrentTheme]= useState('White')
 
+
+    // states for graphscreen
+    const [Dates, setDates] = useState(null)
+    const [TotalDeaths, setTotalDeaths] = useState(null) 
+
+
     const styles = StyleSheet.create({
       container: {
         flex: 1,
@@ -38,8 +61,7 @@ export default function CountryPageScreen({navigation}){
       }
     ,
       text: { 
-  text: {
-      text: { 
+      
         fontSize : 24,
         fontStyle : "italic",
         fontWeight: "bold",
@@ -75,6 +97,37 @@ export default function CountryPageScreen({navigation}){
         //setMiddleEastCountries(resultsTmp)
         setListOfCountriesN(resultsTmp)
       }
+
+
+      const test = function(itemValue) {setSelectedValue(itemValue)
+        setBotton(false)
+        GetCountry(SelectedValue)
+      }
+
+
+
+
+      const GetCountry = async (input) => {
+        const results = await fetchCountryID(input)
+  
+        //console.log(results)
+        const x = results.map(processDates)
+        setDates(x)
+        //console.log(x)
+        //console.log(Dates)
+   
+        
+        const y = results.map(processTotalDeaths)
+        setTotalDeaths(y) 
+        //console.log(y)
+        //console.log(TotalDeaths)    
+      }
+
+      // if (SelectedValue !== "" ){
+      //   GetCountry("Egypt")
+      // }
+
+
       if (TotallCountries === "") {
         GetCountriesNames()
       }
@@ -100,6 +153,11 @@ export default function CountryPageScreen({navigation}){
         <Text style ={styles.text}> 
         Choose a Country
         </Text>
+        {/* {Dates && 
+        <Text>
+            {Dates[0]}
+        </Text>
+        } */}
                          
       </View>
       <Text>
@@ -107,8 +165,7 @@ export default function CountryPageScreen({navigation}){
         <Picker
           selectedValue={SelectedValue}
           style={{ height: 50, width: 160, color: TextColor}}
-          onValueChange={function(itemValue) {setSelectedValue(itemValue)
-          setBotton(false)}
+          onValueChange={(itemValue) => test(itemValue)
           }
         >       
           <Picker.Item label={ListOfCountriesN[0]} value={ListOfCountriesN[0]} />
@@ -155,14 +212,28 @@ export default function CountryPageScreen({navigation}){
         <Button styles= {styles.Button} 
         title="Next"
         disabled = {BottonDis}
-         onPress={() => navigation.navigate('MainTabsEnglish', {
-           params: { language: 'English', country: 'Egypt' }, 
-          params: { language: 'English', country: 'Egypt' }, 
-           params: { language: 'English', country: 'Egypt' }, 
-          })
-          }          
+         onPress={() => navigation.navigate('MainTabsEnglish', { 
+          params: { 
+            language: 'English',
+            country: 'Egypt' , 
+            TotalDeaths: TotalDeaths, 
+            Dates: Dates,
+            TotalCountriesNames : TotallCountries,
+            MiddleEastCountries: ListOfCountriesN,
+            ChossenCountry: SelectedValue,
+            DarkTheme: DarkTheme,
+            WhiteTheme:WhiteTheme,
+            CurrentTheme: CurrentTheme,
+            BackgroundColor:BackgroundColor,
+            TextColor:TextColor,
+
+          }   
       }          
-          }          
+          }   
+        }
+        )
+      }   
+          // onPress = {()=> GetCountry("Egypt")}         
         />
     </View>
   );
