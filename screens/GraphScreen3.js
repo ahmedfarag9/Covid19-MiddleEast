@@ -6,11 +6,7 @@ import { Dimensions } from "react-native";
 import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, StackedBarChart} from "react-native-chart-kit"
 
 
-export default function GraphsScreen3()  {
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1, padding: 16, paddingTop: 30, backgroundColor: 'black' 
+  export default function GraphScreen3({route}){
     },
     text: {
       textAlign: 'center',
