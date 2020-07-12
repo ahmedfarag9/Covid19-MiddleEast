@@ -86,6 +86,13 @@ const styles = StyleSheet.create({
       <ScrollView horizontal={true}>
       <View  style={styles.container}>
         <Text>Daily New Deaths in Egypt</Text>
+
+        <Button
+            title="Refresh"
+            onPress={() => {
+              GetCountry()
+            }}
+          />
         </View>
       </ScrollView>
     )
