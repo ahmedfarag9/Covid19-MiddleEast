@@ -30,6 +30,11 @@ const styles = StyleSheet.create({
 
   export default function GraphsScreen4()  {
 
+
+
+    const [Dates, setDates] = useState(null)
+      const [NewDeaths, setNewDeaths] = useState(null) 
+      
     return (
       <View>
       <Text>Default View</Text>
