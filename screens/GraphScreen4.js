@@ -28,11 +28,11 @@ const styles = StyleSheet.create({
   )
 
 
-export default function GraphsScreen4()  {
+  export default function GraphsScreen4()  {
 
     return (
       <View>
       <Text>Default View</Text>
     </View>      
     )
-  }
+  } 
