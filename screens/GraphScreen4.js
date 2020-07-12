@@ -55,6 +55,33 @@ const styles = StyleSheet.create({
   
       
      
+      const data = {
+          labels: Dates,
+          //datasets: TotalCases,
+          datasets: [
+          {
+            data: NewDeaths
+          }
+          ]
+        };
+
+    // const data = {
+    //     labels: ["Jan 1", "Jan 2", "Jan 3", "Jan 4", "Jan 5", "Jan 6",
+    //     "Jan 7", "Jan 8", "Jan 9", "Jan 10", "Jan 11", "Jan 12",
+    //     "Jan 13", "Jan 14", "Jan 15", "Jan 16", "Jan 17", "Jan 18",
+    //     "Jan 19", "Jan 20", "Jan 21", "Jan 21", "Jan 22", "Jan 23",
+    //     "Jan 24", "Jan 25", "Jan 26", "Jan 27", "Jan 28", "Jan 29",
+    //     "Jan 30",
+    //   ],
+    //   datasets: [
+    //     {
+    //       data: [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+    //     }
+    //   ]
+    
+    //   };
+    
+    
     return (
       <View>
       <Text>Default View</Text>
