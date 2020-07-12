@@ -15,6 +15,13 @@ const styles = StyleSheet.create({
     },
   })
 
+  
+
+
+  const processDates = item => (
+    item.Date
+  )
+
 export default function GraphsScreen4()  {
 
     return (
