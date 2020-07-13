@@ -80,10 +80,7 @@ export default function CountryPageScreen({navigation}){
         color: 'red',
       }
     });  
-  
 
-
-    // testing
     const GetCountriesNames = async () => {
         const results = await fetchCountriesDailyData()
      
@@ -106,8 +103,37 @@ export default function CountryPageScreen({navigation}){
         //setMiddleEastCountries(resultsTmp)
         setListOfCountriesN(resultsTmp)
       }
+
+
+      const test = function(itemValue) {setSelectedValue(itemValue)
+        setBotton(false)
+        GetCountry(SelectedValue)
+      }
+
+
+
+
+      const GetCountry = async (input) => {
+        const results = await fetchCountryID(input)
   
-      
+        //console.log(results)
+        const x = results.map(processDates)
+        setDates(x)
+        //console.log(x)
+        //console.log(Dates)
+   
+        
+        const y = results.map(processTotalDeaths)
+        setTotalDeaths(y) 
+        //console.log(y)
+        //console.log(TotalDeaths)    
+      }
+
+      // if (SelectedValue !== "" ){
+      //   GetCountry("Egypt")
+      // }
+
+
       if (TotallCountries === "") {
         GetCountriesNames()
       }
