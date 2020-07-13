@@ -216,7 +216,9 @@ export default function CountryPageScreen({navigation}){
       </Text>
 
       <Text style ={styles.text}> 
+          اضغط لتفعيل الوضع الليلى  {'\n'} 
         اضغط لتفعيل الوضع الليلى  {'\n'} 
+          اضغط لتفعيل الوضع الليلى  {'\n'} 
         </Text>
 
         </Text>
