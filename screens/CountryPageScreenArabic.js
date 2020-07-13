@@ -67,16 +67,17 @@ export default function CountryPageScreen({navigation}){
       }
     ,
       text: { 
+      
         fontSize : 24,
         fontStyle : "italic",
         fontWeight: "bold",
         color: TextColor
       },
       Button: { 
-        //fontSize : 24,
-        //fontStyle : "italic",
-        //fontWeight: "bold",
-        //color: 'red',
+        fontSize : 24,
+        fontStyle : "italic",
+        fontWeight: "bold",
+        color: 'red',
       }
     });  
   
