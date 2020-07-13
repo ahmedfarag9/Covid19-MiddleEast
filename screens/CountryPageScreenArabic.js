@@ -229,11 +229,8 @@ export default function CountryPageScreen({navigation}){
       </Text>
 
       <Text>{'\n'}{'\n'}{'\n'}{'\n'}{'\n'}</Text>
-
-
-      {/* <Button 
-        title = "Next"
-        style ={styles.Button}
+        <Button styles= {styles.Button} 
+        title="متابعة"
         disabled = {BottonDis}
         /> */}
 
