@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Picker, StyleSheet, Text, Switch, Button } from "react-native";
 
 //testing 
-import {fetchCountriesDailyData} from '../Api'
+import {fetchCountriesDailyData,fetchCountryID} from '../Api'
 import { set } from "react-native-reanimated";
 import { DarkTheme } from "@react-navigation/native";
 //
@@ -12,31 +12,34 @@ import { DarkTheme } from "@react-navigation/native";
 const ListOfCountriesNCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egypt', 'Iraq', 'Jordan', 'Kuwait',
                                'Lebanon', 'Libya', 'Mauritania', 'Morocco', 'Oman', 'Palestine', 'Qatar',
                                'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
+//
+
+const ListOfCoubrtiesNamesAPI2 = ['Algeria',"Bahrain","Comoros","Djibouti", "Egypt","Iraq","Jordan",
+                                  "Lebanon","Libya","Mauritania","Morocco","Oman","Palestine","Qatar",
+                                  "Saudi Arabia","Somalia","Sudan","Syria","Tunisia","United Arab Emirates","Yemen"]
 // 
-
-
-
 const renderItem = item => (
 
   item.country
   )
 
 
-export default function CountryPageScreenArabic({navigation}) {
-  
+  const processDates = item => (
+    item.Date
+  )
 
 
+  const processTotalDeaths = item => (
+    parseInt(item.deaths)
+  )  
+
+
+export default function CountryPageScreen({navigation}){
     const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
     
-    // testing 
-    //const [MiddleEastCountries,setMiddleEastCountries ] = useState("") // to pass over to the next pages 
     const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages 
     const [ListOfCountriesN, setListOfCountriesN] = useState("")
-
-    //
     const [BottonDis,setBotton]= useState(true)
-
-    //Theme values 
     const [DarkTheme,setDarkTheme]= useState(false)
     const [WhiteTheme,setWhiteTheme]= useState(true)
     const [BackgroundColor,setBackgroundColor]= useState('white')
@@ -44,7 +47,11 @@ export default function CountryPageScreenArabic({navigation}) {
     const [CurrentTheme,setCurrentTheme]= useState('White')
 
 
-  
+    // states for graphscreen
+    const [Dates, setDates] = useState(null)
+    const [TotalDeaths, setTotalDeaths] = useState(null) 
+
+
     const styles = StyleSheet.create({
       container: {
         flex: 1,
@@ -54,22 +61,20 @@ export default function CountryPageScreenArabic({navigation}) {
       }
     ,
       text: { 
+      
         fontSize : 24,
         fontStyle : "italic",
         fontWeight: "bold",
         color: TextColor
       },
       Button: { 
-        //fontSize : 24,
-        //fontStyle : "italic",
-        //fontWeight: "bold",
-        //color: 'red',
+        fontSize : 24,
+        fontStyle : "italic",
+        fontWeight: "bold",
+        color: 'red',
       }
     });  
-  
 
-
-    // testing
     const GetCountriesNames = async () => {
         const results = await fetchCountriesDailyData()
      
@@ -92,8 +97,37 @@ export default function CountryPageScreenArabic({navigation}) {
         //setMiddleEastCountries(resultsTmp)
         setListOfCountriesN(resultsTmp)
       }
+
+
+      const test = function(itemValue) {setSelectedValue(itemValue)
+        setBotton(false)
+        GetCountry(SelectedValue)
+      }
+
+
+
+
+      const GetCountry = async (input) => {
+        const results = await fetchCountryID(input)
   
-      
+        //console.log(results)
+        const x = results.map(processDates)
+        setDates(x)
+        //console.log(x)
+        //console.log(Dates)
+   
+        
+        const y = results.map(processTotalDeaths)
+        setTotalDeaths(y) 
+        //console.log(y)
+        //console.log(TotalDeaths)    
+      }
+
+      // if (SelectedValue !== "" ){
+      //   GetCountry("Egypt")
+      // }
+
+
       if (TotallCountries === "") {
         GetCountriesNames()
       }
@@ -112,18 +146,6 @@ export default function CountryPageScreenArabic({navigation}) {
         setWhiteTheme(true)
         setCurrentTheme('White')
       }
-      
- 
-      // fecthing data from the API to display it 
-
-
-      // const handlebottonchange = () => {
-      //   if (SelectedValue!= ""){
-      //     setBotton(false)
-      //   }
-      // }
-
-
   return (
     <View style={styles.container}>
       <View>
@@ -131,6 +153,11 @@ export default function CountryPageScreenArabic({navigation}) {
         <Text style ={styles.text}> 
         اختر البلد 
         </Text>
+        {/* {Dates && 
+        <Text>
+            {Dates[0]}
+        </Text>
+        } */}
                          
       </View>
       <Text>
@@ -138,8 +165,7 @@ export default function CountryPageScreenArabic({navigation}) {
         <Picker
           selectedValue={SelectedValue}
           style={{ height: 50, width: 160, color: TextColor}}
-          onValueChange={function(itemValue) {setSelectedValue(itemValue)
-          setBotton(false)}
+          onValueChange={(itemValue) => test(itemValue)
           }
         >       
           <Picker.Item label={ListOfCountriesN[0]} value={ListOfCountriesN[0]} />
@@ -166,46 +192,48 @@ export default function CountryPageScreenArabic({navigation}) {
           <Picker.Item label={ListOfCountriesN[21]} value={ListOfCountriesN[21]} />      
         </Picker>
       }
-      
+
       <Text style ={styles.text}> 
-            {'\n'} البلد المختارة: {'\n'}     {SelectedValue}    {'\n'}{'\n'}{'\n'}           
+            {'\n'} البلد المختارة: {'\n'}     {SelectedValue}    {'\n'}{'\n'}{'\n'}            
       </Text>
 
       <Text style ={styles.text}> 
-        اضغط لتفعيل الوضع الليلى  {'\n'} 
-        </Text>
-
+          اضغط لتفعيل الوضع الليلى  {'\n'}        </Text>
         </Text>
       <Switch value ={DarkTheme}
       onValueChange={(value)=> setDarkTheme(value)}
       trackColor= {{true: "white"}}      
       />
-
-    <Text style ={styles.text}> 
+<Text style ={styles.text}> 
             {'\n'} الوضع الحالى: {'\n'}          {CurrentTheme}        
       </Text>
-
       <Text>{'\n'}{'\n'}{'\n'}{'\n'}{'\n'}</Text>
-
-
-      {/* <Button 
-        title = "Next"
-        style ={styles.Button}
+        <Button styles= {styles.Button} 
+        title="متابعة"
         disabled = {BottonDis}
-        /> */}
+         onPress={() => navigation.navigate('MainTabsEnglish', { 
+          params: { 
+            language: 'English',
+            country: 'Egypt' , 
+            TotalDeaths: TotalDeaths, 
+            Dates: Dates,
+            TotalCountriesNames : TotallCountries,
+            MiddleEastCountries: ListOfCountriesN,
+            ChossenCountry: SelectedValue,
+            DarkTheme: DarkTheme,
+            WhiteTheme:WhiteTheme,
+            CurrentTheme: CurrentTheme,
+            BackgroundColor:BackgroundColor,
+            TextColor:TextColor,
 
-          <Button
-         title="متابعة"
-         onPress={() => navigation.navigate('MainTabsArabic', {
-           screen: 'DailyUpdateScreenArabic',
-           params: { language: 'Arabic', country: 'Egypt' }, 
-              })
-            } 
-            disabled = {BottonDis}         
-          />
-
-
-
+          }
+      }    
+          }   
+        }
+        )
+      }   
+          // onPress = {()=> GetCountry("Egypt")}         
+        />
     </View>
   );
 }
@@ -231,45 +259,5 @@ export default function CountryPageScreenArabic({navigation}) {
 
 
 
-// import * as React from 'react';
-// import {Button, View, StyleSheet, Text} from 'react-native'
 
 
-// const styles = StyleSheet.create({
-//   container: {
-//     justifyContent: "center",
-//     flex: 1,
-//     flexDirection: "column",
-//     backgroundColor: "white",
-//     //alignItems: 'center',
-//     //paddingTop: 10,
-//   },
-//   text: {
-//     textAlign: 'center',
-//     //fontWeight: 'bold',
-//     fontSize: 15
-//   },
-//   text2: {
-//     textAlign: 'center',
-//     fontWeight: 'bold',
-//     fontSize: 30
-//   },
-// })  
-  
-
-// export default function CountryPageScreenArabic({navigation}) {
-
-//     return (
-//       <View style={styles.container}>
-
-//       <Button
-//         title="مصر"
-//         onPress={() => navigation.navigate('MainTabsArabic', {
-//           screen: 'DailyUpdateScreenArabic',
-//           params: { language: 'Arabic', country: 'Egypt' }, 
-//         })
-//       }          
-//       />
-//     </View>
-//     )
-//   }
