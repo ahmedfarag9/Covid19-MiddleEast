@@ -222,8 +222,9 @@ export default function CountryPageScreen({navigation}){
       onValueChange={(value)=> setDarkTheme(value)}
       trackColor= {{true: "white"}}      
       />
-
+<Text style ={styles.text}> 
     <Text style ={styles.text}> 
+<Text style ={styles.text}> 
             {'\n'} الوضع الحالى: {'\n'}          {CurrentTheme}        
       </Text>
 
