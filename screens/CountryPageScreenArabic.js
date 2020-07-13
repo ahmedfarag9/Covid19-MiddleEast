@@ -29,6 +29,9 @@ const renderItem = item => (
   )
 
 
+  const processTotalDeaths = item => (
+    parseInt(item.deaths)
+  )  
 
     const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
     
