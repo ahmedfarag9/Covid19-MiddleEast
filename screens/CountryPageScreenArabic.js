@@ -37,15 +37,9 @@ const renderItem = item => (
 export default function CountryPageScreen({navigation}){
     const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
     
-    // testing 
-    //const [MiddleEastCountries,setMiddleEastCountries ] = useState("") // to pass over to the next pages 
     const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages 
     const [ListOfCountriesN, setListOfCountriesN] = useState("")
-
-    //
     const [BottonDis,setBotton]= useState(true)
-
-    //Theme values 
     const [DarkTheme,setDarkTheme]= useState(false)
     const [WhiteTheme,setWhiteTheme]= useState(true)
     const [BackgroundColor,setBackgroundColor]= useState('white')
@@ -152,18 +146,6 @@ export default function CountryPageScreen({navigation}){
         setWhiteTheme(true)
         setCurrentTheme('White')
       }
-      
- 
-      // fecthing data from the API to display it 
-
-
-      // const handlebottonchange = () => {
-      //   if (SelectedValue!= ""){
-      //     setBotton(false)
-      //   }
-      // }
-
-
   return (
     <View style={styles.container}>
       <View>
@@ -223,11 +205,8 @@ export default function CountryPageScreen({navigation}){
       trackColor= {{true: "white"}}      
       />
 <Text style ={styles.text}> 
-    <Text style ={styles.text}> 
-<Text style ={styles.text}> 
             {'\n'} الوضع الحالى: {'\n'}          {CurrentTheme}        
       </Text>
-
       <Text>{'\n'}{'\n'}{'\n'}{'\n'}{'\n'}</Text>
         <Button styles= {styles.Button} 
         title="متابعة"
@@ -280,45 +259,5 @@ export default function CountryPageScreen({navigation}){
 
 
 
-// import * as React from 'react';
-// import {Button, View, StyleSheet, Text} from 'react-native'
 
 
-// const styles = StyleSheet.create({
-//   container: {
-//     justifyContent: "center",
-//     flex: 1,
-//     flexDirection: "column",
-//     backgroundColor: "white",
-//     //alignItems: 'center',
-//     //paddingTop: 10,
-//   },
-//   text: {
-//     textAlign: 'center',
-//     //fontWeight: 'bold',
-//     fontSize: 15
-//   },
-//   text2: {
-//     textAlign: 'center',
-//     fontWeight: 'bold',
-//     fontSize: 30
-//   },
-// })  
-  
-
-// export default function CountryPageScreenArabic({navigation}) {
-
-//     return (
-//       <View style={styles.container}>
-
-//       <Button
-//         title="مصر"
-//         onPress={() => navigation.navigate('MainTabsArabic', {
-//           screen: 'DailyUpdateScreenArabic',
-//           params: { language: 'Arabic', country: 'Egypt' }, 
-//         })
-//       }          
-//       />
-//     </View>
-//     )
-//   }
