@@ -249,11 +249,12 @@ export default function CountryPageScreen({navigation}){
 
           }
       }    
-            disabled = {BottonDis}         
-          />
-
-
-
+          }   
+        }
+        )
+      }   
+          // onPress = {()=> GetCountry("Egypt")}         
+        />
     </View>
   );
 }
