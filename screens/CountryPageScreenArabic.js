@@ -210,9 +210,9 @@ export default function CountryPageScreen({navigation}){
           <Picker.Item label={ListOfCountriesN[21]} value={ListOfCountriesN[21]} />      
         </Picker>
       }
-      
+
       <Text style ={styles.text}> 
-            {'\n'} البلد المختارة: {'\n'}     {SelectedValue}    {'\n'}{'\n'}{'\n'}           
+            {'\n'} البلد المختارة: {'\n'}     {SelectedValue}    {'\n'}{'\n'}{'\n'}            
       </Text>
 
       <Text style ={styles.text}> 
