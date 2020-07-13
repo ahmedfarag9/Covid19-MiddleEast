@@ -232,15 +232,23 @@ export default function CountryPageScreen({navigation}){
         <Button styles= {styles.Button} 
         title="متابعة"
         disabled = {BottonDis}
-        /> */}
+         onPress={() => navigation.navigate('MainTabsEnglish', { 
+          params: { 
+            language: 'English',
+            country: 'Egypt' , 
+            TotalDeaths: TotalDeaths, 
+            Dates: Dates,
+            TotalCountriesNames : TotallCountries,
+            MiddleEastCountries: ListOfCountriesN,
+            ChossenCountry: SelectedValue,
+            DarkTheme: DarkTheme,
+            WhiteTheme:WhiteTheme,
+            CurrentTheme: CurrentTheme,
+            BackgroundColor:BackgroundColor,
+            TextColor:TextColor,
 
-          <Button
-         title="متابعة"
-         onPress={() => navigation.navigate('MainTabsArabic', {
-           screen: 'DailyUpdateScreenArabic',
-           params: { language: 'Arabic', country: 'Egypt' }, 
-              })
-            } 
+          }
+      }    
             disabled = {BottonDis}         
           />
 
