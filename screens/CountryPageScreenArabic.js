@@ -24,8 +24,10 @@ const renderItem = item => (
   )
 
 
-export default function CountryPageScreenArabic({navigation}) {
-  
+  const processDates = item => (
+    item.Date
+  )
+
 
 
     const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
