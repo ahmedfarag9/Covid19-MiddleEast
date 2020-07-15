@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
     return (
       <ScrollView horizontal={true}>
       <View  style={styles.container}>
+        <Text>Daily New Cases in Egypt</Text>
         </View>
       </ScrollView>
     )
