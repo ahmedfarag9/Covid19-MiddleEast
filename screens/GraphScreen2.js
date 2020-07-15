@@ -15,6 +15,18 @@ const styles = StyleSheet.create({
     },
   })
 
+  
+
+
+  const processDates = item => (
+    item.Date
+  )
+
+
+  const processNewDeaths = item => (
+    parseInt(item.todayDeaths)
+  )
+
 
 export default function GraphsScreen2()  {
 
