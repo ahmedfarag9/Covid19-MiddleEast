@@ -71,6 +71,40 @@ const styles = StyleSheet.create({
           
 
 
+          {Dates && TotalCases && (
+            <LineChart
+              data={data}
+              //width={Dimensions.get("window").width} // from react-native
+              height={550}
+              width={700}
+              //yAxisSuffix="k"
+              yAxisInterval={30} // optional, defaults to 1
+              verticalLabelRotation={90}
+              segments={3}
+              chartConfig={{
+                backgroundColor: "#e26a00",
+                backgroundGradientFrom: "#fb8c00",
+                backgroundGradientTo: "#ffa726",
+                decimalPlaces: 0, // optional, defaults to 2dp
+                //segments: 5,
+                color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                style: {
+                  borderRadius: 16
+                },
+                propsForDots: {
+                  r: "4",
+                  strokeWidth: "2",
+                  stroke: "#ffa726"
+                }
+              }}
+              style={{
+                marginVertical: 8,
+                borderRadius: 16
+              }}
+            />
+          )}
+
         </View>
         </ScrollView>
       )
