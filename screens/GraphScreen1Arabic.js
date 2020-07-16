@@ -13,6 +13,12 @@ const styles = StyleSheet.create({
       textAlign: 'center',
     },
   })
+  const processDates = item => (
+    item.Date
+  )
+  const processTotalCases = item => (
+    parseInt(item.Confirmed)
+  )
 
   export default function GraphsScreen1Arabic() {
   
