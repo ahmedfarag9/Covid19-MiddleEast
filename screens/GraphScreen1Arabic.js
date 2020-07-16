@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
   )
   export default function GraphsScreen1Arabic(){
 
-  export default function GraphsScreen1Arabic() {
+    const [Dates, setDates] = useState(null)
+    const [TotalCases, setTotalCases] = useState(null) 
   
     //Country()
   
