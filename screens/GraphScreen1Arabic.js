@@ -24,8 +24,23 @@ const styles = StyleSheet.create({
     const [Dates, setDates] = useState(null)
     const [TotalCases, setTotalCases] = useState(null) 
   
-    //Country()
+    const GetCountry = async () => {
+      const results = await fetchCountryID()
+      //this.setState({movies: results})
+      //this.setState({showMovies: true})
+          //this.handleS`ubmit()
+      //console.log(results)
+      const x = results.map(processDates)
+      setDates(x)
+     // console.log(x)
+      
+      
   
+      const y = results.map(processTotalCases)
+      //console.log(y)
+      setTotalCases(y)
+      //console.log("finished")
+    }
       return (
       <View>
         <Text>Default View</Text>
