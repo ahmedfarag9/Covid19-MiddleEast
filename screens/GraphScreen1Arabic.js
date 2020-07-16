@@ -41,6 +41,20 @@ const styles = StyleSheet.create({
       setTotalCases(y)
       //console.log("finished")
     }
+   
+    const data = {
+        labels: Dates,
+        //datasets: TotalCases,
+        datasets: [
+        {
+          data: TotalCases
+        }
+        ]
+      };
+      
+    //GetCountry()
+
+
       return (
       <View>
         <Text>Default View</Text>
