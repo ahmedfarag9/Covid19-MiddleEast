@@ -19,15 +19,16 @@ const styles = StyleSheet.create({
   const processTotalCases = item => (
     parseInt(item.Confirmed)
   )
+  export default function GraphsScreen1Arabic(){
 
   export default function GraphsScreen1Arabic() {
   
     //Country()
   
-    return (
+      return (
       <View>
         <Text>Default View</Text>
       </View>      
-    )
-  }
-  
+      )
+    }
+
