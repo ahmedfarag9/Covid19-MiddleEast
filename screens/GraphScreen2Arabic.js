@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
   export default function GraphsScreen2Arabic()  {
 
 
+
+    const [Dates, setDates] = useState(null)
+      const [NewDeaths, setNewDeaths] = useState(null) 
+      
     return (
       <View>
       <Text>Default View</Text>
