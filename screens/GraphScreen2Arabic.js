@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   )
 
 
-export default function GraphsScreen2Arabic()  {
+  export default function GraphsScreen2Arabic()  {
 
 
     return (
@@ -36,4 +36,4 @@ export default function GraphsScreen2Arabic()  {
       <Text>Default View</Text>
     </View>      
     )
-  }
+  } 
