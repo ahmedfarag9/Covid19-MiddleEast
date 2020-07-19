@@ -312,9 +312,11 @@ export default function CountryPageScreen({navigation}){
          onPress={() => navigation.navigate('MainTabsEnglish', { 
           params: { 
             language: 'English',
-            country: 'Egypt' , 
-            TotalDeaths: TotalDeaths, 
-            Dates: Dates,
+            country: 'Egypt' ,
+
+            TotalDeaths: TotalDeaths,
+            TotalDeathsDates: TotalDeathsDates,
+            TotalCases: TotalCases,
             TotalCountriesNames : TotallCountries,
             MiddleEastCountries: ListOfCountriesN,
             ChossenCountry: SelectedValue,
