@@ -200,6 +200,13 @@ export default function CountryPageScreen({navigation}){
           return num - Tmp1[idx];
         });
         
+        const FinalNewDeaths = sum1.slice(1, sum1.length - 1);
+
+        const FinalNewDeathsDates = TotalDeathsDatesTmp.slice(1);
+
+        // console.log(FinalNewDeaths)
+        // console.log(FinalNewDeathsDates)
+
       }
 
       // if (SelectedValue !== "" ){
