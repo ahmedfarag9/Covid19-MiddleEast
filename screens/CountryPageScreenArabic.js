@@ -317,9 +317,15 @@ const renderItem = item => (
             TotalCasesDates: TotalCasesDates,
             
             DailyNewCases: DailyNewCases,
+            DailyNewCasesDates: DailyNewCasesDates,
+            DailyNewDeaths: DailyNewDeaths,
+            DailyNewDeathsDates: DailyNewDeathsDates,         
+
             TotalCountriesNames : TotallCountries,
             MiddleEastCountries: ListOfCountriesN,
             ChossenCountry: SelectedValue,
+            ChossenCountryData:SelectedValueData,
+
             DarkTheme: DarkTheme,
             WhiteTheme:WhiteTheme,
             CurrentTheme: CurrentTheme,
