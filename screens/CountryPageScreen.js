@@ -98,8 +98,15 @@ export default function CountryPageScreen({navigation}){
             resultsTmp2.push(element)
           }
         }   
-          }
-        }   
+        //console.log(resultsTmp)
+        setTotallCountriesData(results)
+        //setMiddleEastCountries(resultsTmp)
+        setListOfCountriesNData(resultsTmp2)
+        //console.log(resultsTmp2)
+      
+
+
+
         const Final = results.map(renderItem)
         console.log(Final)
               
