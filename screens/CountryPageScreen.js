@@ -172,6 +172,18 @@ export default function CountryPageScreen({navigation}){
 
         const TotalCasesTmp1 = TotalCasesTmp.concat(Tmp0);
 
+        
+        const sum = TotalCasesTmp1.map(function (num, idx) {
+          return num - Tmp[idx];
+        });
+        
+        const FinalNewCases = sum.slice(1, sum.length - 1);
+
+        const FinalNewCasesDates = TotalCasesDatesTmp.slice(1);
+
+        // console.log(FinalNewCases)
+        // console.log(FinalNewCasesDates)
+        
       }
 
       // if (SelectedValue !== "" ){
