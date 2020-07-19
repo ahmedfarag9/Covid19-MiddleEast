@@ -29,6 +29,16 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
     
     
    
+    const data = {
+        labels: Dates1,
+        //datasets: TotalCases,
+        datasets: [
+        {
+          data: TotalDeaths1
+        }
+        ]
+      };     
+
     return (
       <View>
       <Text>Default View</Text>
