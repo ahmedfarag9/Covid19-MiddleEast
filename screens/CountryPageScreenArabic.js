@@ -207,6 +207,13 @@ const renderItem = item => (
         // console.log(FinalNewDeaths)
         // console.log(FinalNewDeathsDates)
 
+
+        setDailyNewCases(FinalNewCases)
+        setDailyNewCasesDates(FinalNewCasesDates)
+
+        setDailyNewDeaths(FinalNewDeaths)
+        setDailyNewDeathsDates(FinalNewDeathsDates)
+
       if (TotallCountries === "") {
         GetCountriesNames()
       }
