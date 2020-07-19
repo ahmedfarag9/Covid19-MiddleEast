@@ -88,7 +88,14 @@ export default function CountryPageScreen({navigation}){
 
     const GetCountriesNames = async () => {
         const results = await fetchCountriesDailyData()
-     
+
+        
+
+        const resultsTmp2 = [];
+        for (const element of results) {
+          // if (element.country in ListOfCountriesNCountries) {
+        }   
+        }   
         const Final = results.map(renderItem)
         console.log(Final)
               
