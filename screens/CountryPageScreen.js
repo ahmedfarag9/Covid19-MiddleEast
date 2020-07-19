@@ -322,14 +322,22 @@ export default function CountryPageScreen({navigation}){
             DailyNewCases: DailyNewCases,
             DailyNewCasesDates: DailyNewCasesDates,
             DailyNewDeaths: DailyNewDeaths,
+            DailyNewDeathsDates: DailyNewDeathsDates,         
+
             TotalCountriesNames : TotallCountries,
             MiddleEastCountries: ListOfCountriesN,
             ChossenCountry: SelectedValue,
+            ChossenCountryData:SelectedValueData,
+
             DarkTheme: DarkTheme,
             WhiteTheme:WhiteTheme,
             CurrentTheme: CurrentTheme,
             BackgroundColor:BackgroundColor,
             TextColor:TextColor,
+            
+            TotalCountriesData: TotallCountriesData,
+            MiddleEastCountriesData: ListOfCountriesNData
+
 
           }   
       }
