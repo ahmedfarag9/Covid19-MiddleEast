@@ -207,6 +207,14 @@ export default function CountryPageScreen({navigation}){
         // console.log(FinalNewDeaths)
         // console.log(FinalNewDeathsDates)
 
+
+        setDailyNewCases(FinalNewCases)
+        setDailyNewCasesDates(FinalNewCasesDates)
+
+        setDailyNewDeaths(FinalNewDeaths)
+        setDailyNewDeathsDates(FinalNewDeathsDates)
+
+        //console.log(results.timeline)
       }
 
       // if (SelectedValue !== "" ){
