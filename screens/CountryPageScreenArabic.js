@@ -12,10 +12,10 @@ import { DarkTheme } from "@react-navigation/native";
 const ListOfCountriesNCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egypt', 'Iraq', 'Jordan', 'Kuwait',
                                'Lebanon', 'Libya', 'Mauritania', 'Morocco', 'Oman', 'Palestine', 'Qatar',
                                'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
-//
+
 
 const ListOfCoubrtiesNamesAPI2 = ['Algeria',"Bahrain","Comoros","Djibouti", "Egypt","Iraq","Jordan",
-                                  "Lebanon","Libya","Mauritania","Morocco","Oman","Palestine","Qatar",
+                                  "Lebanon","Libya","Mauritania","Morocco","Oman","West Bank and Gaza","Qatar",
                                   "Saudi Arabia","Somalia","Sudan","Syria","Tunisia","United Arab Emirates","Yemen"]
 // 
 const renderItem = item => (
@@ -34,11 +34,14 @@ const renderItem = item => (
   )  
 
 
-export default function CountryPageScreen({navigation}){
-    const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
+  export default function CountryPageScreen({navigation}){
+    const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages
+    const [SelectedValueData, setSelectedValueData] = useState(""); // Chossen country data 
     
-    const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages 
+    const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages
+    const [TotallCountriesData, setTotallCountriesData] = useState("") // data to pass over to the next pages  
     const [ListOfCountriesN, setListOfCountriesN] = useState("")
+    const [ListOfCountriesNData, setListOfCountriesNData] = useState("")
     const [BottonDis,setBotton]= useState(true)
     const [DarkTheme,setDarkTheme]= useState(false)
     const [WhiteTheme,setWhiteTheme]= useState(true)
@@ -48,8 +51,16 @@ export default function CountryPageScreen({navigation}){
 
 
     // states for graphscreen
-    const [Dates, setDates] = useState(null)
-    const [TotalDeaths, setTotalDeaths] = useState(null) 
+    //const [Dates, setDates] = useState(null)
+    const [TotalDeaths, setTotalDeaths] = useState(null)
+    const [TotalDeathsDates, setTotalDeathsDates] = useState(null)
+    const [TotalCases, setTotalCases] = useState(null)
+    const [TotalCasesDates, setTotalCasesDates] = useState(null)
+    const [DailyNewCases, setDailyNewCases] = useState(null)
+    const [DailyNewCasesDates, setDailyNewCasesDates] = useState(null)
+    const [DailyNewDeaths, setDailyNewDeaths] = useState(null)
+    const [DailyNewDeathsDates, setDailyNewDeathsDates] = useState(null)
+
 
 
     const styles = StyleSheet.create({
@@ -77,12 +88,30 @@ export default function CountryPageScreen({navigation}){
 
     const GetCountriesNames = async () => {
         const results = await fetchCountriesDailyData()
-     
+
+        
+
+        const resultsTmp2 = [];
+        for (const element of results) {
+          // if (element.country in ListOfCountriesNCountries) {
+            if (ListOfCountriesNCountries.includes(element.country)) {
+            resultsTmp2.push(element)
+          }
+        }   
+        //console.log(resultsTmp)
+        setTotallCountriesData(results)
+        //setMiddleEastCountries(resultsTmp)
+        setListOfCountriesNData(resultsTmp2)
+        //console.log(resultsTmp2)
+      
+
+
+
         const Final = results.map(renderItem)
-        console.log(Final)
+        //console.log(Final)
               
         //console.log(TotallCountries)
-        console.log("-------------------------------------")
+        //console.log("-------------------------------------")
   
 
         const resultsTmp = [];
@@ -96,36 +125,102 @@ export default function CountryPageScreen({navigation}){
         setTotallCountries(Final)
         //setMiddleEastCountries(resultsTmp)
         setListOfCountriesN(resultsTmp)
+        //console.log(resultsTmp)
       }
 
 
-      const test = function(itemValue) {setSelectedValue(itemValue)
+      const test = function(itemValue) {
+        setSelectedValue(itemValue)
         setBotton(false)
-        GetCountry(SelectedValue)
+        GetCountry(itemValue)
       }
 
 
 
 
       const GetCountry = async (input) => {
+
+        //console.log(input)
+
+        //Loop over middleEastCountries to get data of chosen country
+        for (const element of ListOfCountriesNData) {
+          // if (element.country in middleEastCountries) {
+            if (element.country === input) {
+            setSelectedValueData(element)
+            //console.log(element)
+             }
+          }
+        
+        if (input === "Palestine") {
+          input = "West Bank and Gaza"
+          //console.log(element)
+            }
+  
+
+
         const results = await fetchCountryID(input)
   
         //console.log(results)
-        const x = results.map(processDates)
-        setDates(x)
-        //console.log(x)
-        //console.log(Dates)
-   
-        
-        const y = results.map(processTotalDeaths)
-        setTotalDeaths(y) 
-        //console.log(y)
-        //console.log(TotalDeaths)    
-      }
 
-      // if (SelectedValue !== "" ){
-      //   GetCountry("Egypt")
-      // }
+        // Calculate Daily New Cases 
+        const TotalCasesTmp = Object.values(results.timeline.cases)
+        const TotalCasesDatesTmp = Object.keys(results.timeline.cases)
+        
+        const Tmp0 = [0]
+
+        const Tmp = Tmp0.concat(TotalCasesTmp);
+
+        const TotalCasesTmp1 = TotalCasesTmp.concat(Tmp0);
+
+        
+        const sum = TotalCasesTmp1.map(function (num, idx) {
+          return num - Tmp[idx];
+        });
+        
+        const FinalNewCases = sum.slice(1, sum.length - 1);
+
+        const FinalNewCasesDates = TotalCasesDatesTmp.slice(1);
+
+        // console.log(FinalNewCases)
+        // console.log(FinalNewCasesDates)
+        
+
+        // Calculate Daily New Deaths 
+        const TotalDeathsTmp = Object.values(results.timeline.deaths)
+        const TotalDeathsDatesTmp = Object.keys(results.timeline.deaths)
+        
+        const Tmp00 = [0]
+
+        const Tmp1 = Tmp00.concat(TotalDeathsTmp);
+
+        const TotalDeathsTmp1 = TotalDeathsTmp.concat(Tmp00);
+
+        
+        const sum1 = TotalDeathsTmp1.map(function (num, idx) {
+          return num - Tmp1[idx];
+        });
+        
+        const FinalNewDeaths = sum1.slice(1, sum1.length - 1);
+
+        const FinalNewDeathsDates = TotalDeathsDatesTmp.slice(1);
+
+        // console.log(FinalNewDeaths)
+        // console.log(FinalNewDeathsDates)
+
+
+        setDailyNewCases(FinalNewCases)
+        setDailyNewCasesDates(FinalNewCasesDates)
+
+        setDailyNewDeaths(FinalNewDeaths)
+        setDailyNewDeathsDates(FinalNewDeathsDates)
+
+        setTotalCases(Object.values(results.timeline.cases))
+        setTotalCasesDates(Object.keys(results.timeline.cases))
+
+        setTotalDeaths(Object.values(results.timeline.deaths))
+        setTotalDeathsDates(Object.keys(results.timeline.deaths))
+
+      }
 
 
       if (TotallCountries === "") {
@@ -198,7 +293,7 @@ export default function CountryPageScreen({navigation}){
       </Text>
 
       <Text style ={styles.text}> 
-          اضغط لتفعيل الوضع الليلى  {'\n'}        </Text>
+          اضغط لاختيار الوضع  {'\n'}        </Text>
         </Text>
       <Switch value ={DarkTheme}
       onValueChange={(value)=> setDarkTheme(value)}
@@ -211,33 +306,44 @@ export default function CountryPageScreen({navigation}){
         <Button styles= {styles.Button} 
         title="متابعة"
         disabled = {BottonDis}
-         onPress={() => navigation.navigate('MainTabsEnglish', { 
+         onPress={() => navigation.navigate('MainTabsArabic', { 
           params: { 
-            language: 'English',
-            country: 'Egypt' , 
-            TotalDeaths: TotalDeaths, 
-            Dates: Dates,
+            language: 'Arabic',
+            country: 'Egypt' ,
+
+            TotalDeaths: TotalDeaths,
+            TotalDeathsDates: TotalDeathsDates,
+            TotalCases: TotalCases,
+            TotalCasesDates: TotalCasesDates,
+            
+            DailyNewCases: DailyNewCases,
+            DailyNewCasesDates: DailyNewCasesDates,
+            DailyNewDeaths: DailyNewDeaths,
+            DailyNewDeathsDates: DailyNewDeathsDates,         
+
             TotalCountriesNames : TotallCountries,
             MiddleEastCountries: ListOfCountriesN,
             ChossenCountry: SelectedValue,
+            ChossenCountryData:SelectedValueData,
+
             DarkTheme: DarkTheme,
             WhiteTheme:WhiteTheme,
             CurrentTheme: CurrentTheme,
             BackgroundColor:BackgroundColor,
             TextColor:TextColor,
+            
+            TotalCountriesData: TotallCountriesData,
+            MiddleEastCountriesData: ListOfCountriesNData
 
-          }
-      }    
+
           }   
-        }
-        )
-      }   
-          // onPress = {()=> GetCountry("Egypt")}         
-        />
+      }
+         )          
+          }   
+          />
     </View>
   );
 }
-
 
 
 
