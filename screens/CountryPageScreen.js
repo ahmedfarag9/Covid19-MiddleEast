@@ -317,6 +317,11 @@ export default function CountryPageScreen({navigation}){
             TotalDeaths: TotalDeaths,
             TotalDeathsDates: TotalDeathsDates,
             TotalCases: TotalCases,
+            TotalCasesDates: TotalCasesDates,
+            
+            DailyNewCases: DailyNewCases,
+            DailyNewCasesDates: DailyNewCasesDates,
+            DailyNewDeaths: DailyNewDeaths,
             TotalCountriesNames : TotallCountries,
             MiddleEastCountries: ListOfCountriesN,
             ChossenCountry: SelectedValue,
