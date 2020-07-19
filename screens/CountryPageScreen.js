@@ -167,11 +167,11 @@ export default function CountryPageScreen({navigation}){
         const TotalCasesDatesTmp = Object.keys(results.timeline.cases)
         
         const Tmp0 = [0]
-        
-        const y = results.map(processTotalDeaths)
-        setTotalDeaths(y) 
-        //console.log(y)
-        //console.log(TotalDeaths)    
+
+        const Tmp = Tmp0.concat(TotalCasesTmp);
+
+        const TotalCasesTmp1 = TotalCasesTmp.concat(Tmp0);
+
       }
 
       // if (SelectedValue !== "" ){
