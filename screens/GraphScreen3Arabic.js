@@ -17,6 +17,18 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
     })
   
 
+    const  { TotalDeaths,Dates }   = route.params
+
+    const [Dates1, setDates1] = useState(Dates)
+    const [TotalDeaths1, setTotalDeaths1] = useState(TotalDeaths)
+
+
+    //console.log(Dates1)
+    //console.log(TotalDeaths1)
+    
+    
+    
+   
     return (
       <View>
       <Text>Default View</Text>
