@@ -306,11 +306,12 @@ const renderItem = item => (
         <Button styles= {styles.Button} 
         title="متابعة"
         disabled = {BottonDis}
-         onPress={() => navigation.navigate('MainTabsEnglish', { 
+         onPress={() => navigation.navigate('MainTabsArabic', { 
           params: { 
-            language: 'English',
-            country: 'Egypt' , 
-            TotalDeaths: TotalDeaths, 
+            language: 'Arabic',
+            country: 'Egypt' ,
+
+            TotalDeaths: TotalDeaths,
             Dates: Dates,
             TotalCountriesNames : TotallCountries,
             MiddleEastCountries: ListOfCountriesN,
