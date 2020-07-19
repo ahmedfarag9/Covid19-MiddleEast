@@ -331,19 +331,19 @@ const renderItem = item => (
             CurrentTheme: CurrentTheme,
             BackgroundColor:BackgroundColor,
             TextColor:TextColor,
+            
+            TotalCountriesData: TotallCountriesData,
+            MiddleEastCountriesData: ListOfCountriesNData
 
-          }
-      }    
+
           }   
-        }
-        )
-      }   
-          // onPress = {()=> GetCountry("Egypt")}         
-        />
+      }
+         )          
+          }   
+          />
     </View>
   );
 }
-
 
 
 
