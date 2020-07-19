@@ -14,7 +14,7 @@ const ListOfCountriesNCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti'
 
 
 const ListOfCoubrtiesNamesAPI2 = ['Algeria',"Bahrain","Comoros","Djibouti", "Egypt","Iraq","Jordan",
-                                  "Lebanon","Libya","Mauritania","Morocco","Oman","Palestine","Qatar",
+                                  "Lebanon","Libya","Mauritania","Morocco","Oman","West Bank and Gaza","Qatar",
                                   "Saudi Arabia","Somalia","Sudan","Syria","Tunisia","United Arab Emirates","Yemen"]
 // 
 const renderItem = item => (
