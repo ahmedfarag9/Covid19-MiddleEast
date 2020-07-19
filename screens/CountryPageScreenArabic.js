@@ -129,9 +129,10 @@ const renderItem = item => (
       }
 
 
-      const test = function(itemValue) {setSelectedValue(itemValue)
+      const test = function(itemValue) {
+        setSelectedValue(itemValue)
         setBotton(false)
-        GetCountry(SelectedValue)
+        GetCountry(itemValue)
       }
 
 
