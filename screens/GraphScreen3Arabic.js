@@ -6,6 +6,7 @@ import { Dimensions } from "react-native";
 import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, StackedBarChart} from "react-native-chart-kit"
 
 
+  export default function GraphsScreen3Arabic({route}){
 
     return (
       <View>
