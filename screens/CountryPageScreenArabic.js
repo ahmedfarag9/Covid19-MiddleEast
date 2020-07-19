@@ -191,6 +191,15 @@ const renderItem = item => (
         
         const Tmp00 = [0]
 
+        const Tmp1 = Tmp00.concat(TotalDeathsTmp);
+
+        const TotalDeathsTmp1 = TotalDeathsTmp.concat(Tmp00);
+
+        
+        const sum1 = TotalDeathsTmp1.map(function (num, idx) {
+          return num - Tmp1[idx];
+        });
+        
       }
 
       // if (SelectedValue !== "" ){
