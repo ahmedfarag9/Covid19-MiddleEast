@@ -129,9 +129,10 @@ export default function CountryPageScreen({navigation}){
       }
 
 
-      const test = function(itemValue) {setSelectedValue(itemValue)
+      const test = function(itemValue) {
+        setSelectedValue(itemValue)
         setBotton(false)
-        GetCountry(SelectedValue)
+        GetCountry(itemValue)
       }
 
 
