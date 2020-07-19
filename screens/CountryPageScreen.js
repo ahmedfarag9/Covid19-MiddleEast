@@ -56,6 +56,11 @@ export default function CountryPageScreen({navigation}){
     const [TotalDeathsDates, setTotalDeathsDates] = useState(null)
     const [TotalCases, setTotalCases] = useState(null)
     const [TotalCasesDates, setTotalCasesDates] = useState(null)
+    const [DailyNewCases, setDailyNewCases] = useState(null)
+    const [DailyNewCasesDates, setDailyNewCasesDates] = useState(null)
+    const [DailyNewDeaths, setDailyNewDeaths] = useState(null)
+    const [DailyNewDeathsDates, setDailyNewDeathsDates] = useState(null)
+
 
 
     const styles = StyleSheet.create({
