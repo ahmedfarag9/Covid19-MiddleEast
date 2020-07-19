@@ -51,8 +51,11 @@ export default function CountryPageScreen({navigation}){
 
 
     // states for graphscreen
-    const [Dates, setDates] = useState(null)
-    const [TotalDeaths, setTotalDeaths] = useState(null) 
+    //const [Dates, setDates] = useState(null)
+    const [TotalDeaths, setTotalDeaths] = useState(null)
+    const [TotalDeathsDates, setTotalDeathsDates] = useState(null)
+    const [TotalCases, setTotalCases] = useState(null)
+    const [TotalCasesDates, setTotalCasesDates] = useState(null)
 
 
     const styles = StyleSheet.create({
