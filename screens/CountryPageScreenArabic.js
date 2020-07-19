@@ -150,6 +150,14 @@ const renderItem = item => (
             //console.log(element)
              }
           }
+        
+        if (input === "Palestine") {
+          input = "West Bank and Gaza"
+          //console.log(element)
+            }
+  
+
+
         const results = await fetchCountryID(input)
   
         //console.log(results)
