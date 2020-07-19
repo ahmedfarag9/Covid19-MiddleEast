@@ -139,6 +139,12 @@ const renderItem = item => (
 
 
       const GetCountry = async (input) => {
+
+        //console.log(input)
+
+        //Loop over middleEastCountries to get data of chosen country
+        for (const element of ListOfCountriesNData) {
+          // if (element.country in middleEastCountries) {
         const results = await fetchCountryID(input)
   
         //console.log(results)
