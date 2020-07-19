@@ -88,7 +88,13 @@ const renderItem = item => (
 
     const GetCountriesNames = async () => {
         const results = await fetchCountriesDailyData()
-     
+
+        
+
+        const resultsTmp2 = [];
+        for (const element of results) {
+        }   
+        }   
         const Final = results.map(renderItem)
         console.log(Final)
               
