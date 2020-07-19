@@ -184,6 +184,12 @@ export default function CountryPageScreen({navigation}){
         // console.log(FinalNewCases)
         // console.log(FinalNewCasesDates)
         
+
+        // Calculate Daily New Deaths 
+        const TotalDeathsTmp = Object.values(results.timeline.deaths)
+        const TotalDeathsDatesTmp = Object.keys(results.timeline.deaths)
+        
+        const Tmp00 = [0]
       }
 
       // if (SelectedValue !== "" ){
