@@ -293,7 +293,7 @@ const renderItem = item => (
       </Text>
 
       <Text style ={styles.text}> 
-          اضغط لتفعيل الوضع الليلى  {'\n'}        </Text>
+          اضغط لاختيار الوضع  {'\n'}        </Text>
         </Text>
       <Switch value ={DarkTheme}
       onValueChange={(value)=> setDarkTheme(value)}
