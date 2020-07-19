@@ -34,11 +34,14 @@ const renderItem = item => (
   )  
 
 
-export default function CountryPageScreen({navigation}){
-    const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages 
+  export default function CountryPageScreen({navigation}){
+    const [SelectedValue, setSelectedValue] = useState(""); // Chossen country by the user to pass over to other pages
+    const [SelectedValueData, setSelectedValueData] = useState(""); // Chossen country data 
     
-    const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages 
+    const [TotallCountries, setTotallCountries] = useState("") // to pass over to the next pages
+    const [TotallCountriesData, setTotallCountriesData] = useState("") // data to pass over to the next pages  
     const [ListOfCountriesN, setListOfCountriesN] = useState("")
+    const [ListOfCountriesNData, setListOfCountriesNData] = useState("")
     const [BottonDis,setBotton]= useState(true)
     const [DarkTheme,setDarkTheme]= useState(false)
     const [WhiteTheme,setWhiteTheme]= useState(true)
