@@ -312,7 +312,11 @@ const renderItem = item => (
             country: 'Egypt' ,
 
             TotalDeaths: TotalDeaths,
-            Dates: Dates,
+            TotalDeathsDates: TotalDeathsDates,
+            TotalCases: TotalCases,
+            TotalCasesDates: TotalCasesDates,
+            
+            DailyNewCases: DailyNewCases,
             TotalCountriesNames : TotallCountries,
             MiddleEastCountries: ListOfCountriesN,
             ChossenCountry: SelectedValue,
