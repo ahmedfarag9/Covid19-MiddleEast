@@ -93,7 +93,12 @@ const renderItem = item => (
 
         const resultsTmp2 = [];
         for (const element of results) {
+          // if (element.country in ListOfCountriesNCountries) {
+            if (ListOfCountriesNCountries.includes(element.country)) {
+            resultsTmp2.push(element)
+          }
         }   
+          }
         }   
         const Final = results.map(renderItem)
         console.log(Final)
