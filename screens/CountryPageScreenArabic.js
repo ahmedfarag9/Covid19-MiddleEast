@@ -161,11 +161,11 @@ const renderItem = item => (
         const results = await fetchCountryID(input)
   
         //console.log(results)
-        const x = results.map(processDates)
-        setDates(x)
-        //console.log(x)
-        //console.log(Dates)
-   
+
+        // Calculate Daily New Cases 
+        const TotalCasesTmp = Object.values(results.timeline.cases)
+        const TotalCasesDatesTmp = Object.keys(results.timeline.cases)
+        
         
         const y = results.map(processTotalDeaths)
         setTotalDeaths(y) 
