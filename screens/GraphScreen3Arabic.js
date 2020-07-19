@@ -44,6 +44,7 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
 
 
       <View  style={styles.container}>
+        <Text>العدد الكلى للمتوفين</Text>
       </View>
       </ScrollView>
     )
