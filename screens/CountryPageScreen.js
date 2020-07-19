@@ -108,10 +108,10 @@ export default function CountryPageScreen({navigation}){
 
 
         const Final = results.map(renderItem)
-        console.log(Final)
+        //console.log(Final)
               
         //console.log(TotallCountries)
-        console.log("-------------------------------------")
+        //console.log("-------------------------------------")
   
 
         const resultsTmp = [];
@@ -125,6 +125,7 @@ export default function CountryPageScreen({navigation}){
         setTotallCountries(Final)
         //setMiddleEastCountries(resultsTmp)
         setListOfCountriesN(resultsTmp)
+        //console.log(resultsTmp)
       }
 
 
