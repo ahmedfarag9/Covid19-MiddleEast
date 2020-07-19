@@ -214,6 +214,15 @@ const renderItem = item => (
         setDailyNewDeaths(FinalNewDeaths)
         setDailyNewDeathsDates(FinalNewDeathsDates)
 
+        setTotalCases(Object.values(results.timeline.cases))
+        setTotalCasesDates(Object.keys(results.timeline.cases))
+
+        setTotalDeaths(Object.values(results.timeline.deaths))
+        setTotalDeathsDates(Object.keys(results.timeline.deaths))
+
+      }
+
+
       if (TotallCountries === "") {
         GetCountriesNames()
       }
