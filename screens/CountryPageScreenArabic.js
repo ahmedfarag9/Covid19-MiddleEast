@@ -166,6 +166,12 @@ const renderItem = item => (
         const TotalCasesTmp = Object.values(results.timeline.cases)
         const TotalCasesDatesTmp = Object.keys(results.timeline.cases)
         
+        const Tmp0 = [0]
+
+        const Tmp = Tmp0.concat(TotalCasesTmp);
+
+        const TotalCasesTmp1 = TotalCasesTmp.concat(Tmp0);
+
         
         const y = results.map(processTotalDeaths)
         setTotalDeaths(y) 
