@@ -170,38 +170,7 @@ function Countries(props) {
   const today1 = dd+'/'+mm+'/'+yyyy;
   setDate(today1)*/
 
-  // Get Data from Api
-  const GetCountries = async () => {
-    const resultsTmp0 = await fetchCountriesDailyData()
-    //this.setState({movies: results})
-    //this.setState({showMovies: true})
-        //this.handleSubmit()
-    console.log(resultsTmp0)
 
-    const resultsTmp = [];
-    for (const element of resultsTmp0) {
-      // if (element.country in middleEastCountries) {
-        if (middleEastCountries.includes(element.country)) {
-        resultsTmp.push(element)
-      }
-    }
-    console.log(resultsTmp)
-
-    for (const element of resultsTmp) {
-      // if (element.country in middleEastCountries) {
-        if (element.country === ChosenCountry) {
-        setCountry(element)
-        console.log(element.country)
-        }
-      }
-    setResults(resultsTmp)
-    }
-
-  if (Country === "") {
-    GetCountries()
-    }    
-  
-  //GetCountries()
 
   // Set global test device ID
   setTestDeviceIDAsync('ANDROID');
