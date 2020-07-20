@@ -73,6 +73,8 @@ export default function SettingsScreen({route, navigation}) {
         onPress={() => navigation.navigate('CountryPageScreen')}          
         />
 
+        <Text>{'\n'}{'\n'}</Text>
+
         {/* <Button
           onPress={() =>
             navigation.setParams({
