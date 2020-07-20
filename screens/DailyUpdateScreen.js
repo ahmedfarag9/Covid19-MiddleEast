@@ -255,15 +255,13 @@ function Countries(props) {
 
 export default function DailyUpdateScreen({route}) {
 
-  const  { country }   = route.params
-  //console.log(country)
+  const data    = route.params
+//  const {ChossenCountryData}    = route.params
 
-  //const  { language }  = route.params
-  //console.log(language)
 
   return (
     <Countries
-      ChosenCountry = {country}      
+      Data = {data}      
     />
   )
 }
