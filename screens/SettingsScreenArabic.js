@@ -32,10 +32,17 @@ const styles = StyleSheet.create({
   },
 })  
 
+
 export default function SettingsScreenArabic({route, navigation}) {
 
   const  { country }   = route.params
   const  { language }  = route.params
+
+  // Set global test device ID
+  setTestDeviceIDAsync('ANDROID');
+
+
+
 
   return (
     <View style={styles.container}>
