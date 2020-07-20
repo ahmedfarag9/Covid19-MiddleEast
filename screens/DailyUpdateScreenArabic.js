@@ -159,17 +159,11 @@ function Countries(props) {
   /*const today = new Date();
   const dd = today.getDate();  
   const mm = today.getMonth()+1; 
-    const mm = today.getMonth()+1; 
-  const mm = today.getMonth()+1; 
   const yyyy = today.getFullYear();
-  if(dd<10) 
-    if(dd<10) 
   if(dd<10) 
   {
       const dd='0'+dd;
   } 
-  if(mm<10) 
-    if(mm<10) 
   if(mm<10) 
   {
       mm='0'+mm;
@@ -178,31 +172,10 @@ function Countries(props) {
   setDate(today1)*/
 
 
-      const resultsTmp = [];
-      for (const element of resultsTmp0) {
-        // if (element.country in middleEastCountries) {
-          if (middleEastCountries.includes(element.country)) {
-          resultsTmp.push(element)
-        }
-      }
-      console.log(resultsTmp)
-  
-      for (const element of resultsTmp) {
-        // if (element.country in middleEastCountries) {
-          if (element.country === ChosenCountry) {
-          setCountry(element)
-          console.log(element.country)
-          }
-        }
-      setResults(resultsTmp)
-      }
-  
-    if (Country === "") {
-      GetCountries()
-      }    
-    
-    //GetCountries()
-  
+  // Set global test device ID
+  setTestDeviceIDAsync('ANDROID');
+
+
 
   return (
 
