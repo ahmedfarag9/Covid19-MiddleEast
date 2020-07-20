@@ -142,13 +142,17 @@ const middleEastCountries =  [ 'Algeria', 'Bahrain', 'Comoros', 'Djibouti', 'Egy
 function Countries(props) {
 
   // 
-  const { ChosenCountry } = props
-  //console.log(ChosenCountry)
 
-  const [ChosenCountryTmp, setChosenCountry] = useState(ChosenCountry)
-  const [Country, setCountry] = useState("")
-  const [todayDate, setDate] = useState("1/1/2020")
-  const [results, setResults] = useState("") 
+        const [Country, setCountry] = useState(props.Data.ChossenCountry)
+        const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
+        const [language, setlanguage] = useState(props.Data.language)
+        const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
+        const [DarkTheme, setDarkTheme] = useState(props.Data.DarkTheme)
+        const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
+        const [CurrentTheme, setCurrentTheme] = useState(props.Data.CurrentTheme)
+        const [BackgroundColor, setBackgroundColor] = useState(props.Data.BackgroundColor)
+        const [TextColor, setTextColor] = useState(props.Data.TextColor)
+        const [todayDate, settodayDate] = useState("1/1/2020")
 
   // Get today's date
   /*const today = new Date();
@@ -166,38 +170,7 @@ function Countries(props) {
   const today1 = dd+'/'+mm+'/'+yyyy;
   setDate(today1)*/
 
-  // Get Data from Api
-  const GetCountries = async () => {
-    const resultsTmp0 = await fetchCountriesDailyData()
-    //this.setState({movies: results})
-    //this.setState({showMovies: true})
-        //this.handleSubmit()
-    console.log(resultsTmp0)
 
-    const resultsTmp = [];
-    for (const element of resultsTmp0) {
-      // if (element.country in middleEastCountries) {
-        if (middleEastCountries.includes(element.country)) {
-        resultsTmp.push(element)
-      }
-    }
-    console.log(resultsTmp)
-
-    for (const element of resultsTmp) {
-      // if (element.country in middleEastCountries) {
-        if (element.country === ChosenCountry) {
-        setCountry(element)
-        console.log(element.country)
-        }
-      }
-    setResults(resultsTmp)
-    }
-
-  if (Country === "") {
-    GetCountries()
-    }    
-  
-  //GetCountries()
 
   // Set global test device ID
   setTestDeviceIDAsync('ANDROID');
@@ -207,52 +180,51 @@ function Countries(props) {
 
     <View style={styles.container}>
 
+  
       <View style={[styles.container2,{}]}>
-        <Text style={styles.text2}>{Country.country}</Text>
-        <Text style={styles.text2}>   1/1/2020</Text>
+        <Text style={styles.text2}>{ChossenCountryData.country}</Text>
+        <Text style={styles.text2}>   {todayDate}</Text>
       </View>
 
       <View style={styles.container3}>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}>{Country.todayCases}</Text>
+          <Text style={styles.text}>{ChossenCountryData.todayCases}</Text>
           <Text style={styles.text3}>New Cases </Text>
         </View>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}>{Country.cases}</Text>
+          <Text style={styles.text}>{ChossenCountryData.cases}</Text>
           <Text style={styles.text3}>Total Cases</Text>
         </View>
       </View>
 
       <View style={styles.container4}>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}>{Country.todayDeaths}</Text>
+          <Text style={styles.text}>{ChossenCountryData.todayDeaths}</Text>
           <Text style={styles.text3}>New Deaths</Text>
         </View>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}>{Country.deaths}</Text>
+          <Text style={styles.text}>{ChossenCountryData.deaths}</Text>
           <Text style={styles.text3}>Total Deaths</Text>
         </View>
       </View>
 
       <View style={styles.container5}>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}>{Country.active}</Text>
+          <Text style={styles.text}>{ChossenCountryData.active}</Text>
           <Text style={styles.text3}>Active Cases</Text>
         </View>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}>{Country.critical}</Text>
+          <Text style={styles.text}>{ChossenCountryData.critical}</Text>
           <Text style={styles.text3}>Critical Cases</Text>
         </View>
       </View>
 
       <View style={styles.container6}>
         <View style={[styles.circle,{alignSelf: "center"}]}> 
-          <Text style={styles.text}>{Country.recovered}</Text>
+          <Text style={styles.text}>{ChossenCountryData.recovered}</Text>
           <Text style={styles.text3}>Total Recovered</Text>
         </View>
       </View>
-
-
 
       {/* <Button
         title="Refresh"
@@ -264,12 +236,20 @@ function Countries(props) {
       {/* <Text>{"\n"}</Text> */}
 
       {/* // Display a banner */}
-      <AdMobBanner
-        bannerSize="banner"
-        adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
-        servePersonalizedAds // true or false
-        //onDidFailToReceiveAdWithError={this.bannerError} 
-      />
+
+
+        <View style={[{paddingLeft: 0}]}>
+
+
+          <AdMobBanner
+            bannerSize="banner"
+            adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+            servePersonalizedAds // true or false
+            //onDidFailToReceiveAdWithError={this.bannerError} 
+          />
+
+        </View>
+
 
 
     </View>
@@ -282,15 +262,13 @@ function Countries(props) {
 
 export default function DailyUpdateScreen({route}) {
 
-  const  { country }   = route.params
-  //console.log(country)
+  const data    = route.params
+//  const {ChossenCountryData}    = route.params
 
-  //const  { language }  = route.params
-  //console.log(language)
 
   return (
     <Countries
-      ChosenCountry = {country}      
+      Data = {data}      
     />
   )
 }
