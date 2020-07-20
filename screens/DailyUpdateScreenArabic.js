@@ -256,11 +256,13 @@ function Countries(props) {
 
 export default function DailyUpdateScreenArabic({route}) {
 
-  const  { country }   = route.params
+  const data    = route.params
+//  const {ChossenCountryData}    = route.params
+
 
   return (
     <Countries
-    ChosenCountry = {country}      
+      Data = {data}      
     />
   )
 }
