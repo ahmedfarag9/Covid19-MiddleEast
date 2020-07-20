@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "white",
     //alignItems: 'center',
-    //paddingTop: 10,
+    paddingTop: 100,
   },
   text: {
     textAlign: 'center',
