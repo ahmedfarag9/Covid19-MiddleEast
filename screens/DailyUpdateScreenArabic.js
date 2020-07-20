@@ -155,27 +155,29 @@ function Countries(props) {
         const [TextColor, setTextColor] = useState(props.Data.TextColor)
         const [todayDate, settodayDate] = useState("1/1/2020")
 
+  // Get today's date
+  /*const today = new Date();
+  const dd = today.getDate();  
+  const mm = today.getMonth()+1; 
     const mm = today.getMonth()+1; 
-    const yyyy = today.getFullYear();
+  const mm = today.getMonth()+1; 
+  const yyyy = today.getFullYear();
+  if(dd<10) 
     if(dd<10) 
-    {
-        const dd='0'+dd;
-    } 
+  if(dd<10) 
+  {
+      const dd='0'+dd;
+  } 
+  if(mm<10) 
     if(mm<10) 
-    {
-        mm='0'+mm;
-    }
-    const today1 = dd+'/'+mm+'/'+yyyy;
-    setDate(today1)*/
-  
-    // Get Data from Api
-    const GetCountries = async () => {
-      const resultsTmp0 = await fetchCountriesDailyData()
-      //this.setState({movies: results})
-      //this.setState({showMovies: true})
-          //this.handleSubmit()
-      console.log(resultsTmp0)
-  
+  if(mm<10) 
+  {
+      mm='0'+mm;
+  }
+  const today1 = dd+'/'+mm+'/'+yyyy;
+  setDate(today1)*/
+
+
       const resultsTmp = [];
       for (const element of resultsTmp0) {
         // if (element.country in middleEastCountries) {
