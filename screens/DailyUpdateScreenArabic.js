@@ -2,6 +2,15 @@ import * as React from 'react'
 import { useState } from 'react'
 import {Button, View, StyleSheet, Text} from 'react-native'
 import {fetchCountriesDailyData} from '../Api'
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
+
+
 
 const styles = StyleSheet.create({
     container: {
