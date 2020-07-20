@@ -1,5 +1,12 @@
 import * as React from 'react';
 import {Button, View, StyleSheet, Text} from 'react-native'
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
 
 
 const styles = StyleSheet.create({
