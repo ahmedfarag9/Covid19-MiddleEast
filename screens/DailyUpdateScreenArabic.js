@@ -131,20 +131,15 @@ const styles = StyleSheet.create({
   'Saudi Arabia', 'Somalia', 'Sudan', 'Syria', 'Tunisia', 'UAE', 'Yemen' ]
   
   
-  function Countries(props) {
-  
+function Countries(props) {
+
+  // 
     // 
-    const { ChosenCountry } = props
-    //console.log(ChosenCountry)
-  
-    const [ChosenCountryTmp, setChosenCountry] = useState(ChosenCountry)
-    const [Country, setCountry] = useState("")
-    const [todayDate, setDate] = useState("1/1/2020")
-    const [results, setResults] = useState("") 
-  
-    // Get today's date
-    /*const today = new Date();
-    const dd = today.getDate();  
+  // 
+
+        const [Country, setCountry] = useState(props.Data.ChossenCountry)
+        const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
+        const [language, setlanguage] = useState(props.Data.language)
     const mm = today.getMonth()+1; 
     const yyyy = today.getFullYear();
     if(dd<10) 
