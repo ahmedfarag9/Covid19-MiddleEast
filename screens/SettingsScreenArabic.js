@@ -1,5 +1,12 @@
 import * as React from 'react';
 import {Button, View, StyleSheet, Text} from 'react-native'
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
 
 
 const styles = StyleSheet.create({
@@ -9,7 +16,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "white",
     //alignItems: 'center',
-    //paddingTop: 10,
+    paddingTop: 100,
   },
   text: {
     textAlign: 'center',
@@ -25,10 +32,17 @@ const styles = StyleSheet.create({
   },
 })  
 
+
 export default function SettingsScreenArabic({route, navigation}) {
 
   const  { country }   = route.params
   const  { language }  = route.params
+
+  // Set global test device ID
+  setTestDeviceIDAsync('ANDROID');
+
+
+
 
   return (
     <View style={styles.container}>
@@ -58,6 +72,20 @@ export default function SettingsScreenArabic({route, navigation}) {
         title="تغيير البلد"
         onPress={() => navigation.navigate('CountryPageScreenArabic')}
       />
+
+        <Text>{'\n'}{'\n'}</Text>
+
+        <View style={[{paddingLeft: 20}]}>
+
+
+          <AdMobBanner
+            bannerSize="banner"
+            adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+            servePersonalizedAds // true or false
+            //onDidFailToReceiveAdWithError={this.bannerError} 
+          />
+
+        </View>
 
     </View>
   )

@@ -1,5 +1,12 @@
 import * as React from 'react';
 import {Button, View, StyleSheet, Text} from 'react-native'
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
 
 
 const styles = StyleSheet.create({
@@ -9,7 +16,8 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "white",
     //alignItems: 'center',
-    //paddingTop: 10,
+    paddingTop: 70,
+    //paddingLeft: 0
   },
   text: {
     textAlign: 'center',
@@ -30,6 +38,11 @@ export default function SettingsScreen({route, navigation}) {
 
   const  { country }   = route.params
   const  { language }  = route.params
+
+  // Set global test device ID
+  setTestDeviceIDAsync('ANDROID');
+
+
 
     return (
       <View style={styles.container}>
@@ -60,6 +73,8 @@ export default function SettingsScreen({route, navigation}) {
         onPress={() => navigation.navigate('CountryPageScreen')}          
         />
 
+        <Text>{'\n'}{'\n'}</Text>
+
         {/* <Button
           onPress={() =>
             navigation.setParams({
@@ -69,6 +84,19 @@ export default function SettingsScreen({route, navigation}) {
           }
           title="Change country"
         /> */}
+
+        <View style={[{paddingLeft: 20}]}>
+
+
+          <AdMobBanner
+            bannerSize="banner"
+            adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+            servePersonalizedAds // true or false
+            //onDidFailToReceiveAdWithError={this.bannerError} 
+          />
+
+        </View>
+
 
       </View>
     )
