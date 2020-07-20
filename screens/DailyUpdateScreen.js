@@ -147,6 +147,9 @@ function Countries(props) {
         const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
         const [language, setlanguage] = useState(props.Data.language)
         const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
+        const [DarkTheme, setDarkTheme] = useState(props.Data.DarkTheme)
+        const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
+        const [CurrentTheme, setCurrentTheme] = useState(props.Data.CurrentTheme)
 
   // Get today's date
   /*const today = new Date();
