@@ -73,6 +73,8 @@ export default function SettingsScreenArabic({route, navigation}) {
         onPress={() => navigation.navigate('CountryPageScreenArabic')}
       />
 
+        <Text>{'\n'}{'\n'}</Text>
+
     </View>
   )
 }
