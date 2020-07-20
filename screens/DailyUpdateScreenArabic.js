@@ -182,16 +182,17 @@ function Countries(props) {
     <View style={styles.container}>
 
       <View style={[styles.container2,{}]}>
-        <Text style={styles.text2}>{Country.country}</Text>
+        <Text style={styles.text2}>{ChossenCountryData.country}</Text>
+        <Text style={styles.text2}>   {todayDate}</Text>
       </View>
 
       <View style={styles.container3}>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}>{Country.todayCases}</Text>
+          <Text style={styles.text}>{ChossenCountryData.todayCases}</Text>
           <Text style={styles.text3}>الاصابات الجديدة</Text>
         </View>
         <View style={[styles.circle,{}]}> 
-          <Text style={styles.text}>{Country.cases}</Text>
+          <Text style={styles.text}>{ChossenCountryData.cases}</Text>
           <Text style={styles.text3}>اجمالى الاصابات</Text>
         </View>
       </View>
