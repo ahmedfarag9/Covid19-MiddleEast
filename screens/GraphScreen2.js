@@ -42,13 +42,16 @@ function Countries(props){
   const [Tmp, setTmp] = useState(true)
 
   const [DailyNewCases, setDailyNewCases] = useState(props.Data.DailyNewCases)
+  const [DailyNewCasesDates, setDailyNewCasesDates] = useState(props.Data.DailyNewCasesDates)
+  const [DailyNewDeaths, setDailyNewDeaths] = useState(props.Data.DailyNewDeaths)
+  const [DailyNewDeathsDates, setDailyNewDeathsDates] = useState(props.Data.DailyNewDeathsDates)
 
-  const processNewDeaths = item => (
-    parseInt(item.todayDeaths)
-  )
-
-
-  export default function GraphsScreen2()  {
+  const [TotalDeaths, setTotalDeaths] = useState(props.Data.TotalDeaths)
+  const [TotalDeathsDates, setTotalDeathsDates] = useState(props.Data.TotalDeathsDates)
+  const [TotalCases, setTotalCases] = useState(props.Data.TotalCases)
+  const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
+  
+  
 
 
 
