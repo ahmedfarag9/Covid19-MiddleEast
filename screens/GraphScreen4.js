@@ -46,6 +46,10 @@ function Countries(props){
     const [DailyNewDeaths, setDailyNewDeaths] = useState(props.Data.DailyNewDeaths)
     const [DailyNewDeathsDates, setDailyNewDeathsDates] = useState(props.Data.DailyNewDeathsDates)
 
+    const [TotalDeaths, setTotalDeaths] = useState(props.Data.TotalDeaths)
+    const [TotalDeathsDates, setTotalDeathsDates] = useState(props.Data.TotalDeathsDates)
+    const [TotalCases, setTotalCases] = useState(props.Data.TotalCases)
+    const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
 
   const processNewDeaths = item => (
     parseInt(item.todayDeaths)
