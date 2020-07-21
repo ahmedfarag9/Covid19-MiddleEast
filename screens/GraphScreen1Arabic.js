@@ -33,6 +33,11 @@ function Countries(props){
   const [language, setlanguage] = useState(props.Data.language)
   const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
   const [DarkTheme, setDarkTheme] = useState(props.Data.DarkTheme)
+  const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
+  const [CurrentTheme, setCurrentTheme] = useState(props.Data.CurrentTheme)
+  const [BackgroundColor, setBackgroundColor] = useState(props.Data.BackgroundColor)
+  const [TextColor, setTextColor] = useState(props.Data.TextColor)
+  const [todayDate, settodayDate] = useState("1/1/2020")
       
   
       const y = results.map(processTotalCases)
