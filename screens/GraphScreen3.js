@@ -44,9 +44,14 @@ function Countries(props){
     const [DailyNewCases, setDailyNewCases] = useState(props.Data.DailyNewCases)
     const [DailyNewCasesDates, setDailyNewCasesDates] = useState(props.Data.DailyNewCasesDates)
     const [DailyNewDeaths, setDailyNewDeaths] = useState(props.Data.DailyNewDeaths)
-    
-    
-   
+    const [DailyNewDeathsDates, setDailyNewDeathsDates] = useState(props.Data.DailyNewDeathsDates)
+
+    const [TotalDeaths, setTotalDeaths] = useState(props.Data.TotalDeaths)
+    const [TotalDeathsDates, setTotalDeathsDates] = useState(props.Data.TotalDeathsDates)
+    const [TotalCases, setTotalCases] = useState(props.Data.TotalCases)
+    const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
+
+
     const data = {
         labels: Dates1,
         //datasets: TotalCases,
