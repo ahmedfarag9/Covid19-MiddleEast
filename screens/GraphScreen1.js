@@ -30,16 +30,13 @@ function Countries(props){
     const [Dates, setDates] = useState(null)
     const [TotalCases, setTotalCases] = useState(null) 
   
-    const GetCountry = async () => {
-      const results = await fetchCountryID()
-      //this.setState({movies: results})
-      //this.setState({showMovies: true})
-          //this.handleS`ubmit()
-      //console.log(results)
-      const x = results.map(processDates)
-      setDates(x)
-     // console.log(x)
-      
+
+    const [Country, setCountry] = useState(props.Data.ChossenCountry)
+    const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
+    const [language, setlanguage] = useState(props.Data.language)
+    const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
+    const [DarkTheme, setDarkTheme] = useState(props.Data.DarkTheme)
+    const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
       
   
       const y = results.map(processTotalCases)
