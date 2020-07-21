@@ -4,6 +4,13 @@ import { useState } from 'react'
 import {fetchCountriesDailyData, fetchCountryID} from '../Api'
 import { Dimensions } from "react-native";
 import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, StackedBarChart} from "react-native-chart-kit"
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
 
 const styles = StyleSheet.create({
     container: {
