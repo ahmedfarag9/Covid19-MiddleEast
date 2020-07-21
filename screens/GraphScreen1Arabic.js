@@ -38,7 +38,12 @@ function Countries(props){
   const [BackgroundColor, setBackgroundColor] = useState(props.Data.BackgroundColor)
   const [TextColor, setTextColor] = useState(props.Data.TextColor)
   const [todayDate, settodayDate] = useState("1/1/2020")
-      
+  const [TotalCountriesData, setTotalCountriesData] = useState(props.Data.TotalCountriesData)
+  const [MiddleEastCountriesData, setMiddleEastCountriesData] = useState(props.Data.MiddleEastCountriesData)
+  const [Tmp, setTmp] = useState(true)
+
+  const [DailyNewCases, setDailyNewCases] = useState(props.Data.DailyNewCases)
+  const [DailyNewCasesDates, setDailyNewCasesDates] = useState(props.Data.DailyNewCasesDates)
   
       const y = results.map(processTotalCases)
       //console.log(y)
