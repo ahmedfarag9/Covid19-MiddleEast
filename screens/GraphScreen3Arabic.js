@@ -25,10 +25,13 @@ import {
     })
   
 
-    const  { TotalDeaths,Dates }   = route.params
 
-    const [Dates1, setDates1] = useState(Dates)
-    const [TotalDeaths1, setTotalDeaths1] = useState(TotalDeaths)
+    const [Country, setCountry] = useState(props.Data.ChossenCountry)
+    const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
+    const [language, setlanguage] = useState(props.Data.language)
+    const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
+    const [DarkTheme, setDarkTheme] = useState(props.Data.DarkTheme)
+    const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
 
 
     //console.log(Dates1)
