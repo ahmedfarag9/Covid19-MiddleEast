@@ -13,21 +13,19 @@ import {
 } from 'expo-ads-admob';
 
 
-  export default function GraphScreen3({route}){
-    const styles = StyleSheet.create({
-      container: {
-        flex: 1, padding: 16, paddingTop: 30, backgroundColor: 'black' 
-      },
-      text: {
-        textAlign: 'center',
-      },
-    })
+function Countries(props){
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1, padding: 0, paddingTop: 0, backgroundColor: 'white' 
+    },
+    text: {
+      textAlign: 'center',
+    },
+  })
+
   
 
-    const  { TotalDeaths,Dates }   = route.params
-
-    const [Dates1, setDates1] = useState(Dates)
-    const [TotalDeaths1, setTotalDeaths1] = useState(TotalDeaths)
 
 
     //console.log(Dates1)
