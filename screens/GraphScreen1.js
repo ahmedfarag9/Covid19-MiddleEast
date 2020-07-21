@@ -44,8 +44,12 @@ function Countries(props){
     const [TotalCountriesData, setTotalCountriesData] = useState(props.Data.TotalCountriesData)
     const [MiddleEastCountriesData, setMiddleEastCountriesData] = useState(props.Data.MiddleEastCountriesData)
     const [Tmp, setTmp] = useState(true)
-      
-  
+
+    const [DailyNewCases, setDailyNewCases] = useState(props.Data.DailyNewCases)
+    const [DailyNewCasesDates, setDailyNewCasesDates] = useState(props.Data.DailyNewCasesDates)
+    const [DailyNewDeaths, setDailyNewDeaths] = useState(props.Data.DailyNewDeaths)
+    const [DailyNewDeathsDates, setDailyNewDeathsDates] = useState(props.Data.DailyNewDeathsDates)
+
       const y = results.map(processTotalCases)
       //console.log(y)
       setTotalCases(y)
