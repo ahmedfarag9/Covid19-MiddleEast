@@ -13,10 +13,11 @@ import {
 } from 'expo-ads-admob';
 
 
-  export default function GraphsScreen3Arabic({route}){
+  function Countries(props){
+
     const styles = StyleSheet.create({
       container: {
-        flex: 1, padding: 16, paddingTop: 30, backgroundColor: 'black' 
+        flex: 1, padding: 0, paddingTop: 0, backgroundColor: 'white' 
       },
       text: {
         textAlign: 'center',
