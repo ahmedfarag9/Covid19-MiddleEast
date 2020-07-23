@@ -52,9 +52,9 @@ function Countries(props){
   const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
   
   
-
-
-
+  
+      
+     
       const data = {
           labels: DailyNewCasesDates,
           //datasets: TotalCases,
@@ -81,6 +81,8 @@ function Countries(props){
     
     //   };
     
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');  
     
 
     return (
