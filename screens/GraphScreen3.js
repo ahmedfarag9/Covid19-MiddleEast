@@ -117,6 +117,16 @@ function Countries(props){
         )}
 
       </View>
-      </ScrollView>
+
+
+  export default function GraphScreen3({route}) {
+
+    const data    = route.params
+  
+  
+    return (
+      <Countries
+        Data = {data}      
+      />
     )
   }
