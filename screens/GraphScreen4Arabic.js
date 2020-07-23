@@ -85,15 +85,16 @@ import {
 
     return (
       <View  style={styles.container}>
-        <Text>عدد المتةفين فى اليوم</Text>
+        <Text>عدد الوفيات اليومية</Text>
 
-        <Button
+        <ScrollView horizontal={true}>
+
+        {/* <Button
             title="Refresh"
             onPress={() => {
               GetCountry()
             }}
-          />
-      {Dates && NewDeaths && (
+          /> */}
           <BarChart
             data={data}
             //width={Dimensions.get("window").width} // from react-native
