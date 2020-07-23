@@ -95,6 +95,8 @@ import {
               GetCountry()
             }}
           /> */}
+      
+      {DailyNewDeathsDates && DailyNewDeaths && (
           <BarChart
             data={data}
             //width={Dimensions.get("window").width} // from react-native
