@@ -81,12 +81,12 @@ function Countries(props){
     
     //   };
     
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');
+
     
 
     return (
-      <ScrollView horizontal={true}>
-      <View  style={styles.container}>
-        <Text>Daily New Deaths in Egypt</Text>
 
         <Button
             title="Refresh"
