@@ -97,6 +97,7 @@ function Countries(props){
               GetCountry()
             }}
           /> */}
+      {DailyNewCasesDates && DailyNewCases && (
           <BarChart
             data={data}
             //width={Dimensions.get("window").width} // from react-native
