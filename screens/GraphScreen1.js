@@ -72,20 +72,20 @@ function Countries(props){
 
 
       return (
-        <ScrollView horizontal={true}>
+
         <View  style={styles.container}>
-          <Text>Total Coronavirus Cases in Egypt</Text>
-          <Button
+
+      <Text style={[{paddingLeft: 10}]}>Total Coronavirus Cases</Text>
+
+          <ScrollView horizontal={true}>
+
+
+          {/* <Button
             title="Refresh"
             onPress={() => {
               GetCountry()
             }}
-          />
-
-
-          
-          
-
+          /> */}
 
           {Dates && TotalCases && (
             <LineChart
