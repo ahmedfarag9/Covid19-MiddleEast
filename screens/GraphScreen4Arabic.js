@@ -51,10 +51,7 @@ import {
     const [TotalCases, setTotalCases] = useState(props.Data.TotalCases)
     const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
 
-  const processNewDeaths = item => (
-    parseInt(item.todayDeaths)
-  )
-
+     
       const data = {
           labels: DailyNewDeathsDates,
           //datasets: TotalCases,
@@ -81,10 +78,12 @@ import {
     
     //   };
     
-    
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');
+
+
 
     return (
-      <ScrollView horizontal={true}>
       <View  style={styles.container}>
         <Text>عدد المتةفين فى اليوم</Text>
 
