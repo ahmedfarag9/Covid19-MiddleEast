@@ -128,6 +128,16 @@ import {
           />
       )}
         </View>
-      </ScrollView>
+
+
+  export default function GraphsScreen4Arabic({route}) {
+
+    const data    = route.params
+  
+  
+    return (
+      <Countries
+        Data = {data}      
+      />
     )
-  } 
+  }
