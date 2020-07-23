@@ -27,8 +27,6 @@ function Countries(props){
     },
   })
 
-    const [Dates, setDates] = useState(null)
-    const [TotalCases, setTotalCases] = useState(null) 
   
 
     const [Country, setCountry] = useState(props.Data.ChossenCountry)
