@@ -102,8 +102,8 @@ function Countries(props){
           <BarChart
             data={data}
             //width={Dimensions.get("window").width} // from react-native
-            width={1000}
-            height={700}
+            width={1100}
+            height={550}
             yAxisSuffix=""
             yAxisInterval={30} // optional, defaults to 1
             verticalLabelRotation={90}
@@ -112,7 +112,7 @@ function Countries(props){
                 backgroundColor: "#e26a00",
                 backgroundGradientFrom: "#fb8c00",
                 backgroundGradientTo: "#ffa726",
-                decimalPlaces: 0, // optional, defaults to 2dp
+                decimalPlaces: 0.1, // optional, defaults to 2dp
                 color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                 labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                 style: {
@@ -125,8 +125,8 @@ function Countries(props){
                 }
             }}
             style={{
-                marginVertical: 8,
-                marginHorizontal: 20,
+                marginVertical: 0,
+                marginHorizontal: 5,
                 borderRadius: 16,
                 //paddingRight: 10
             }}
