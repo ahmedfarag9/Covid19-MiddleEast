@@ -53,11 +53,11 @@ function Countries(props){
 
 
     const data = {
-        labels: Dates1,
+        labels: TotalDeathsDates,
         //datasets: TotalCases,
         datasets: [
         {
-          data: TotalDeaths1
+          data: TotalDeaths
         }
         ]
       };     
