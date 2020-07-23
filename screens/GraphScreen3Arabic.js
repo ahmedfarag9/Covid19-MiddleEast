@@ -61,10 +61,9 @@ import {
         ]
       };  
       
-    return (
-      <ScrollView horizontal={true}>
-
-
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');
+   
       <View  style={styles.container}>
         <Text>العدد الكلى للمتوفين</Text>
 
