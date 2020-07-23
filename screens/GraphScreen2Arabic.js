@@ -50,11 +50,10 @@ function Countries(props){
   const [TotalCases, setTotalCases] = useState(props.Data.TotalCases)
   const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
   
-
-
-  export default function GraphsScreen2Arabic()  {
-
-
+  
+  
+      
+     
       const data = {
           labels: DailyNewCasesDates,
           //datasets: TotalCases,
@@ -81,7 +80,9 @@ function Countries(props){
     
     //   };
     
-    
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');  
+   
 
     return (
       <ScrollView horizontal={true}>
