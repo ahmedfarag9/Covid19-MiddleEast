@@ -52,16 +52,19 @@ function Countries(props){
   const [TotalCases, setTotalCases] = useState(props.Data.TotalCases)
   const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
 
-    const data = {
-        labels: Dates,
-        //datasets: TotalCases,
-        datasets: [
-        {
-          data: TotalCases
-        }
-        ]
+
+  const data = {
+      labels: TotalCasesDates,
+      //datasets: TotalCases,
+      datasets: [
+      {
+        data: TotalCases
+      }
+      ]
+    };     
       };
-      
+    };     
+
     //GetCountry()
 
 
