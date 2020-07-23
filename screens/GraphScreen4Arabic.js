@@ -55,40 +55,12 @@ import {
     parseInt(item.todayDeaths)
   )
 
-
-  export default function GraphsScreen4Arabic()  {
-
-
-
-    const [Dates, setDates] = useState(null)
-      const [NewDeaths, setNewDeaths] = useState(null) 
-      
-      
-      const GetCountry = async () => {
-        const results = await fetchCountryID()
-        const  results2 = await fetchCountriesDailyData()
-  
-        console.log(results2)
-        const x = results.map(processDates)
-        setDates(x)
-   
-        
-        const y = results2.map(processNewDeaths)
-        setNewDeaths(y) 
-        console.log(y)    
-      }
-
-    
-  
-  
-      
-     
       const data = {
-          labels: Dates,
+          labels: DailyNewDeathsDates,
           //datasets: TotalCases,
           datasets: [
           {
-            data: NewDeaths
+            data: DailyNewDeaths
           }
           ]
         };
