@@ -88,13 +88,15 @@ function Countries(props){
 
     return (
 
-        <Button
+      <View  style={styles.container}>
+        <Text style={[{paddingLeft: 10}]}>Daily New Deaths</Text>
+        <ScrollView horizontal={true}>
+        {/* <Button
             title="Refresh"
             onPress={() => {
               GetCountry()
             }}
-          />
-      {Dates && NewDeaths && (
+          /> */}
           <BarChart
             data={data}
             //width={Dimensions.get("window").width} // from react-native
