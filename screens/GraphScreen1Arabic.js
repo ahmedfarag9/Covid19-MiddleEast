@@ -68,19 +68,20 @@ function Countries(props){
 
 
       return (
-        <ScrollView horizontal={true}>
+
         <View  style={styles.container}>
+
           <Text>العدد الكلى للمصابين</Text>
-          <Button
+
+          <ScrollView horizontal={true}>
+
+          {/* <Button
             title="Refresh"
             onPress={() => {
               GetCountry()
             }}
           />
-
-
-          
-          
+         */}
 
 
           {Dates && TotalCases && (
