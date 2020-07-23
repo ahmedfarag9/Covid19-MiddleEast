@@ -85,7 +85,7 @@ function Countries(props){
             }}
           /> */}
 
-          {Dates && TotalCases && (
+          {TotalCasesDates && TotalCases && (
             <LineChart
               data={data}
               //width={Dimensions.get("window").width} // from react-native
