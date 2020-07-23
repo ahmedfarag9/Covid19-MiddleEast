@@ -51,10 +51,7 @@ function Countries(props){
     const [TotalCases, setTotalCases] = useState(props.Data.TotalCases)
     const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
 
-  const processNewDeaths = item => (
-    parseInt(item.todayDeaths)
-  )
-
+     
       const data = {
           labels: DailyNewDeathsDates,
           //datasets: TotalCases,
