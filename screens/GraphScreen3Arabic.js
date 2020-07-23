@@ -64,12 +64,16 @@ import {
     // Set global test device ID
     setTestDeviceIDAsync('ANDROID');
    
+      
+    return (
+
       <View  style={styles.container}>
         <Text>العدد الكلى للمتوفين</Text>
 
+        <ScrollView horizontal={true}>
 
-        <View style={{ flex: 1, alignItems: "center", backgroundColor: "white"}}>
-      </View> 
+        {/* <View style={{ flex: 1, alignItems: "center", backgroundColor: "white"}}>
+      </View>  */}
 
 
 
