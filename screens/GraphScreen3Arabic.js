@@ -4,12 +4,20 @@ import { useState } from 'react'
 import {fetchCountriesDailyData, fetchCountryID} from '../Api'
 import { Dimensions } from "react-native";
 import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, StackedBarChart} from "react-native-chart-kit"
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
 
 
-  export default function GraphsScreen3Arabic({route}){
+  function Countries(props){
+
     const styles = StyleSheet.create({
       container: {
-        flex: 1, padding: 16, paddingTop: 30, backgroundColor: 'black' 
+        flex: 1, padding: 0, paddingTop: 0, backgroundColor: 'white' 
       },
       text: {
         textAlign: 'center',
@@ -17,38 +25,55 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
     })
   
 
-    const  { TotalDeaths,Dates }   = route.params
 
-    const [Dates1, setDates1] = useState(Dates)
-    const [TotalDeaths1, setTotalDeaths1] = useState(TotalDeaths)
+    const [Country, setCountry] = useState(props.Data.ChossenCountry)
+    const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
+    const [language, setlanguage] = useState(props.Data.language)
+    const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
+    const [DarkTheme, setDarkTheme] = useState(props.Data.DarkTheme)
+    const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
+    const [CurrentTheme, setCurrentTheme] = useState(props.Data.CurrentTheme)
+    const [BackgroundColor, setBackgroundColor] = useState(props.Data.BackgroundColor)
+    const [TextColor, setTextColor] = useState(props.Data.TextColor)
+    const [todayDate, settodayDate] = useState("1/1/2020")
+    const [TotalCountriesData, setTotalCountriesData] = useState(props.Data.TotalCountriesData)
+    const [MiddleEastCountriesData, setMiddleEastCountriesData] = useState(props.Data.MiddleEastCountriesData)
+    const [Tmp, setTmp] = useState(true)
+
+    const [DailyNewCases, setDailyNewCases] = useState(props.Data.DailyNewCases)
+    const [DailyNewCasesDates, setDailyNewCasesDates] = useState(props.Data.DailyNewCasesDates)
+    const [DailyNewDeaths, setDailyNewDeaths] = useState(props.Data.DailyNewDeaths)
+    const [DailyNewDeathsDates, setDailyNewDeathsDates] = useState(props.Data.DailyNewDeathsDates)
+
+    const [TotalDeaths, setTotalDeaths] = useState(props.Data.TotalDeaths)
+    const [TotalDeathsDates, setTotalDeathsDates] = useState(props.Data.TotalDeathsDates)
+    const [TotalCases, setTotalCases] = useState(props.Data.TotalCases)
+    const [TotalCasesDates, setTotalCasesDates] = useState(props.Data.TotalCasesDates)
 
 
-    //console.log(Dates1)
-    //console.log(TotalDeaths1)
-    
-    
-    
-   
     const data = {
-        labels: Dates1,
+        labels: TotalDeathsDates,
         //datasets: TotalCases,
         datasets: [
         {
-          data: TotalDeaths1
+          data: TotalDeaths
         }
         ]
-      };     
-
+      };  
+      
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');
+   
+      
     return (
-      <ScrollView horizontal={true}>
-
 
       <View  style={styles.container}>
         <Text>العدد الكلى للمتوفين</Text>
 
+        <ScrollView horizontal={true}>
 
-        <View style={{ flex: 1, alignItems: "center", backgroundColor: "white"}}>
-      </View> 
+        {/* <View style={{ flex: 1, alignItems: "center", backgroundColor: "white"}}>
+      </View>  */}
 
 
 
@@ -59,7 +84,7 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
           }}
         /> */}
 
-        {Dates && TotalDeaths && (
+{TotalDeathsDates && TotalDeaths && (
           <LineChart
             data={data}
             //width={Dimensions.get("window").width} // from react-native
@@ -92,8 +117,35 @@ import {LineChart, BarChart, PieChart, ProgressChart, ContributionGraph, Stacked
             }}
           />
         )}
+      </ScrollView>
+
+        <View style={[{paddingLeft: 20}]}>
+
+
+          <AdMobBanner
+            bannerSize="banner"
+            adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+            servePersonalizedAds // true or false
+            //onDidFailToReceiveAdWithError={this.bannerError} 
+          />
+
+        </View>
 
       </View>
-      </ScrollView>
+
+    )
+  }
+
+
+
+  export default function GraphsScreen3Arabic({route}) {
+
+    const data    = route.params
+  
+  
+    return (
+      <Countries
+        Data = {data}      
+      />
     )
   }
