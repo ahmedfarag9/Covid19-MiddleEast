@@ -62,8 +62,8 @@ function Countries(props){
         ]
       };     
 
-    return (
-      <ScrollView horizontal={true}>
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');
 
 
       <View  style={styles.container}>
