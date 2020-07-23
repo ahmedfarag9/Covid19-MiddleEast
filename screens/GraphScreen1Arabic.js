@@ -62,10 +62,9 @@ function Countries(props){
       }
       ]
     };     
-      };
-    };     
 
-    //GetCountry()
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');  
 
 
       return (
