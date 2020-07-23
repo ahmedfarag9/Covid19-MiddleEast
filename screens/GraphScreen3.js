@@ -66,14 +66,17 @@ function Countries(props){
     setTestDeviceIDAsync('ANDROID');
 
 
+
+    return (
+
       <View  style={styles.container}>
-        <Text>Total Deaths in Egypt</Text>
+        <Text style={[{paddingLeft: 10}]}>Total Deaths</Text>
 
+        <ScrollView horizontal={true}>
 
+        {/* 
         <View style={{ flex: 1, alignItems: "center", backgroundColor: "white"}}>
-      </View> 
-
-
+      </View>  */}
 
         {/* <Button
           title="Refresh"
