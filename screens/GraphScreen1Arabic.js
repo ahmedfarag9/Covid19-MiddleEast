@@ -121,3 +121,20 @@ function Countries(props){
         </ScrollView>
       )
     }
+
+
+
+
+
+
+  export default function GraphsScreen1Arabic({route}) {
+
+    const data    = route.params
+    
+    
+    return (
+      <Countries
+        Data = {data}      
+      />
+    )
+  }
