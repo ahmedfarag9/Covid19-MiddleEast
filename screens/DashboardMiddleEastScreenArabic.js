@@ -62,6 +62,10 @@ function Countries(props) {
     const [todayDate, settodayDate] = useState("1/1/2020")
     const [tableHead, setTableHead] = useState(tableHeadConst)
     const [widthArr, setWidthArr] = useState(widthArrConst)
+    const [TotalCountriesData, setTotalCountriesData] = useState(props.Data.TotalCountriesData)
+    const [MiddleEastCountriesData, setMiddleEastCountriesData] = useState(props.Data.MiddleEastCountriesData)
+    const [tableData, setTableData] = useState(tableDataTmp)
+    const [Tmp, setTmp] = useState(true)
 
     const GetCountries = async () => {
       const resultsTmp0 = await fetchCountriesDailyData()
