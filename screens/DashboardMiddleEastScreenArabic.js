@@ -58,6 +58,10 @@ function Countries(props) {
     const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
     const [CurrentTheme, setCurrentTheme] = useState(props.Data.CurrentTheme)
     const [BackgroundColor, setBackgroundColor] = useState(props.Data.BackgroundColor)
+    const [TextColor, setTextColor] = useState(props.Data.TextColor)
+    const [todayDate, settodayDate] = useState("1/1/2020")
+    const [tableHead, setTableHead] = useState(tableHeadConst)
+    const [widthArr, setWidthArr] = useState(widthArrConst)
 
     const GetCountries = async () => {
       const resultsTmp0 = await fetchCountriesDailyData()
