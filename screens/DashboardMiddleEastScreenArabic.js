@@ -3,6 +3,14 @@ import { useState } from 'react'
 import {Button, View, StyleSheet, Text, ScrollView} from 'react-native'
 import { Table, TableWrapper, Row } from 'react-native-table-component';
 import {fetchCountriesDailyData} from '../Api'
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
+
 
 const tableHeadConst = ['الدولة', 'اجمالى الاصابات', 'الاصابات الجديدة', 'اجمالى الوفيات', 'الوفيات الجديدة',
 'المتعافون', 'الحالات النشطة', 'الحالات الحرجة', 'عدد الاصابات / مليون نسمة',
