@@ -62,22 +62,14 @@ function Countries(props) {
     const [CurrentTheme, setCurrentTheme] = useState(props.Data.CurrentTheme)
     const [BackgroundColor, setBackgroundColor] = useState(props.Data.BackgroundColor)
     const [TextColor, setTextColor] = useState(props.Data.TextColor)
+    const [todayDate, settodayDate] = useState("1/1/2020")
     const [tableHead, setTableHead] = useState(tableHeadConst)
     const [widthArr, setWidthArr] = useState(widthArrConst)
-    const [results, setResults] = useState("")
+    const [TotalCountriesData, setTotalCountriesData] = useState(props.Data.TotalCountriesData)
+    const [MiddleEastCountriesData, setMiddleEastCountriesData] = useState(props.Data.MiddleEastCountriesData)
     const [tableData, setTableData] = useState(tableDataTmp)
+    const [Tmp, setTmp] = useState(true)
 
-    const GetCountries = async () => {
-      const resultsTmp0 = await fetchCountriesDailyData()
-      const resultsTmp = [];
-      for (const element of resultsTmp0) {
-        // if (element.country in middleEastCountries) {
-          if (middleEastCountries.includes(element.country)) {
-          resultsTmp.push(element)
-        }
-      }
-      console.log(resultsTmp)
-      setResults(resultsTmp)
       
       const tableData1 = [];
       for (const element of resultsTmp) {
