@@ -3,6 +3,14 @@ import { useState } from 'react'
 import {Button, View, StyleSheet, Text, ScrollView} from 'react-native'
 import { Table, TableWrapper, Row } from 'react-native-table-component';
 import {fetchCountriesDailyData} from '../Api'
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
+
 
 const tableHeadConst = ['Country', 'Total Cases', 'New Cases', 'Total Deaths', 'New Deaths',
                         'Total Recovered', 'Active Cases', 'Critical Cases', 'Total Cases / 1M pop',
