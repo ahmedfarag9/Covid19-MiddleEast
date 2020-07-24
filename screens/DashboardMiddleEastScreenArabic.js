@@ -49,13 +49,11 @@ const styles = StyleSheet.create({
 
 function Countries(props) {
 
-  const { ChosenCountry } = props
-  //console.log(ChosenCountry)
 
-  const [ChosenCountryTmp, setChosenCountry] = useState(ChosenCountry)
-
-  const [tableHead, setTableHead] = useState(tableHeadConst)
-  const [widthArr, setWidthArr] = useState(widthArrConst)
+    const [Country, setCountry] = useState(props.Data.ChossenCountry)
+    const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
+    const [language, setlanguage] = useState(props.Data.language)
+    const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
   const [results, setResults] = useState("")
   const [tableData, setTableData] = useState(tableDataTmp)
 
