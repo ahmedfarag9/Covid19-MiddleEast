@@ -54,8 +54,10 @@ function Countries(props) {
     const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
     const [language, setlanguage] = useState(props.Data.language)
     const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
-  const [results, setResults] = useState("")
-  const [tableData, setTableData] = useState(tableDataTmp)
+    const [DarkTheme, setDarkTheme] = useState(props.Data.DarkTheme)
+    const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
+    const [CurrentTheme, setCurrentTheme] = useState(props.Data.CurrentTheme)
+    const [BackgroundColor, setBackgroundColor] = useState(props.Data.BackgroundColor)
 
     const GetCountries = async () => {
       const resultsTmp0 = await fetchCountriesDailyData()
