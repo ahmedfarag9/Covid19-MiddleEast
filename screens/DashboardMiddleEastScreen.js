@@ -107,12 +107,12 @@ function Countries(props) {
     return (
       <View style={styles.container}>
 
-        <Button
+        {/* <Button
             title="Refresh"
             onPress={() => {
               GetCountries()
             }}
-          />
+          /> */}
 
         <ScrollView horizontal={true}>      
           <View>
