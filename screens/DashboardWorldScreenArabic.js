@@ -155,9 +155,14 @@ function Countries(props) {
   }
 
 
-export default function DashboardWorldScreenArabic() {
+export default function DashboardWorldScreenArabic({route}) {
+
+  const data    = route.params
+
 
   return (
-    <Countries/>
+    <Countries
+      Data = {data}      
+    />
   )
 }
