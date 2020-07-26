@@ -159,9 +159,14 @@ function Countries(props) {
   }
 
 
-export default function DashboardWorldScreen() {
+export default function DashboardWorldScreen({route}) {
+
+  const data    = route.params
+
 
   return (
-    <Countries/>
+    <Countries
+      Data = {data}      
+    />
   )
 }
