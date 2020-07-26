@@ -88,11 +88,10 @@ function Countries(props) {
 
   }
 
+  if (Tmp === true) {
+    SetData()
+  }
 
-    if (results === "") {
-      GetCountries()
-    }
- 
   // Set global test device ID
   setTestDeviceIDAsync('ANDROID');
 
