@@ -87,9 +87,11 @@ function Countries(props) {
       rowData.push(`${element.testsPerOneMillion}`);
       rowData.push(`${parseInt(1)*parseInt(1)}`);
 
-        tableData1.push(rowData);
-      }
+      tableData1.push(rowData);
+       }
       setTableData(tableData1)
+      setTmp(false)
+
     }
 
     if (results === "") {
