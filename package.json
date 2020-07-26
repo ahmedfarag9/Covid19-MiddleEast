@@ -29,7 +29,7 @@
     "react-native-table-component": "1.2.1",
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "~0.11.7",
-    "expo-ads-admob": "8.2.1"
+    "expo-ads-admob": "~8.1.0"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.0.0",
