@@ -41,11 +41,8 @@ const styles = StyleSheet.create({
   row: { height: 40, backgroundColor: '#E7E6E1' }
 });  
 
-
 function Countries(props) {
 
-  const { ChosenCountry } = props
-  //console.log(ChosenCountry)
 
   const [Country, setCountry] = useState(props.Data.ChossenCountry)
   const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
@@ -84,12 +81,12 @@ function Countries(props) {
     rowData.push(`${element.testsPerOneMillion}`);
     rowData.push(`${parseInt(1)*parseInt(1)}`);
 
-        tableData1.push(rowData);
-        // for (let j = 0; j < 11; j += 1) {
-        //   rowData.push(`${element.country}`);
-        // }
-      }
-      setTableData(tableData1)
+    tableData1.push(rowData);
+     }
+    setTableData(tableData1)
+    setTmp(false)
+
+  }
 
     }
 
