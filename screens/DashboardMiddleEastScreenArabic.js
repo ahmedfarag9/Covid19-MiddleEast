@@ -94,8 +94,8 @@ function Countries(props) {
 
     }
 
-    if (results === "") {
-      GetCountries()
+    if (Tmp === true) {
+      SetData()
     }
 
     // Set global test device ID
