@@ -160,12 +160,13 @@ function Countries(props) {
     )
   }
 
-export default function DashboardMiddleEastScreenArabic(route) {
-  const  { country }   = route.route.params
+export default function DashboardMiddleEastScreenArabic({route}) {
+  
+  const data    = route.params
 
   return (
     <Countries
-      ChosenCountry = {country}          
+      Data = {data}      
     />
   )
 }
