@@ -16,6 +16,7 @@ const tableHeadConst = ['Country', 'Total Cases', 'New Cases', 'Total Deaths', '
 'Total Recovered', 'Active Cases', 'Critical Cases', 'Total Cases / 1M pop',
 'Deaths / 1M pop', 'Total Tests', 'Tests / 1M pop'/*, 'Population'*/]
 
+const x = 80
 const widthArrConst = [x, x, x, x, x, x, x, x, x, x, x, x/*, x */]
 
 const tableDataTmp = [];
