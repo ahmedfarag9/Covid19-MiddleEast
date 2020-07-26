@@ -104,7 +104,12 @@ function Countries(props) {
     if (results === "") {
       GetCountries()
     }
+
+    // Set global test device ID
+    setTestDeviceIDAsync('ANDROID');
  
+
+
     return (
       <View style={styles.container}>
 
