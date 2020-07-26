@@ -93,9 +93,14 @@ function Countries(props) {
       setTableData(tableData1)
     }
 
-    if (Tmp === true) {
-      SetData()
+    if (results === "") {
+      GetCountries()
     }
+
+  // Set global test device ID
+  setTestDeviceIDAsync('ANDROID');
+
+
  
     return (
       <View style={styles.container}>
