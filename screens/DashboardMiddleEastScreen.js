@@ -50,8 +50,6 @@ const styles = StyleSheet.create({
 
 function Countries(props) {
 
-    const { ChosenCountry } = props
-    //console.log(ChosenCountry)
 
     const [Country, setCountry] = useState(props.Data.ChossenCountry)
     const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
@@ -91,7 +89,10 @@ function Countries(props) {
       rowData.push(`${parseInt(1)*parseInt(1)}`);
 
       tableData1.push(rowData);
+       }
       setTableData(tableData1)
+      setTmp(false)
+
     }
 
     if (results === "") {
