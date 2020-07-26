@@ -154,11 +154,11 @@ function Countries(props) {
 
 export default function DashboardMiddleEastScreen({route}) {
 
-  const  { country }   = route.params
+  const data    = route.params
 
   return (
     <Countries
-      ChosenCountry = {country}          
+      Data = {data}      
     />
   )
 }
