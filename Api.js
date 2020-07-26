@@ -48,7 +48,7 @@ export const fetchCountryID = async (input) => {
 
 	const response = await fetch(url)
     const result = await response.json()
-  console.log(result)
+  //console.log(result)
 
 	//const response = await fetch('http://www.omdbapi.com/?apikey=4e59c02d&r=json&s=Avengers')
   //console.log(result)

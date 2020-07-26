@@ -3,6 +3,14 @@ import { useState } from 'react'
 import {Button, View, StyleSheet, Text, ScrollView} from 'react-native'
 import { Table, TableWrapper, Row } from 'react-native-table-component';
 import {fetchCountriesDailyData} from '../Api'
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
+
 
 const tableHeadConst = ['Country', 'Total Cases', 'New Cases', 'Total Deaths', 'New Deaths',
                         'Total Recovered', 'Active Cases', 'Critical Cases', 'Total Cases / 1M pop',
@@ -42,63 +50,69 @@ const styles = StyleSheet.create({
 
 function Countries(props) {
 
-    const { ChosenCountry } = props
-    //console.log(ChosenCountry)
 
-    const [ChosenCountryTmp, setChosenCountry] = useState(ChosenCountry)
-
+    const [Country, setCountry] = useState(props.Data.ChossenCountry)
+    const [ChossenCountryData, setChossenCountryData] = useState(props.Data.ChossenCountryData)
+    const [language, setlanguage] = useState(props.Data.language)
+    const [MiddleEastCountries, setMiddleEastCountries] = useState(props.Data.MiddleEastCountries)
+    const [DarkTheme, setDarkTheme] = useState(props.Data.DarkTheme)
+    const [WhiteTheme, setWhiteTheme] = useState(props.Data.WhiteTheme)
+    const [CurrentTheme, setCurrentTheme] = useState(props.Data.CurrentTheme)
+    const [BackgroundColor, setBackgroundColor] = useState(props.Data.BackgroundColor)
+    const [TextColor, setTextColor] = useState(props.Data.TextColor)
+    const [todayDate, settodayDate] = useState("1/1/2020")
     const [tableHead, setTableHead] = useState(tableHeadConst)
     const [widthArr, setWidthArr] = useState(widthArrConst)
-    const [results, setResults] = useState("")
+    const [TotalCountriesData, setTotalCountriesData] = useState(props.Data.TotalCountriesData)
+    const [MiddleEastCountriesData, setMiddleEastCountriesData] = useState(props.Data.MiddleEastCountriesData)
     const [tableData, setTableData] = useState(tableDataTmp)
+    const [Tmp, setTmp] = useState(true)
 
-    const GetCountries = async () => {
-      const resultsTmp0 = await fetchCountriesDailyData()
-      const resultsTmp = [];
-      for (const element of resultsTmp0) {
-        // if (element.country in middleEastCountries) {
-          if (middleEastCountries.includes(element.country)) {
-          resultsTmp.push(element)
-        }
-      }
-      console.log(resultsTmp)
-      setResults(resultsTmp)
-      
+
+    const SetData = () => {
+
       const tableData1 = [];
-      for (const element of resultsTmp) {
-        const rowData = [];
-        rowData.push(`${element.country}`);
-        rowData.push(`${element.cases}`);
-        rowData.push(`${element.todayCases}`);
-        rowData.push(`${element.deaths}`);
-        rowData.push(`${element.todayDeaths}`);
-        rowData.push(`${element.recovered}`);
-        rowData.push(`${element.active}`);
-        rowData.push(`${element.critical}`);
-        rowData.push(`${element.casesPerOneMillion}`);
-        rowData.push(`${element.deathsPerOneMillion}`);
-        rowData.push(`${element.totalTests}`);
-        rowData.push(`${element.testsPerOneMillion}`);
-        rowData.push(`${parseInt(1)*parseInt(1)}`);
+       for (const element of MiddleEastCountriesData) {
+      const rowData = [];
+      rowData.push(`${element.country}`);
+      rowData.push(`${element.cases}`);
+      rowData.push(`${element.todayCases}`);
+      rowData.push(`${element.deaths}`);
+      rowData.push(`${element.todayDeaths}`);
+      rowData.push(`${element.recovered}`);
+      rowData.push(`${element.active}`);
+      rowData.push(`${element.critical}`);
+      rowData.push(`${element.casesPerOneMillion}`);
+      rowData.push(`${element.deathsPerOneMillion}`);
+      rowData.push(`${element.totalTests}`);
+      rowData.push(`${element.testsPerOneMillion}`);
+      rowData.push(`${parseInt(1)*parseInt(1)}`);
 
-        tableData1.push(rowData);
-      }
+      tableData1.push(rowData);
+       }
       setTableData(tableData1)
+      setTmp(false)
+
     }
 
-    if (results === "") {
-      GetCountries()
+    if (Tmp === true) {
+      SetData()
     }
+
+  // Set global test device ID
+  setTestDeviceIDAsync('ANDROID');
+
+
  
     return (
       <View style={styles.container}>
 
-        <Button
+        {/* <Button
             title="Refresh"
             onPress={() => {
               GetCountries()
             }}
-          />
+          /> */}
 
         <ScrollView horizontal={true}>      
           <View>
@@ -122,17 +136,31 @@ function Countries(props) {
             </ScrollView>
           </View>
         </ScrollView>
+
+        <View style={[{paddingLeft: 20}]}>
+
+
+          <AdMobBanner
+            bannerSize="banner"
+            adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+            servePersonalizedAds // true or false
+            //onDidFailToReceiveAdWithError={this.bannerError} 
+          />
+
+        </View>
+
+
       </View>
     )
   }
 
 export default function DashboardMiddleEastScreen({route}) {
 
-  const  { country }   = route.params
+  const data    = route.params
 
   return (
     <Countries
-      ChosenCountry = {country}          
+      Data = {data}      
     />
   )
 }

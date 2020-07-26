@@ -76,7 +76,7 @@ function MainTabsEnglish(props) {
           ),
         }}
       />
-       {/* <Tab1English.Screen
+       <Tab1English.Screen
         name="GraphsScreenEnglish"
         component={Tabs3English}
         initialParams={props.route.params.params}
@@ -86,8 +86,8 @@ function MainTabsEnglish(props) {
             <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
           ),
         }}
-      /> */}
-      <Tab1English.Screen
+      />
+      {/* <Tab1English.Screen
         name="DashboardMiddleEastScreen"
         component={Tabs2English}
         initialParams={props.route.params.params}        
@@ -97,7 +97,7 @@ function MainTabsEnglish(props) {
             <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
       {/* <Tab1English.Screen
         name="NewsScreen"
         component={NewsScreen}
@@ -151,7 +151,7 @@ function MainTabsArabic(props) {
           ),
         }}
       />
-       {/* <Tab1Arabic.Screen
+       <Tab1Arabic.Screen
         name="GraphsScreenArabic"
         component={Tabs3Arabic}
         initialParams={props.route.params.params}
@@ -161,8 +161,8 @@ function MainTabsArabic(props) {
             <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
           ),
         }}
-      /> */}
-      <Tab1Arabic.Screen
+      />
+      {/* <Tab1Arabic.Screen
         name="DashboardMiddleEastScreenArabic"
         component={Tabs2Arabic}
         initialParams={props.route.params.params}
@@ -172,7 +172,7 @@ function MainTabsArabic(props) {
             <MaterialCommunityIcons name="settings-helper" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
       {/* <Tab1Arabic.Screen
         name="NewsScreenArabic"
         component={NewsScreenArabic}
