@@ -18,9 +18,7 @@ import GraphScreen2 from './screens/GraphScreen2'
 import GraphScreen3 from './screens/GraphScreen3'
 import GraphScreen4 from './screens/GraphScreen4'
 import DashboardMiddleEastScreen from './screens/DashboardMiddleEastScreen'
-import DashboardCountryScreen from './screens/DashboardCountryScreen'
 import DashboardWorldScreen from './screens/DashboardWorldScreen'
-import NewsScreen from './screens/NewsScreen'
 import SettingsScreen from './screens/SettingsScreen'
 
 // Arabic Screens
@@ -30,9 +28,7 @@ import GraphScreen2Arabic from './screens/GraphScreen2Arabic'
 import GraphScreen3Arabic from './screens/GraphScreen3Arabic'
 import GraphScreen4Arabic from './screens/GraphScreen4Arabic'
 import DashboardMiddleEastScreenArabic from './screens/DashboardMiddleEastScreenArabic'
-import DashboardCountryScreenArabic from './screens/DashboardCountryScreenArabic'
 import DashboardWorldScreenArabic from './screens/DashboardWorldScreenArabic'
-import NewsScreenArabic from './screens/NewsScreenArabic'
 import SettingsScreenArabic from './screens/SettingsScreenArabic'
 
 
